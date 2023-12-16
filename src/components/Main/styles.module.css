@@ -1,0 +1,54 @@
+.main{
+    background-color: rgb(221, 190, 190);
+}
+
+h1{
+    color: #07F;
+font-variant-numeric: lining-nums proportional-nums;
+font-family: Proxima Nova;
+font-size: 56px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+h2{
+    color: var(--Text-bodyText, #171A28);
+font-variant-numeric: lining-nums proportional-nums;
+font-family: Proxima Nova;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+h3{
+    color: var(--Text-bodyText, #171A28);
+font-variant-numeric: lining-nums proportional-nums;
+font-family: Proxima Nova;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+h4{
+    color: var(--Header, #07F);
+text-align: center;
+font-variant-numeric: lining-nums proportional-nums;
+font-family: Proxima Nova;
+font-size: 70px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+p{
+    color: var(--Text-titleText, #454545);
+font-variant-numeric: lining-nums proportional-nums;
+font-family: Proxima Nova;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
