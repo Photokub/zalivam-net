@@ -1,54 +1,58 @@
-.main{
+.main {
     background-color: rgb(221, 190, 190);
 }
 
-h1{
+.main__logo {
     color: #07F;
-font-variant-numeric: lining-nums proportional-nums;
-font-family: Proxima Nova;
-font-size: 56px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
-h2{
+.main__title {
     color: var(--Text-bodyText, #171A28);
-font-variant-numeric: lining-nums proportional-nums;
-font-family: Proxima Nova;
-font-size: 40px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
-h3{
+.main__subtitle {
     color: var(--Text-bodyText, #171A28);
-font-variant-numeric: lining-nums proportional-nums;
-font-family: Proxima Nova;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
-h4{
-    color: var(--Header, #07F);
-text-align: center;
-font-variant-numeric: lining-nums proportional-nums;
-font-family: Proxima Nova;
-font-size: 70px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-
-p{
+.main__paragraph {
     color: var(--Text-titleText, #454545);
-font-variant-numeric: lining-nums proportional-nums;
-font-family: Proxima Nova;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.main__listitem {
+    list-style-type: none;
+    position: relative;
+}
+
+.main__listitem::before {
+    content: url('../../images/check\ 1.svg');
+    width: 17px;
+    height: 17px;
+    padding-right: 8px;
+    position: relative;
+    top: 3px;
 }
