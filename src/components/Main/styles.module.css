@@ -1,18 +1,44 @@
+#gorbunov__photo {
+    height: 719px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+
+#otinov__photo {
+    height: 719px;
+    position: absolute;
+    top: 100px;
+    right: 330px;
+}
+
+
 .main {
     background-color: rgb(221, 190, 190);
+    padding: 32px 0 89px 140px;
 }
 
 .main__logo {
-    color: #07F;
+    color: #000;
+    max-width: 700px;
+    margin: 0 0 40px 0;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
     font-size: 56px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-align: left;
+}
+
+.main__logo::after {
+    content: "НЕТ";
+    color: #07F;
 }
 
 .main__title {
+    max-width: 637px;
+    margin: 0 0 100px 0;
     color: var(--Text-bodyText, #171A28);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
@@ -20,9 +46,12 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-align: left;
 }
 
 .main__subtitle {
+    max-width: 522px;
+    margin: 0 0 18px 0;
     color: var(--Text-bodyText, #171A28);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
@@ -30,9 +59,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-align: left;
 }
 
 .main__paragraph {
+    max-width: 522px;
     color: var(--Text-titleText, #454545);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
@@ -40,12 +71,23 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-align: left;
 }
 
+.main__list {
+    max-width: 455px;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 39px 0;
+}
 
 .main__listitem {
+    margin: 0 0 18px 0;
     list-style-type: none;
     position: relative;
+    list-style-position: inside;
+    position: relative;
+    padding-right: 20px;
 }
 
 .main__listitem::before {
@@ -53,6 +95,33 @@
     width: 17px;
     height: 17px;
     padding-right: 8px;
-    position: relative;
-    top: 3px;
+    position: absolute;
+    left: calc(-17px - 8px);
+}
+
+.main__button {
+    display: flex;
+    width: 296px;
+    height: 62px;
+    padding: 0 60px;
+    /* padding: 27px 60px 24px 60px; */
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 4.96px;
+    cursor: pointer;
+    background: var(--Buttons, #3390EC);
+    box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.17);
+
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.main__buttonicon {
+    width: 24px;
+    height: 24px;
 }
