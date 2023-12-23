@@ -1,27 +1,29 @@
 #gorbunov__photo {
-    height: 719px;
+    height: 685px;
     position: absolute;
     top: 100px;
     right: 0;
 }
 
 #otinov__photo {
-    height: 719px;
+    height: 685px;
     position: absolute;
     top: 100px;
-    right: 330px;
+    right: 310px;
 }
 
 
 .main {
-    background-color: rgb(221, 190, 190);
-    padding: 32px 0 89px 140px;
+    background-image: url("../../images/main-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 26px 0 89px 140px;
 }
 
 .main__logo {
     color: #000;
     max-width: 700px;
-    margin: 0 0 40px 0;
+    margin: 0 0 32px 0;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
     font-size: 56px;
@@ -45,7 +47,7 @@
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 40px;
     text-align: left;
 }
 
@@ -78,16 +80,17 @@
     max-width: 455px;
     text-align: left;
     padding: 0;
-    margin: 0 0 39px 0;
+    margin: 0 0 40px 25px;
 }
 
 .main__listitem {
-    margin: 0 0 18px 0;
+    margin: 0 0 24px 0;
     list-style-type: none;
     position: relative;
     list-style-position: inside;
     position: relative;
     padding-right: 20px;
+    letter-spacing: 0.75px;
 }
 
 .main__listitem::before {
@@ -104,7 +107,6 @@
     width: 296px;
     height: 62px;
     padding: 0 60px;
-    /* padding: 27px 60px 24px 60px; */
     justify-content: space-between;
     align-items: center;
     border: none;
