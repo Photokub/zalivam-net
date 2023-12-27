@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import { FaPhoneAlt } from "react-icons/fa"
 import gorbunov from '../../images/photo-2.png';
 import otinov from '../../images/photo.png'
+import { NameContainer } from "../NameContainer/NameContainer";
 
 
 interface MainPropTypes {
@@ -26,6 +27,16 @@ const Main: React.FC<MainPropTypes> = () => {
             <button className={styles.main__button} type="button"><FaPhoneAlt className={styles.main__buttonicon} />Заказать звонок</button>
             <img src={gorbunov} alt='Адриан Горбунов' id={styles.gorbunov__photo} />
             <img src={otinov} alt='Алексей Отинов' id={styles.otinov__photo} />
+            <NameContainer
+                title="Алексей Отинов"
+                subTitle="юрист"
+                right="490px"
+            />
+            <NameContainer
+                title="Адриан Горбунов"
+                subTitle="юрист"
+                right="100px"
+            />
         </section>
     )
 }
