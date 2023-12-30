@@ -29,3 +29,11 @@
     font-weight: 400;
     line-height: normal;
 }
+
+@media screen and (max-width: 768px){
+    .nameContainer{
+        top: 1030px;
+        /* left: 96px; */
+        /* bottom:53px; */
+    }
+}

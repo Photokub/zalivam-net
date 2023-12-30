@@ -2,7 +2,8 @@
     height: 685px;
     position: absolute;
     top: 100px;
-    right: 0;
+    right: -68px;
+    /* box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5); */
 }
 
 #otinov__photo {
@@ -18,6 +19,7 @@
     background-repeat: no-repeat;
     background-position: right;
     padding: 26px 0 89px 140px;
+    overflow: hidden;
 }
 
 .main__logo {
@@ -44,7 +46,7 @@
     color: var(--Text-bodyText, #171A28);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
-    font-size: 40px;
+    font-size: 40px;margin: 0 0 18px 0;
     font-style: normal;
     font-weight: 600;
     line-height: 40px;
@@ -53,7 +55,7 @@
 
 .main__subtitle {
     max-width: 522px;
-    margin: 0 0 18px 0;
+    
     color: var(--Text-bodyText, #171A28);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
@@ -126,4 +128,60 @@
 .main__buttonicon {
     width: 24px;
     height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    #gorbunov__photo {
+        height: 504px;
+        top:655px;
+        right: 35px;
+        /* bottom: 0; */
+        /* bottom: 0px; */
+        /* position: absolute; */
+    }
+
+    #otinov__photo{
+        height: 504px;
+        top: 655px;
+        left: 37px;
+        /* bottom: 0; */
+        /* bottom:0px; */
+        /* position:ab */
+    }
+
+    .main{
+        background-image: url("../../images/background-768.png");
+        background-position: bottom;
+        padding: 65px 74px 537px 74px;
+    }
+
+    .main__logo {
+        font-size: 36px;
+        margin: 0 0 10px 0;
+
+    }
+
+    .main__title {
+        font-size: 36px;
+        line-height: 36px;
+        margin: 0 0 68px 0;
+    }
+
+    .main__subtitle{
+        margin: 0 0 23px 0;
+    }
+
+    .main__list{
+        margin: 0 0 33px 25px;
+        max-width: 660px;
+    }
+
+    .main__listitem{
+        padding:0;
+        margin: 0 0 27px 0;
+    }
+
+    .main__button{
+        margin: 0 auto;
+    }
 }

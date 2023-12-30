@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './styles.module.css';
 import { FaPhoneAlt } from "react-icons/fa"
-import gorbunov from '../../images/photo-2.png';
-import otinov from '../../images/photo.png'
+import gorbunov from '../../images/gorbunov.png';
+import otinov from '../../images/otinov.png'
 import { NameContainer } from "../NameContainer/NameContainer";
 
 
@@ -31,11 +31,13 @@ const Main: React.FC<MainPropTypes> = () => {
                 title="Алексей Отинов"
                 subTitle="юрист"
                 right="490px"
+                // borderRadius="0 20px 20px 20px"
             />
             <NameContainer
                 title="Адриан Горбунов"
                 subTitle="юрист"
                 right="100px"
+                // borderRadius="20px 20px 0 20px"
             />
         </section>
     )
