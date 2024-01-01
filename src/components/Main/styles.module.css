@@ -1,25 +1,45 @@
 #gorbunov__photo {
-    height: 685px;
-    position: absolute;
-    top: 100px;
-    right: -68px;
-    /* box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5); */
+    height: 704px;
+    z-index: 0;
+    position: relative;
+    top:44px;
+    right: 11%;
 }
 
 #otinov__photo {
-    height: 685px;
-    position: absolute;
-    top: 100px;
-    right: 310px;
+    height: 726px;
+    position: relative;
+    top: 40px;
+    z-index: 1;
 }
 
 
 .main {
+    display: flex;
+    flex-direction: row;
     background-image: url("../../images/main-bg.jpg");
     background-repeat: no-repeat;
     background-position: right;
-    padding: 26px 0 89px 140px;
+    padding: 26px 0 0 140px;
     overflow: hidden;
+}
+
+.main__textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 89px;
+}
+
+.main__imageContainer {
+    display: flex;
+    align-self: flex-end;
+    /* overflow: hidden; */
+    justify-content: start;
+    /* position: absolute; */
+    position: relative;
+    /* bottom:0; */
+    /* top: 0; */
+    right: 130px;
 }
 
 .main__logo {
@@ -41,12 +61,14 @@
 }
 
 .main__title {
-    max-width: 637px;
-    margin: 0 0 100px 0;
+    /* max-width: 637px; */
+    width: 637px;
+    /* margin: 0 0 100px 0; */
     color: var(--Text-bodyText, #171A28);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
-    font-size: 40px;margin: 0 0 18px 0;
+    font-size: 40px;
+    margin: 0 0 96px 0;
     font-style: normal;
     font-weight: 600;
     line-height: 40px;
@@ -55,7 +77,8 @@
 
 .main__subtitle {
     max-width: 522px;
-    
+    /* max-width: 100%; */
+    margin: 0 0 20px 0;
     color: var(--Text-bodyText, #171A28);
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
@@ -82,7 +105,7 @@
     max-width: 455px;
     text-align: left;
     padding: 0;
-    margin: 0 0 40px 25px;
+    margin: 0 0 17px 25px;
 }
 
 .main__listitem {
@@ -91,8 +114,9 @@
     position: relative;
     list-style-position: inside;
     position: relative;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     letter-spacing: 0.75px;
+    line-height: normal;
 }
 
 .main__listitem::before {
@@ -133,23 +157,18 @@
 @media screen and (max-width: 768px) {
     #gorbunov__photo {
         height: 504px;
-        top:655px;
+        top: 655px;
         right: 35px;
-        /* bottom: 0; */
-        /* bottom: 0px; */
-        /* position: absolute; */
+        object-fit: contain;
     }
 
-    #otinov__photo{
+    #otinov__photo {
         height: 504px;
         top: 655px;
         left: 37px;
-        /* bottom: 0; */
-        /* bottom:0px; */
-        /* position:ab */
     }
 
-    .main{
+    .main {
         background-image: url("../../images/background-768.png");
         background-position: bottom;
         padding: 65px 74px 537px 74px;
@@ -167,21 +186,21 @@
         margin: 0 0 68px 0;
     }
 
-    .main__subtitle{
+    .main__subtitle {
         margin: 0 0 23px 0;
     }
 
-    .main__list{
+    .main__list {
         margin: 0 0 33px 25px;
         max-width: 660px;
     }
 
-    .main__listitem{
-        padding:0;
+    .main__listitem {
+        padding: 0;
         margin: 0 0 27px 0;
     }
 
-    .main__button{
+    .main__button {
         margin: 0 auto;
     }
 }
