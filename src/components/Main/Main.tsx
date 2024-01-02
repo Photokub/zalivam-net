@@ -27,22 +27,35 @@ const Main: React.FC<MainPropTypes> = () => {
                 </ul>
                 <button className={styles.main__button} type="button"><FaPhoneAlt className={styles.main__buttonicon} />Заказать звонок</button>
             </div>
-            <div className={styles.main__imageContainer}>
-                <img src={otinov} alt='Алексей Отинов' id={styles.otinov__photo} />
-                <img src={gorbunov} alt='Адриан Горбунов' id={styles.gorbunov__photo} />
+            <div className={styles.main__imagesContainer}>
+                <div className={styles.main__imageContainer}>
+                    <img src={otinov} alt='Алексей Отинов' id={styles.otinov__photo} />
+                    <NameContainer
+                        title="Алексей Отинов"
+                        subTitle="юрист"
+                        modify="otinov"
+                    />
+                </div>
+                <div className={styles.main__imageContainer}>
+                    <img src={gorbunov} alt='Адриан Горбунов' id={styles.gorbunov__photo} />
+                    <NameContainer
+                        title="Адриан Горбунов"
+                        subTitle="юрист"
+                        modify="gorbunov"
+                    />
+                </div>
+
             </div>
-            <NameContainer
+            {/* <NameContainer
                 title="Алексей Отинов"
                 subTitle="юрист"
-                right="490px"
-            // borderRadius="0 20px 20px 20px"
-            />
-            <NameContainer
+                modify="otinov"
+            /> */}
+            {/* <NameContainer
                 title="Адриан Горбунов"
                 subTitle="юрист"
-                right="100px"
-            // borderRadius="20px 20px 0 20px"
-            />
+                modify="gorbunov"
+            /> */}
         </section>
     )
 }

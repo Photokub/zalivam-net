@@ -1,0 +1,27 @@
+.nameContainer_gorbunov{
+    border-radius: 20px 20px 0 20px;
+    right: 280px;
+    /* top:10px; */
+    /* left: 75px; */
+}
+
+.nameContainer_otinov{
+    border-radius:0 20px 20px 20px;
+    left: 75px;
+    /* top:10px; */
+}
+
+@media screen and (max-width: 984px){
+    .nameContainer_gorbunov{
+        /* border-radius: 20px 20px 0 20px; */
+        right: 0;
+        /* top:10px; */
+        /* left: 75px; */
+    }
+    
+    .nameContainer_otinov{
+        /* border-radius:0 20px 20px 20px; */
+        left: 0;
+        /* top:10px; */
+    }
+}

@@ -1,17 +1,20 @@
 import React from "react";
 import styles from './styles.module.css';
+import './NameContainer.css'
 
 interface NameContainerPropTypes {
     title: string;
     subTitle: string;
-    right: string;
+    modify: string;
+    // right: string;
     // borderRadius: string;
 }
 
 const NameContainer: React.FC<NameContainerPropTypes> = ({
     title,
     subTitle,
-    right,
+    modify
+    // right,
     // borderRadius
 }) => {
 
@@ -19,11 +22,15 @@ const NameContainer: React.FC<NameContainerPropTypes> = ({
     //     if window.width
     // }
 
+     const classes = styles.nameContainer + ' ' + `nameContainer_${modify}`
+    //const classes = styles.nameContainer + ' ' + styles.nameContainer_grobunov
+
     return (
         <div
-            className={styles.nameContainer}
+        className = {classes}
+        //className = "styles.nameContainer"
             style={{
-                right: `${right}`
+                // right: `${right}`
                 // border-radius: `${borderRadius}`
             }}
         >

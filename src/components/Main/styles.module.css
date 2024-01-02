@@ -30,7 +30,7 @@
     margin-bottom: 89px;
 }
 
-.main__imageContainer {
+.main__imagesContainer {
     display: flex;
     align-self: flex-end;
     justify-content: start;
@@ -145,6 +145,14 @@
     height: 24px;
 }
 
+.main__imageContainer{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: start;
+    /* position: relative; */
+}
+
 @media screen and (max-width: 1265px) {
 
     .main__title {
@@ -170,14 +178,16 @@
     #gorbunov__photo {
         height: 503px;
         right: 0;
-        left: 25%;
+        left: 0;
+        /* left: 25%; */
         top:32px;
     }
 
     #otinov__photo {
         height: 504px;
         top: 32px;
-        left: 146px;
+        /* left: 146px; */
+        left: 0;
     }
 
     .main {
@@ -192,12 +202,13 @@
         margin-bottom: 0;
     }
 
-    .main__imageContainer{
+    .main__imagesContainer{
         display: flex;
         align-self: flex-end;
         justify-content: start;
-        position: relative;
-        right: 130px;
+        right: 0;
+        /* position: relative; */
+        /* right: 130px; */
     }
 
     .main__logo {
