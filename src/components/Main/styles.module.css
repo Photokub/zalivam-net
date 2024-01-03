@@ -13,7 +13,6 @@
     z-index: 1;
 }
 
-
 .main {
     display: flex;
     flex-direction: row;
@@ -145,12 +144,10 @@
     height: 24px;
 }
 
-.main__imageContainer{
-    display:flex;
+.main__imageContainer {
+    display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: start;
-    /* position: relative; */
 }
 
 @media screen and (max-width: 1265px) {
@@ -169,7 +166,7 @@
         width: 520px
     }
 
-    .main__listitem{
+    .main__listitem {
         max-width: 425px;
     }
 }
@@ -179,15 +176,13 @@
         height: 503px;
         right: 0;
         left: 0;
-        /* left: 25%; */
-        top:32px;
+        top: 32px;
     }
 
     #otinov__photo {
         height: 504px;
         top: 32px;
-        /* left: 146px; */
-        left: 0;
+        left: -20px;
     }
 
     .main {
@@ -198,17 +193,16 @@
         padding: 65px 74px 0 74px;
     }
 
-    .main__textContainer{
+    .main__textContainer {
         margin-bottom: 0;
     }
 
-    .main__imagesContainer{
+    .main__imagesContainer {
         display: flex;
         align-self: flex-end;
         justify-content: start;
-        right: 0;
-        /* position: relative; */
-        /* right: 130px; */
+        right: 17px;
+        margin: 0 auto;
     }
 
     .main__logo {
@@ -218,7 +212,7 @@
     }
 
     .main__title {
-        width:100%;
+        width: 100%;
         font-size: 36px;
         line-height: 36px;
         margin: 0 0 68px 0;
@@ -230,7 +224,7 @@
 
     .main__list {
         max-width: 100%;
-        margin: 0 0 6px 25px;  
+        margin: 0 0 6px 25px;
     }
 
     .main__listitem {

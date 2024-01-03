@@ -46,16 +46,6 @@ const Main: React.FC<MainPropTypes> = () => {
                 </div>
 
             </div>
-            {/* <NameContainer
-                title="Алексей Отинов"
-                subTitle="юрист"
-                modify="otinov"
-            /> */}
-            {/* <NameContainer
-                title="Адриан Горбунов"
-                subTitle="юрист"
-                modify="gorbunov"
-            /> */}
         </section>
     )
 }

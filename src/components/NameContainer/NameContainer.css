@@ -1,27 +1,33 @@
-.nameContainer_gorbunov{
+.nameContainer_gorbunov {
     border-radius: 20px 20px 0 20px;
     right: 280px;
-    /* top:10px; */
-    /* left: 75px; */
 }
 
-.nameContainer_otinov{
-    border-radius:0 20px 20px 20px;
+.nameContainer_otinov {
+    border-radius: 0 20px 20px 20px;
     left: 75px;
-    /* top:10px; */
 }
 
-@media screen and (max-width: 984px){
-    .nameContainer_gorbunov{
-        /* border-radius: 20px 20px 0 20px; */
+@media screen and (max-width: 984px) {
+    .nameContainer_gorbunov {
         right: 0;
-        /* top:10px; */
-        /* left: 75px; */
+        left: 293px;
     }
-    
+
+    .nameContainer_otinov {
+        left: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nameContainer_gorbunov {
+        left: 293px;
+        bottom: 20px;
+    }
+
     .nameContainer_otinov{
-        /* border-radius:0 20px 20px 20px; */
-        left: 0;
-        /* top:10px; */
+        left: 40px;
+        bottom: 20px;
+
     }
 }

@@ -8,8 +8,6 @@
     box-sizing: border-box;
     position:absolute;
     bottom: 76px;
-    /* position: relative; */
-    /* top:633px; */
     color: #171A28;
     z-index: 2;
 }
@@ -35,6 +33,6 @@
 @media screen and (max-width: 984px){
     .nameContainer{
         left:0;
-        /* top: 115%; */
+        margin: 0 auto;
     }
 }
