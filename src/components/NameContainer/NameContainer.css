@@ -31,3 +31,23 @@
 
     }
 }
+
+@media screen and (max-width: 568px) {
+    .nameContainer_gorbunov {
+        left: 280px;
+    }
+
+    .nameContainer_otinov {
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nameContainer_gorbunov {
+        left: 90px;
+    }
+
+    .nameContainer_otinov {
+        left: 20px;
+    }
+}

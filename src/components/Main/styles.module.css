@@ -16,6 +16,8 @@
 .main {
     display: flex;
     flex-direction: row;
+    background-color: #F3F3F3;
+    ;
     background-image: url("../../images/main-bg.jpg");
     background-repeat: no-repeat;
     background-position: right;
@@ -130,6 +132,7 @@
     cursor: pointer;
     background: var(--Buttons, #3390EC);
     box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.17);
+    transition: 0.25s;
 
     color: #fff;
     font-variant-numeric: lining-nums proportional-nums;
@@ -137,6 +140,15 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
+}
+
+.main__button:hover {
+    background: var(--Buttons, #539de8);
+    box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.35);
+}
+
+.main__button:active {
+    transform: translateX(1px) translateY(1px);
 }
 
 .main__buttonicon {
@@ -235,5 +247,49 @@
 
     .main__button {
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #gorbunov__photo {
+        height: 388px;
+        left: 15px;
+    }
+
+    #otinov__photo {
+        height: 388px;
+        left: 35px;
+    }
+
+    .main {
+        padding: 18px 16px 0 16px;
+        background-size: 768px 258px;
+        background-position: bottom;
+    }
+
+    .main__textContainer {
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #gorbunov__photo {
+        height: 388px;
+        left: -95px;
+    }
+
+    #otinov__photo {
+        height: 388px;
+        left: -38px;
+    }
+
+    .main {
+        padding: 18px 16px 0 16px;
+        background-size: 768px 258px;
+        background-position: bottom;
+    }
+
+    .main__textContainer {
+        margin-bottom: 45px;
     }
 }
