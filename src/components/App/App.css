@@ -1,5 +1,6 @@
 .App {
-  /* padding: 0 0 0 140px ; */
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
