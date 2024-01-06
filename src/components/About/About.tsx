@@ -5,10 +5,13 @@ interface AboutPropTypes {
 
 }
 
-const About: React.FC<AboutPropTypes> = ({}) => {
-    return(
+const About: React.FC<AboutPropTypes> = ({ }) => {
+    return (
         <section className="about">
-<h1>TEST</h1>
+            <div className="about__wrap">
+                <h2 className="about__tilte">О нас в цифрах</h2>
+
+            </div>
         </section>
     )
 }
