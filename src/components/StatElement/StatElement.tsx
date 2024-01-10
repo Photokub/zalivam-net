@@ -2,8 +2,8 @@ import React from "react";
 import "./StatElement.css"
 
 interface StatElementPropTypes {
-    title: string,
-    subtitle: string
+    title: any,
+    subtitle: any,
 }
 
 const StatElement: React.FC<StatElementPropTypes> = ({

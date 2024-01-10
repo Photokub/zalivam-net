@@ -12,6 +12,7 @@
 }
 
 .about__title {
+  margin: 0 0 48px 0;
   font-family: Proxima Nova;
   font-size: 40px;
   font-style: normal;
