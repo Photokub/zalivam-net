@@ -34,4 +34,9 @@
     padding: 94px 0 63px 0;
     margin: 0 74px;
   }
+}
+@media screen and (max-width: 568px) {
+  .about__wrap {
+    margin: 0 15px;
+  }
 }/*# sourceMappingURL=About.css.map */
