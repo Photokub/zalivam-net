@@ -21,6 +21,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    word-spacing: -8px;
 }
 
 .statElement__subtitle {
@@ -39,4 +40,6 @@
     color: var(--Header, #07F);
     font-size: 43px;
     margin: 0;
+    // letter-spacing: -3px;
+
 }
