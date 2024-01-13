@@ -20,3 +20,19 @@
     font-weight: 600;
     line-height: normal;
 }
+
+@media screen and (max-width: 984px) {
+    .about {
+        height: 1138px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 94px 0 63px 0;
+        margin: 0 74px;
+    }
+}

@@ -3,4 +3,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 984px) {
+  .statContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }/*# sourceMappingURL=StatContainer.css.map */

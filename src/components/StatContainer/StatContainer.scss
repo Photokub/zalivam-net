@@ -6,7 +6,12 @@
 }
 
 
-//TODO// .statElement__span {
-//     color: var(--Header, #07F);
-//     font-size: 43px;
-// }
+@media screen and (max-width: 984px) {
+    .statContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
