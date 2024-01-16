@@ -1,0 +1,14 @@
+@import "../../variables/variaables.scss";
+
+.carouselNav {
+    width: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .carouselNav__arrow {
+        width: 24px;
+        height: 24px;
+        color: $element-color;
+    }
+}

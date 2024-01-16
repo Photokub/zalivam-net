@@ -1,0 +1,11 @@
+.carouselNav {
+  width: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carouselNav .carouselNav__arrow {
+  width: 24px;
+  height: 24px;
+  color: #3390EC;
+}/*# sourceMappingURL=CarouselNav.css.map */
