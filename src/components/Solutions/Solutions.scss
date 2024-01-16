@@ -1,0 +1,53 @@
+@import '../../variables/variaables.scss';
+
+.solutions {
+    background-color: #FFF;
+
+    .solutions__wrap {
+        max-width: $warp-1440;
+        margin: 0 auto;
+        padding: 100px 140px 81px 140px;
+
+    }
+
+    .solutions__title {
+        margin: 0 0 49px 0;
+
+        color: #171A28;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: Proxima Nova;
+        font-size: $h2-font-size;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .solutions__textContainer{
+        max-width: 627px;
+        padding: $textContainer-padding;
+
+        .solutions__subtitle {
+            margin: 0 0 4px 0;
+
+            color: #171A28;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Proxima Nova;
+            font-size: $h4-font-size;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+        }
+
+        .solutions__paragraph{
+            margin: 0;
+
+            color: #171A28;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Proxima Nova;
+            font-size: $paragraph-font-size;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+}

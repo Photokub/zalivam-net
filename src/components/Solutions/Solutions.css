@@ -1,0 +1,42 @@
+.solutions {
+  background-color: #FFF;
+}
+.solutions .solutions__wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 140px 81px 140px;
+}
+.solutions .solutions__title {
+  margin: 0 0 49px 0;
+  color: #171A28;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.solutions .solutions__textContainer {
+  max-width: 627px;
+  padding: 20px;
+}
+.solutions .solutions__textContainer .solutions__subtitle {
+  margin: 0 0 4px 0;
+  color: #171A28;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+}
+.solutions .solutions__textContainer .solutions__paragraph {
+  margin: 0;
+  color: #171A28;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}/*# sourceMappingURL=Solutions.css.map */
