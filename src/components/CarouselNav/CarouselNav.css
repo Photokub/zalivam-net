@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 19px 0 0 0;
 }
 .carouselNav .carouselNav__arrow {
   width: 24px;

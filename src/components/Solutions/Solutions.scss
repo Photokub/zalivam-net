@@ -7,11 +7,10 @@
         max-width: $warp-1440;
         margin: 0 auto;
         padding: 100px 140px 81px 140px;
-
     }
 
     .solutions__title {
-        margin: 0 0 49px 0;
+        margin: 0 0 25px 0;
 
         color: #171A28;
         font-variant-numeric: lining-nums proportional-nums;
@@ -22,9 +21,10 @@
         line-height: normal;
     }
 
-    .solutions__textContainer{
+    .solutions__textContainer {
         max-width: 627px;
         padding: $textContainer-padding;
+        margin-bottom: 20px;
 
         .solutions__subtitle {
             margin: 0 0 4px 0;
@@ -38,7 +38,7 @@
             line-height: 21px;
         }
 
-        .solutions__paragraph{
+        .solutions__paragraph {
             margin: 0;
 
             color: #171A28;
@@ -51,3 +51,33 @@
         }
     }
 }
+
+@media screen and (max-width: 984px) {
+    .solutions__wrap {
+        padding: 100px 74px 81px 74px !important;
+    }
+
+    .solutions__title {
+        margin: 0 0 30px 0 !important;
+    }
+
+    .solutions__textContainer {
+        margin-bottom: 44px !important;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .solutions__wrap {
+        padding: 100px 16px 81px 16px !important;
+    }
+
+    .solutions__textContainer {
+        margin-bottom: 20px !important;
+        padding: 0 !important;
+    }
+
+    .solutions__title {
+        margin: 0 0 50px 0 !important;
+    }
+}
+
