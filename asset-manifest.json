@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/zalivam-net/static/css/main.e5019a4a.css",
-    "main.js": "/zalivam-net/static/js/main.a42a79e2.js",
+    "main.css": "/zalivam-net/static/css/main.c89deef4.css",
+    "main.js": "/zalivam-net/static/js/main.4406b85a.js",
     "static/js/787.3a0a764e.chunk.js": "/zalivam-net/static/js/787.3a0a764e.chunk.js",
     "static/media/main-bg.jpg": "/zalivam-net/static/media/main-bg.495618dd07eee429c62c.jpg",
     "static/media/gorbunov-main.png": "/zalivam-net/static/media/gorbunov-main.fafd50d46dcce915a67a.png",
     "static/media/background-768.png": "/zalivam-net/static/media/background-768.123f104dc7a2ed4c194b.png",
     "static/media/otinov-main.png": "/zalivam-net/static/media/otinov-main.ebfe07bc73078cf36218.png",
     "static/media/about_BG_image_tablet.png": "/zalivam-net/static/media/about_BG_image_tablet.4e891fbe89265631ed3d.png",
-    "static/media/certificate.png": "/zalivam-net/static/media/certificate.7f30f026e1af3fa5a928.png",
+    "static/media/certificate.png": "/zalivam-net/static/media/certificate.245eb9d3ab8f307eddd0.png",
     "static/media/ProximaNova-Regular.woff": "/zalivam-net/static/media/ProximaNova-Regular.99528640efded3e12591.woff",
     "static/media/ProximaNova-Bold.woff": "/zalivam-net/static/media/ProximaNova-Bold.1f267da183b3d4fe3d5b.woff",
     "static/media/ProximaNova-Semibold.woff": "/zalivam-net/static/media/ProximaNova-Semibold.a71877a1eef65838ed4c.woff",
     "static/media/check 1.svg": "/zalivam-net/static/media/check 1.e6df7214e298441f5c95.svg",
     "index.html": "/zalivam-net/index.html",
-    "main.e5019a4a.css.map": "/zalivam-net/static/css/main.e5019a4a.css.map",
-    "main.a42a79e2.js.map": "/zalivam-net/static/js/main.a42a79e2.js.map",
+    "main.c89deef4.css.map": "/zalivam-net/static/css/main.c89deef4.css.map",
+    "main.4406b85a.js.map": "/zalivam-net/static/js/main.4406b85a.js.map",
     "787.3a0a764e.chunk.js.map": "/zalivam-net/static/js/787.3a0a764e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5019a4a.css",
-    "static/js/main.a42a79e2.js"
+    "static/css/main.c89deef4.css",
+    "static/js/main.4406b85a.js"
   ]
 }
