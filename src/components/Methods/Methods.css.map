@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Methods.css"}
+{"version":3,"sources":["Methods.scss","Methods.css","../../variables/variaables.scss"],"names":[],"mappings":"AAEA;EACI,sBAAA;ACDJ;;ADIA;EACI,iBEIQ;EFHR,cAAA;EACA,+BAAA;ACDJ;;ADIA;EACI,kBAAA;EAEA,cAAA;EACA,mDAAA;EACA,yBAAA;EACA,eEjBW;EFkBX,kBAAA;EACA,gBAAA;EACA,mBAAA;ACFJ","file":"Methods.css"}

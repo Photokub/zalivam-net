@@ -1,1 +1,20 @@
-/*# sourceMappingURL=Methods.css.map */
+.methods {
+  background-color: #FFF;
+}
+
+.methods__warp {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 140px 81px 140px;
+}
+
+.methods__title {
+  margin: 0 0 25px 0;
+  color: #171A28;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}/*# sourceMappingURL=Methods.css.map */
