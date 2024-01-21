@@ -4,6 +4,7 @@ import './App.css';
 import Main from '../Main/Main';
 import  About  from '../About/About';
 import Solutions from '../Solutions/Solutions';
+import Methods from '../Methods/Methods'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Main />
       <About />
       <Solutions />
+      <Methods />
     </div>
   );
 }
