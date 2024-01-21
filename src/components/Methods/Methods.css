@@ -17,4 +17,11 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.methods__bottomline {
+  width: 360px;
+  border: 2px solid;
+  border-color: #3390EC;
+  margin: 0;
 }/*# sourceMappingURL=Methods.css.map */

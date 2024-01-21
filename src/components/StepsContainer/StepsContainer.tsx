@@ -11,6 +11,10 @@ const StepsContainer: React.FC<StepsContainerProptypes> = ({ }) => {
     return (
         <div className="stepsContainer">
             <StepCard />
+            <StepCard />
+            <StepCard />
+            <StepCard />
+            <StepCard />
         </div>
     )
 }

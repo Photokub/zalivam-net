@@ -1,1 +1,5 @@
-/*# sourceMappingURL=StepsContainer.css.map */
+.stepsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}/*# sourceMappingURL=StepsContainer.css.map */

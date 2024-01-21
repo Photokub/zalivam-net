@@ -1,6 +1,6 @@
 @import '../../variables/variaables.scss';
 
-.methods{
+.methods {
     background-color: #FFF;
 }
 
@@ -20,4 +20,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.methods__bottomline {
+    width: 360px;
+    border: 2px solid;
+    border-color: $element-color;
+    margin: 0;
 }
