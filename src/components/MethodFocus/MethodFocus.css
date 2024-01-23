@@ -19,6 +19,8 @@
 }
 
 .methodFocus__title {
+  margin: 3px 0 0 0;
+  align-self: center;
   color: #0077FF;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Proxima Nova";
@@ -29,6 +31,7 @@
 }
 
 .methodFocus__subtitle {
+  margin: 0;
   color: var(--Text-titleText, #454545);
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Proxima Nova";

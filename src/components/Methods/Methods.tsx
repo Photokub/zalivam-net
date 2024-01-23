@@ -2,13 +2,13 @@ import React from 'react';
 import "./Methods.css";
 import "../StepsContainer/StepsContainer"
 import StepsContainer from '../StepsContainer/StepsContainer';
-import MethodFocus from '../MethodFocus/MethodFocus';
+import MethodFocus from '../szethodFocus/MethodFocus';
 
-interface MethodPropTypes {
+interface MethodsPropTypes {
 
 }
 
-const Methods: React.FC<MethodPropTypes> = ({ }) => {
+const Methods: React.FC<MethodsPropTypes> = ({ }) => {
     return (
         <section className='methods'>
             <div className="methods__warp">
