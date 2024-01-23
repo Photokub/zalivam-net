@@ -2,7 +2,7 @@ import React from 'react';
 import "./Methods.css";
 import "../StepsContainer/StepsContainer"
 import StepsContainer from '../StepsContainer/StepsContainer';
-import MethodFocus from '../szethodFocus/MethodFocus';
+import MethodFocus from '../MethodFocus/MethodFocus';
 
 interface MethodsPropTypes {
 
