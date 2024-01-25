@@ -128,7 +128,7 @@
     justify-content: space-between;
     align-items: center;
     border: none;
-    border-radius: 4.96px;
+    border-radius: 5px;
     cursor: pointer;
     background: var(--Buttons, #3390EC);
     box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.17);

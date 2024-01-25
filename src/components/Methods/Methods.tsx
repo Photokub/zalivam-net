@@ -3,6 +3,7 @@ import "./Methods.css";
 import "../StepsContainer/StepsContainer"
 import StepsContainer from '../StepsContainer/StepsContainer';
 import MethodFocus from '../MethodFocus/MethodFocus';
+import MethodsButtons from '../MethodsButtons/MethodsButtons';
 
 interface MethodsPropTypes {
 
@@ -16,6 +17,7 @@ const Methods: React.FC<MethodsPropTypes> = ({ }) => {
                 <StepsContainer />
                 <hr className="methods__bottomline" />
                 <MethodFocus />
+                <MethodsButtons />
             </div>
         </section>
     )

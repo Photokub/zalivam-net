@@ -1,1 +1,5 @@
-/*# sourceMappingURL=MethodButtons.css.map */
+.methodsButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}/*# sourceMappingURL=MethodsButtons.css.map */
