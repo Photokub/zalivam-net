@@ -1,1 +1,1 @@
-{"version":3,"sources":["CarouselNav.scss","CarouselNav.css","../../variables/variaables.scss"],"names":[],"mappings":"AAEA;EACI,WAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBAAA;ACDJ;ADII;EACI,WAAA;EACA,YAAA;EACA,cEPQ;ADKhB","file":"CarouselNav.css"}
+{"version":3,"sources":["CarouselNav.scss","CarouselNav.css","../../variables/variaables.scss"],"names":[],"mappings":"AAEA;EACI,WAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBAAA;ACDJ;ADII;EACI,WAAA;EACA,YAAA;EACA,cEPQ;EFQR,eAAA;EACA,iBAAA;ACFR;ADIQ;EACI,8BAAA;EACA,+DAAA;ACFZ;ADKQ;EACI,0CAAA;ACHZ","file":"CarouselNav.css"}

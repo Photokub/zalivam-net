@@ -9,4 +9,13 @@
   width: 24px;
   height: 24px;
   color: #3390EC;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.carouselNav .carouselNav__arrow:hover {
+  color: var(--Buttons, #539de8);
+  box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.35);
+}
+.carouselNav .carouselNav__arrow:active {
+  transform: translateX(1px) translateY(1px);
 }/*# sourceMappingURL=CarouselNav.css.map */
