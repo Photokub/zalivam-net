@@ -1,7 +1,5 @@
 import React, { ReactNode } from "react";
 import "./MethodsButton.css"
-// import {BsArrowLeft} from "react-icons/bs"
-// import {BsArrowRight} from "react-icons/bs"
 
 interface MethodsButtonPropTypes {
     icon: ReactNode;

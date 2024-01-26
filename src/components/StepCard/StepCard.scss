@@ -1,7 +1,7 @@
 .stepCard {
     width: 188px;
     height: 166px;
-    padding: 10px 0px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +11,7 @@
 
 .stepCard__number {
     width: 188px;
-    height: 70px;
-    margin: 0;
+    margin: 0 0 5px 0;
     color: #D2D1D1;
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
@@ -33,7 +32,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 16px;
 }
 
 .stepCard_checked {}

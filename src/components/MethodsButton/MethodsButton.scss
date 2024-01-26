@@ -4,7 +4,6 @@
     display: flex;
     width: 224px;
     height: 62px;
-    padding: 27.28px 0px 24.8px 0px;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -16,6 +15,9 @@
     box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.17);
     transition: 0.25s;
 
+    font-family: "Proxima Nova";
+    font-size: 18px;
+
     &:hover {
         background: var(--Buttons, #539de8);
         box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.35);
@@ -24,6 +26,11 @@
     &:active {
         transform: translateX(1px) translateY(1px);
     }
+}
+
+.methodsButton__icon{
+    width: 24px;
+    height: 24px;
 }
 
 .methodsButton__right {

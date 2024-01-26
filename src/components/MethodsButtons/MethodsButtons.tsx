@@ -12,12 +12,12 @@ const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({ }) => {
     return (
         <div className="methodsButtons">
             <MethodsButton
-                icon={<BsArrowLeft />}
+                icon={<BsArrowLeft className="methodsButton__icon"/>}
                 label="Предыдущий шаг"
                 buttonClass="methodsButton"
             />
             <MethodsButton
-                icon={<BsArrowRight />}
+                icon={<BsArrowRight className="methodsButton__icon"/>}
                 label="Следующий шаг"
                 buttonClass="methodsButton methodsButton__right"
             />
