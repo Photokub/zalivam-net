@@ -1,0 +1,46 @@
+.adFormContainer {
+  width: 760px;
+  height: 389px;
+  display: grid;
+  border-radius: 4px;
+  border: 1px solid #F3F3F3;
+  outline: 1px dashed #D2D1D1;
+  -moz-outline-radius: 4px;
+  border-radius: 4px;
+  outline-offset: -5px;
+  background: #FFF;
+  box-shadow: 0px 45px 25px -20px rgba(174, 197, 191, 0.22);
+}
+
+.adForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.adFormInput {
+  width: 296px;
+  padding: 11px 201px 9px 21px;
+  align-items: center;
+  border-radius: 5px;
+  background: #F9F9F9;
+}
+
+.adFormSubmitBtn {
+  display: flex;
+  width: 296px;
+  height: 48px;
+  padding: 22px 28px 20px 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #3390EC;
+  box-shadow: 0px 20px 24px -10px rgba(0, 119, 255, 0.3);
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: small-caps;
+}/*# sourceMappingURL=AdForm.css.map */
