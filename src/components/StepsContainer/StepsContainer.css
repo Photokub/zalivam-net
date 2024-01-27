@@ -3,4 +3,13 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 124px 0 0 0;
+}
+
+@media screen and (max-width: 984px) {
+  .stepsContainer {
+    height: 947px;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 0 0;
+  }
 }/*# sourceMappingURL=StepsContainer.css.map */

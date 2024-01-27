@@ -30,4 +30,8 @@
 
 .methodsButton__right {
   flex-direction: row-reverse !important;
+}
+
+.methodsButton_small {
+  width: 91px;
 }/*# sourceMappingURL=MethodsButton.css.map */

@@ -24,7 +24,27 @@
 
 .methods__bottomline {
     width: 360px;
-    border: 2px solid;
+    border: 1px solid;
     border-color: $element-color;
-    margin: 33px 0 0 0;
+    margin: 34px 0 0 0;
+}
+
+@media screen and (max-width: 984px) {
+    .methods__warp {
+        padding: 100px 74px 148px 74px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .methods__warp {
+        padding: 100px 15px 134px 15px;
+    }
+
+    .methods__title{
+        line-height: normal;
+    }
+
+    .methods__bottomline{
+        width: 100%;
+    }
 }

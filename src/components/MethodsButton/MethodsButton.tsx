@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import "./MethodsButton.css"
 
 interface MethodsButtonPropTypes {
@@ -7,12 +7,35 @@ interface MethodsButtonPropTypes {
     buttonClass: string;
 }
 
-const MethodsButton: React.FC<MethodsButtonPropTypes> = ({ icon, label, buttonClass }) => {
+const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
+    icon,
+    label,
+    buttonClass,
+}) => {
+
+    const button = <button className={buttonClass} type="button">
+        {icon}
+        {label}
+    </button>
+
+    const buttonSmall = <button className="methodsButton methodsButton_small" type="button">
+        {icon}
+    </button>
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        let screenWidthValue = window.innerWidth
+        window.addEventListener('resize', () => {
+            screenWidthValue = window.innerWidth
+            setScreenWidth(screenWidthValue)
+        })
+    })
+
     return (
-        <button className={buttonClass} type="button">
-            {icon}
-            {label}
-        </button>
+        <>
+            {screenWidth > 568 ? button : buttonSmall}
+        </>
     )
 }
 
