@@ -10,11 +10,11 @@
 }
 
 .ad__wrap {
+    display: flex;
+    flex-direction: row;
     max-width: 1440px;
     padding: 100px 140px 0 140px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
 }
 
 .ad__image {
@@ -34,4 +34,12 @@
     background: rgba(255, 255, 255, 0.50);
     mix-blend-mode: overlay;
     filter: blur(56.5px);
+}
+
+@media screen and (max-width: 984px){
+    .ad__wrap{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 71px 54px 0 54px;
+    }
 }

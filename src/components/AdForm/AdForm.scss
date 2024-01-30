@@ -12,8 +12,8 @@
 }
 
 .adForm {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     border: 1px dashed #D2D1D1;
     border-radius: 4px;
     display: grid;
@@ -32,7 +32,7 @@
     line-height: 40px;
 }
 
-.adFormTitle_highlight{
+.adFormTitle_highlight {
     margin: 0;
     color: $text-highlight-color !important;
 }
@@ -117,4 +117,28 @@
     font-weight: 400;
     line-height: normal;
     font-variant: all-small-caps;
+}
+
+@media screen and (max-width: 984px) {
+    .adFormContainer{
+        height: 100%;
+        margin: 0;
+    }
+
+    .adForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adFormInput{
+        width: 100%;
+    } 
+
+    .adFormLegalText {
+        align-self: center;
+    }
+
+    .adFormBtnContainer{
+        padding: 0 0 20px 0;
+    }
 }
