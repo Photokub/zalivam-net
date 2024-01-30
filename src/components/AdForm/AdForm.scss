@@ -32,6 +32,11 @@
     line-height: 40px;
 }
 
+.adFormTitle_highlight{
+    margin: 0;
+    color: $text-highlight-color !important;
+}
+
 .adFormInputContainer {
     display: flex;
     grid-column: 2/3;
@@ -45,7 +50,6 @@
     width: 296px;
     height: 48px;
     padding: 11px 5px 9px 21px;
-    align-items: center;
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
@@ -104,7 +108,7 @@
     grid-row: 2/3;
     align-self: flex-end;
 
-    color: var(--Text-subTitleText, #808080);
+    color: $text-highlight-color;
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: "Proxima Nova";

@@ -1,5 +1,37 @@
+#womenPhoto {
+    z-index: 1;
+}
+
 .ad {
-    background: linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
     display: flex;
     justify-content: center;
+    background: url("../../images/about_BG_image_tablet.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
+    background-size: cover;
+}
+
+.ad__wrap {
+    max-width: 1440px;
+    padding: 100px 140px 0 140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.ad__image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin: 0 40px 0 0;
+}
+
+.ad__imageEffect {
+    width: 350px;
+    height: 350px;
+    position:absolute;
+    top: 25%;
+    border-radius: 350px;
+    background: rgba(255, 255, 255, 0.50);
+    mix-blend-mode: overlay;
+    filter: blur(56.5px);
 }
