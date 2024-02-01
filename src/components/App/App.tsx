@@ -6,6 +6,7 @@ import  About  from '../About/About';
 import Solutions from '../Solutions/Solutions';
 import Methods from '../Methods/Methods'
 import Ad from '../Ad/Ad';
+import Reviews from '../Reviews/Reviews';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Solutions />
       <Methods />
       <Ad />
+      <Reviews />
     </div>
   );
 }
