@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: row;
   max-width: 1440px;
-  padding: 100px 140px 0 140px;
   margin: 0 auto;
 }
 
@@ -37,9 +36,21 @@
 }
 
 @media screen and (max-width: 984px) {
+  #womenPhoto {
+    width: 100%;
+  }
   .ad__wrap {
     flex-direction: column-reverse;
     align-items: center;
     padding: 71px 54px 0 54px;
+  }
+  .ad__image {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 568px) {
+  .ad__wrap {
+    padding: 64px 15px 0 15px;
   }
 }/*# sourceMappingURL=Ad.css.map */

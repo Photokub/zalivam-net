@@ -10,7 +10,7 @@ const AdForm: React.FC<AdFormPropTypes> = ({ }) => {
     return (
         <div className="adFormContainer">
             <form name="adFormFeedbck" action="" className="adForm">
-                <h2 className="adFormTitle">Экспертиза <span className="adFormTitle adFormTitle_highlight">бесплатно </span>при заключении договора-услуг!</h2>
+                <h2 className="adFormTitle">Экспертиза <span className="adFormTitle adFormTitle_highlight">бесплатно</span> при заключении договора-услуг!</h2>
                 <div className="adFormInputContainer">
                     <input type="text" className="adFormInput" name="adInputName" placeholder="Ваше имя *" required />
                     <input type="text" className="adFormInput" name="adInputEmail" placeholder="Email *" required />

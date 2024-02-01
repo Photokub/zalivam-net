@@ -1,7 +1,7 @@
 @import '../../variables/variaables.scss';
 
 .adFormContainer {
-    width: 760px;
+    max-width: 760;
     height: 379px;
     padding: 5px;
     margin: 83px 0;
@@ -33,7 +33,7 @@
 }
 
 .adFormTitle_highlight {
-    margin: 0;
+    margin: 0 !important;
     color: $text-highlight-color !important;
 }
 
@@ -121,6 +121,7 @@
 
 @media screen and (max-width: 984px) {
     .adFormContainer{
+        max-width: 660px;
         height: 100%;
         margin: 0;
     }
@@ -130,15 +131,36 @@
         flex-direction: column;
     }
 
+    .adFormTitle{
+        margin: 26px 17px;
+    }
+
+    .adFormInputContainer{
+        margin: 0 17px;
+        gap: 20px;
+    }
+
     .adFormInput{
         width: 100%;
     } 
 
+    .adFormBtnContainer{
+        margin-top: 20px;
+        padding: 0 0 20px 0;
+    }
+
     .adFormLegalText {
         align-self: center;
     }
+}
+
+@media screen and (max-width: 568px){
+    .adFormContainer{
+        max-width: 345px;
+    }
 
     .adFormBtnContainer{
-        padding: 0 0 20px 0;
+        align-self: center;
+        max-width: 296px;
     }
 }

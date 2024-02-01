@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: row;
     max-width: 1440px;
-    padding: 100px 140px 0 140px;
+    ////TODO// padding: 100px 140px 0 140px;
     margin: 0 auto;
 }
 
@@ -28,7 +28,7 @@
 .ad__imageEffect {
     width: 350px;
     height: 350px;
-    position:absolute;
+    position: absolute;
     top: 25%;
     border-radius: 350px;
     background: rgba(255, 255, 255, 0.50);
@@ -36,10 +36,35 @@
     filter: blur(56.5px);
 }
 
-@media screen and (max-width: 984px){
-    .ad__wrap{
+@media screen and (max-width: 984px) {
+
+    #womenPhoto {
+        width: 100%;
+    }
+
+    .ad__wrap {
         flex-direction: column-reverse;
         align-items: center;
         padding: 71px 54px 0 54px;
+    }
+
+    .ad__image {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    #womenPhoto {
+    //TODO//    position: absolute;
+    }
+
+    .ad__wrap {
+        padding: 64px 15px 0 15px;
+    }
+
+    .ad__image{
+        ////TODO// height: 375px;
     }
 }
