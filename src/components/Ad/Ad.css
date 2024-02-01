@@ -33,6 +33,7 @@
   background: rgba(255, 255, 255, 0.5);
   mix-blend-mode: overlay;
   filter: blur(56.5px);
+  z-index: 0;
 }
 
 @media screen and (max-width: 984px) {
@@ -52,5 +53,8 @@
 @media screen and (max-width: 568px) {
   .ad__wrap {
     padding: 64px 15px 0 15px;
+  }
+  .ad__imageEffect {
+    top: 15%;
   }
 }/*# sourceMappingURL=Ad.css.map */
