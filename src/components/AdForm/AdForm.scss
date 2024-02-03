@@ -109,7 +109,6 @@
     grid-row: 2/3;
     align-self: flex-end;
 
-    color: $text-highlight-color;
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: "Proxima Nova";
@@ -120,8 +119,13 @@
     font-variant: all-small-caps;
 }
 
+.adFormLegalText__link {
+    color: $text-highlight-color;
+
+}
+
 @media screen and (max-width: 984px) {
-    .adFormContainer{
+    .adFormContainer {
         max-width: 660px;
         height: 100%;
         margin: 0;
@@ -132,20 +136,20 @@
         flex-direction: column;
     }
 
-    .adFormTitle{
+    .adFormTitle {
         margin: 26px 17px;
     }
 
-    .adFormInputContainer{
+    .adFormInputContainer {
         margin: 0 17px;
         gap: 20px;
     }
 
-    .adFormInput{
+    .adFormInput {
         width: 100%;
-    } 
+    }
 
-    .adFormBtnContainer{
+    .adFormBtnContainer {
         margin-top: 20px;
         padding: 0 0 20px 0;
     }
@@ -155,12 +159,12 @@
     }
 }
 
-@media screen and (max-width: 568px){
-    .adFormContainer{
+@media screen and (max-width: 568px) {
+    .adFormContainer {
         max-width: 345px;
     }
 
-    .adFormBtnContainer{
+    .adFormBtnContainer {
         align-self: center;
         max-width: 296px;
     }

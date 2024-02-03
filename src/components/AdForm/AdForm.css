@@ -103,7 +103,6 @@
   grid-column: 1/2;
   grid-row: 2/3;
   align-self: flex-end;
-  color: #0077FF;
   text-align: center;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Proxima Nova";
@@ -112,6 +111,10 @@
   font-weight: 400;
   line-height: normal;
   font-variant: all-small-caps;
+}
+
+.adFormLegalText__link {
+  color: #0077FF;
 }
 
 @media screen and (max-width: 984px) {

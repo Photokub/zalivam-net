@@ -18,7 +18,7 @@ const AdForm: React.FC<AdFormPropTypes> = ({ }) => {
                 </div>
                 <div className = "adFormBtnContainer">
                     <button className="adFormSubmitBtn" type="submit">Проконсультироваться с экспертом</button>
-                    <span className="adFormLegalText">*Нажимая на кнопку вы даете <Link to="#">согласие на обработку</Link> своих персональных данных</span>
+                    <span className="adFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="adFormLegalText__link">согласие на обработку</Link> своих персональных данных</span>
                 </div>
             </form>
         </div>
