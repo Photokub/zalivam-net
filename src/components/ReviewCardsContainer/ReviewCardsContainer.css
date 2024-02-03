@@ -1,0 +1,14 @@
+.ReviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ReviewCardsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
+  padding: 0 140px;
+  box-sizing: border-box;
+}/*# sourceMappingURL=ReviewCardsContainer.css.map */
