@@ -5,7 +5,7 @@
 .ad {
   display: flex;
   justify-content: center;
-  background: url("../../images/about_BG_image_tablet.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
+  background: url("../../images/about_BG_image.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
   background-size: cover;
 }
 
