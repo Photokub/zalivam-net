@@ -31,4 +31,13 @@
   font-style: normal;
   font-weight: 600;
   line-height: 21px;
+}
+
+@media screen and (max-width: 568px) {
+  .feedback {
+    height: 100%;
+  }
+  .feedbck__wrap {
+    margin: 0;
+  }
 }/*# sourceMappingURL=Feedback.css.map */

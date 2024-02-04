@@ -108,8 +108,7 @@
 @media screen and (max-width: 984px) {
     .feedbackFormContainer {
         max-width: 660px;
-        height: 100%;
-        margin: 0;
+        margin: 28px 0 0 0;
     }
 
     .feedbackForm {
@@ -143,10 +142,12 @@
 @media screen and (max-width: 568px) {
     .feedbackFormContainer {
         max-width: 345px;
+        margin: 28px 0 64px 0;
     }
 
     .feedbackFormBtnContainer {
         align-self: center;
         max-width: 296px;
+        padding: 0;
     }
 }
