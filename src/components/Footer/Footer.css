@@ -1,0 +1,91 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: url("../../images/about_BG_image.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
+  background-size: cover;
+  padding: 70px 140px 0 140px;
+}
+
+.footerTitle {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-variant: all-small-caps;
+}
+
+.footer__contactContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFF;
+}
+
+.footer__leegalTextContainer {
+  margin: 36px 0 44px 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__paragraph {
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.footer__socialMediaIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0 16px 0 0;
+  color: #FFF;
+}
+
+.footer__phoneNumber {
+  margin: 7px 0 0 0;
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.footer__leegalTextParagraph {
+  margin: 0 0 8px 0;
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+
+@media screen and (max-width: 984px) {
+  .footer {
+    padding: 60px 74px 0 74px;
+  }
+  .footer__contactContainer {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 568px) {
+  .footer {
+    padding: 60px 15px 0 15px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

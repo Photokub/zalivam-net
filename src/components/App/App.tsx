@@ -8,6 +8,7 @@ import Methods from '../Methods/Methods'
 import Ad from '../Ad/Ad';
 import Reviews from '../Reviews/Reviews';
 import Feedback from '../Feedback/Feedback';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Ad />
       <Reviews />
       <Feedback />
+      <Footer />
     </div>
   );
 }
