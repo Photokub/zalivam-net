@@ -1,11 +1,13 @@
 .reviews {
   background-color: #FFF;
   padding: 0 0 130px 0;
+  overflow: hidden;
 }
 .reviews .reviews__wrap {
   max-width: 1440px;
   margin: 0 auto;
   padding: 100px 140px 81px 140px;
+  justify-self: start;
 }
 .reviews .reviews__title {
   margin: 0 0 25px 0;
@@ -44,6 +46,12 @@
 }
 
 @media screen and (max-width: 984px) {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .reviews__wrap {
     padding: 100px 74px 81px 74px !important;
   }
