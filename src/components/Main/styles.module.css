@@ -202,7 +202,7 @@
         background-image: url("../../images/background-768.png");
         background-position: 0 104%;
         background-size: contain;
-        padding: 65px 74px 0 74px;
+        padding: 100px 74px 0 74px;
     }
 
     .main__textContainer {
@@ -262,7 +262,7 @@
     }
 
     .main {
-        padding: 18px 16px 0 16px;
+        padding: 100px 16px 0 16px;
         background-size: 768px 258px;
         background-position: bottom;
     }
