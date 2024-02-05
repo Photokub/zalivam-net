@@ -17,7 +17,7 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({ }) => {
                     <input type="text" className="feedbackFormInput" name="feedbackInputEmail" placeholder="Email *" required />
                 </label>
                 <label htmlFor="" className="feedbackForm__field">
-                    <input type="text" className="feedbackFormInput feedbackFormInput_message" name="feedbackInputMessage" placeholder="Сообщение *" required />
+                    <textarea className="feedbackFormInput feedbackFormInput_message" name="feedbackInputMessage" placeholder="Сообщение *" required />
                 </label>
                 <div className="feedbackFormBtnContainer">
                     <button className="feedbackFormSubmitBtn" type="submit">Отправить</button>

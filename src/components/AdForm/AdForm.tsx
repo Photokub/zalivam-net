@@ -14,7 +14,7 @@ const AdForm: React.FC<AdFormPropTypes> = ({ }) => {
                 <div className="adFormInputContainer">
                     <input type="text" className="adFormInput" name="adInputName" placeholder="Ваше имя *" required />
                     <input type="text" className="adFormInput" name="adInputEmail" placeholder="Email *" required />
-                    <input type="text" className="adFormInput adFormInput_message" name="adInputMessage" placeholder="Сообщение *" required />
+                    <textarea className="adFormInput adFormInput_message" name="adInputMessage" placeholder="Сообщение *" required />
                 </div>
                 <div className = "adFormBtnContainer">
                     <button className="adFormSubmitBtn" type="submit">Проконсультироваться с экспертом</button>

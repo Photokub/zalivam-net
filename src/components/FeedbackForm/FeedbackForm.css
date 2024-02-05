@@ -37,6 +37,7 @@
 
 .feedbackFormInput_message {
   height: 158px;
+  resize: none;
 }
 
 .feedbackFormBtnContainer {
