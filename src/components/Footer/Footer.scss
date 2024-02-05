@@ -1,15 +1,21 @@
 @import '../../variables/variaables.scss';
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     background: url("../../images/about_BG_image.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
     background-size: cover;
     padding: 70px 140px 0 140px;
 }
 
+.footer__wrap {
+    max-width: $warp-1440;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .footerTitle {
+    align-self: start;
     margin: 0;
     color: #FFF;
     text-align: center;
@@ -22,7 +28,7 @@
     font-variant: all-small-caps;
 }
 
-.footer__contactContainer{
+.footer__contactContainer {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -30,7 +36,7 @@
     border-bottom: 1px solid #FFF;
 }
 
-.footer__leegalTextContainer{
+.footer__leegalTextContainer {
     margin: 36px 0 44px 0;
     align-self: center;
     display: flex;
@@ -38,7 +44,7 @@
     align-items: center;
 }
 
-.footer__paragraph{
+.footer__paragraph {
     color: #FFF;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
@@ -48,14 +54,14 @@
     line-height: 21px;
 }
 
-.footer__socialMediaIcon{
+.footer__socialMediaIcon {
     width: 24px;
     height: 24px;
     margin: 0 16px 0 0;
     color: #FFF;
 }
 
-.footer__phoneNumber{
+.footer__phoneNumber {
     margin: 7px 0 0 0;
     color: #FFF;
     font-variant-numeric: lining-nums proportional-nums;
@@ -66,7 +72,7 @@
     line-height: 21px;
 }
 
-.footer__leegalTextParagraph{
+.footer__leegalTextParagraph {
     margin: 0 0 8px 0;
     color: #FFF;
     font-variant-numeric: lining-nums proportional-nums;
@@ -78,18 +84,18 @@
     text-align: center;
 }
 
-@media screen and (max-width: 984px){
-.footer{
-    padding: 60px 74px 0 74px;
-}
+@media screen and (max-width: 984px) {
+    .footer {
+        padding: 60px 74px 0 74px;
+    }
 
-    .footer__contactContainer{
+    .footer__contactContainer {
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 568px) {
-    .footer{
+    .footer {
         padding: 60px 15px 0 15px;
     }
 }
