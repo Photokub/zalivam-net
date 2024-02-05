@@ -1,13 +1,14 @@
 .statContainer {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 256px);
+    justify-content: space-between;
+    grid-column-gap: 5px;
+    grid-row-gap: 40px;
 }
 
-
 @media screen and (max-width: 984px) {
-    .statContainer{
+    .statContainer {
         height: 100%;
         display: flex;
         flex-direction: column;
