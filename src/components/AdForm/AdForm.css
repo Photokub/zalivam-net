@@ -1,6 +1,6 @@
 .adFormContainer {
   max-width: 760;
-  height: 379px;
+  min-height: 379px;
   padding: 5px;
   margin: 83px 0;
   border-radius: 4px;
@@ -16,11 +16,12 @@
   border: 1px dashed #D2D1D1;
   border-radius: 4px;
   display: grid;
-  grid-template-columns: repeat(2, fit-content(400px));
+  grid-template-columns: repeat(2, minmax(100px, 376px));
   grid-template-rows: auto auto;
 }
 
 .adFormTitle {
+  max-width: 300px;
   margin: 40px 38px 40px 33px;
   color: var(--Text-bodyText, #171A28);
   font-variant-numeric: lining-nums proportional-nums;
@@ -46,7 +47,7 @@
 }
 
 .adFormInput {
-  width: 296px;
+  max-width: 296px;
   height: 48px;
   padding: 11px 5px 9px 21px;
   border: none;
@@ -60,15 +61,16 @@
 }
 
 .adFormBtnContainer {
+  max-width: 296px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 42px 0 42px;
+  margin: 0 0 40px 0;
 }
 
 .adFormSubmitBtn {
   display: flex;
-  width: 296px;
   height: 48px;
   padding: 22px 28px 20px 28px;
   margin: 0 0 15px 0;
@@ -128,6 +130,7 @@
     flex-direction: column;
   }
   .adFormTitle {
+    max-width: 620px;
     margin: 26px 17px;
   }
   .adFormInputContainer {
@@ -136,10 +139,12 @@
   }
   .adFormInput {
     width: 100%;
+    max-width: unset;
   }
   .adFormBtnContainer {
-    margin-top: 20px;
     padding: 0 0 20px 0;
+    align-self: center;
+    margin: 20px 0 0 0;
   }
   .adFormLegalText {
     align-self: center;

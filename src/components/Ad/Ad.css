@@ -1,5 +1,7 @@
 #womenPhoto {
   z-index: 1;
+  width: auto;
+  height: 100%;
 }
 
 .ad {
@@ -12,7 +14,10 @@
 .ad__wrap {
   display: flex;
   flex-direction: row;
-  max-width: 1440px;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1400px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -44,6 +49,7 @@
     flex-direction: column-reverse;
     align-items: center;
     padding: 71px 54px 0 54px;
+    gap: unset;
   }
   .ad__image {
     margin: 0;
