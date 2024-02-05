@@ -17,11 +17,11 @@
     display: flex;
     flex-direction: row;
     background-color: #F3F3F3;
-    ;
     background-image: url("../../images/main-bg.jpg");
     background-repeat: no-repeat;
     background-position: right;
-    padding: 26px 0 0 140px;
+    padding: 106px 0 0 140px;
+    /* padding: 26px 0 0 140px; */
     overflow: hidden;
 }
 
