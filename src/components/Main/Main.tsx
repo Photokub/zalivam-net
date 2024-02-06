@@ -13,38 +13,39 @@ interface MainPropTypes {
 const Main: React.FC<MainPropTypes> = () => {
     return (
         <section className={styles.main}>
-            <div className={styles.main__textContainer}>
-                <h1 className={styles.main__logo}>Заливам.</h1>
-                <h2 className={styles.main__title}>Вас затопили?<br />
-                    Протекла крыша?<br />
-                    Соседи отрицают свою вину и отказываются возмещать ущерб?
-                    Не беда! Мы поможем Вам!</h2>
-                <h3 className={styles.main__subtitle}>Наши приемущества:</h3>
-                <ul className={styles.main__list}>
-                    <li className={styles.main__listitem}>Предоставление качественных услуг является нашей главной задачей</li>
-                    <li className={styles.main__listitem}>Для нас важен комфорт клиента</li>
-                    <li className={styles.main__listitem}>Мы делаем, а не просто говорим</li>
-                </ul>
-                <button className={styles.main__button} type="button"><FaPhoneAlt className={styles.main__buttonicon} />Заказать звонок</button>
-            </div>
-            <div className={styles.main__imagesContainer}>
-                <div className={styles.main__imageContainer}>
-                    <img src={otinov} alt='Алексей Отинов' id={styles.otinov__photo} />
-                    <NameContainer
-                        title="Алексей Отинов"
-                        subTitle="юрист"
-                        modify="otinov"
-                    />
+            <div className={styles.main__wrap}>
+                <div className={styles.main__textContainer}>
+                    <h1 className={styles.main__logo}>Заливам.</h1>
+                    <h2 className={styles.main__title}>Вас затопили?<br />
+                        Протекла крыша?<br />
+                        Соседи отрицают свою вину и отказываются возмещать ущерб?
+                        Не беда! Мы поможем Вам!</h2>
+                    <h3 className={styles.main__subtitle}>Наши приемущества:</h3>
+                    <ul className={styles.main__list}>
+                        <li className={styles.main__listitem}>Предоставление качественных услуг является нашей главной задачей</li>
+                        <li className={styles.main__listitem}>Для нас важен комфорт клиента</li>
+                        <li className={styles.main__listitem}>Мы делаем, а не просто говорим</li>
+                    </ul>
+                    <button className={styles.main__button} type="button"><FaPhoneAlt className={styles.main__buttonicon} />Заказать звонок</button>
                 </div>
-                <div className={styles.main__imageContainer}>
-                    <img src={gorbunov} alt='Адриан Горбунов' id={styles.gorbunov__photo} />
-                    <NameContainer
-                        title="Адриан Горбунов"
-                        subTitle="юрист"
-                        modify="gorbunov"
-                    />
+                <div className={styles.main__imagesContainer}>
+                    <div className={styles.main__imageContainer}>
+                        <img src={otinov} alt='Алексей Отинов' id={styles.otinov__photo} />
+                        <NameContainer
+                            title="Алексей Отинов"
+                            subTitle="юрист"
+                            modify="otinov"
+                        />
+                    </div>
+                    <div className={styles.main__imageContainer}>
+                        <img src={gorbunov} alt='Адриан Горбунов' id={styles.gorbunov__photo} />
+                        <NameContainer
+                            title="Адриан Горбунов"
+                            subTitle="юрист"
+                            modify="gorbunov"
+                        />
+                    </div>
                 </div>
-
             </div>
         </section>
     )
