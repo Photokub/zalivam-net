@@ -49,28 +49,13 @@
     font-variant: all-small-caps;
 }
 
-.header__nav {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.header__navLink{
-    color: #000;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: "Proxima Nova";
-    font-size: $nav-title;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    font-variant: all-small-caps;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-}
+// .header__nav {
+//     width: 50%;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     gap: 16px;
+// }
 
 .header__contacts {
     width: 284px;

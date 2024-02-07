@@ -1,0 +1,33 @@
+.nav {
+  width: 50%;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0;
+}
+
+.navList__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav__link {
+  color: #000;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: all-small-caps;
+  text-decoration: none;
+  cursor: pointer;
+}/*# sourceMappingURL=Navigation.css.map */
