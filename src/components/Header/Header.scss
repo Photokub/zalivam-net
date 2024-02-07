@@ -3,9 +3,6 @@
 .header {
     width: 100%;
     height: 80px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 calc(140px / 1440px * 100%);
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, .5);
@@ -49,51 +46,35 @@
     font-variant: all-small-caps;
 }
 
-.header__contacts {
-    width: 284px;
+.header__menuAndContactsBlock{
+    max-width: 969px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 0 0 20px;
-    gap: 10px;
-}
-
-.header__contactsAdress {
-    width: 100px;
-
-    color: $text-highlight-color;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: "Proxima Nova";
-    font-size: $nav-title;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-variant: all-small-caps;
-    text-align: start;
-}
-
-.header__contactsPhoneNumber{
-    min-width: 132px;
-    color: $text-highlight-color;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: "Proxima Nova";
-    font-size: $h4-font-size;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-variant: all-small-caps;
+    gap:92px;
 }
 
 @media screen and (max-width: 984px){
     .header{
-        padding: 0 74spx;
+        padding: 0 74px;
+    }
+
+    .header__menuAndContactsBlock{
+        flex-direction: row-reverse;
     }
 }
 
 @media screen and (max-width: 568px){
     .header{
-        padding: 0 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding:  15px;
+    }
+
+    .header__wrap{
+        width: 100%;
     }
 }
