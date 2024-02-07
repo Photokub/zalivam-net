@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css"
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 interface NavigationPropTypes {
 
 }
 
 const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
+
     return (
         <nav className="nav">
             <ul className="navList">
