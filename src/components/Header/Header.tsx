@@ -9,14 +9,6 @@ const Header: React.FC = ({ }) => {
         <header className="header">
             <div className="header__wrap">
                 <p className="header__logo">ЗАЛИВАМ <span className="header__logoHighlight">НЕТ</span></p>
-                {/* <nav className="header__nav">
-                    <Link className="header__navLink" to="#">О нас</Link>
-                    <Link className="header__navLink" to="#">Решения</Link>
-                    <Link className="header__navLink" to="#">Как мы работаем?</Link>
-                    <Link className="header__navLink" to="#">Подать заявку</Link>
-                    <Link className="header__navLink" to="#">Отзывы</Link>
-                    <Link className="header__navLink" to="#">Связаться с нами</Link>
-                </nav> */}
                 <Navigation />
                 <div className="header__contacts">
                     <p className="header__contactsAdress">Москва, Красная пл. д.1</p>
