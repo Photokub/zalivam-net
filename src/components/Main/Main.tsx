@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import { FaPhoneAlt } from "react-icons/fa"
 import gorbunov from '../../images/gorbunov-main.png';
 import otinov from '../../images/otinov-main.png'
-import { NameContainer } from "../NameContainer/NameContainer";
+import  NameContainer  from "../NameContainer/NameContainer";
 
 
 interface MainPropTypes {
@@ -34,7 +34,7 @@ const Main: React.FC<MainPropTypes> = () => {
                         <NameContainer
                             title="Алексей Отинов"
                             subTitle="юрист"
-                            modify="otinov"
+                            id="otinovNameContainer"
                         />
                     </div>
                     <div className={styles.main__imageContainer}>
@@ -42,7 +42,7 @@ const Main: React.FC<MainPropTypes> = () => {
                         <NameContainer
                             title="Адриан Горбунов"
                             subTitle="юрист"
-                            modify="gorbunov"
+                            id="gorbunovNameContainer"
                         />
                     </div>
                 </div>

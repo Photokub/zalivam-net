@@ -20,8 +20,7 @@
     background-image: url("../../images/main-bg.jpg");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 35%;
-    background-attachment: fixed;
+    background-size: contain;
     padding: 106px 0 0 0;
     overflow: hidden;
 }
@@ -168,7 +167,7 @@
 .main__imageContainer {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
 }
 
 @media screen and (max-width: 1265px) {
@@ -203,7 +202,6 @@
     #otinov__photo {
         height: 504px;
         top: 32px;
-        left: -20px;
     }
 
     .main {
@@ -224,11 +222,16 @@
     }
 
     .main__imagesContainer {
+        width:100%;
         display: flex;
         align-self: flex-end;
         justify-content: start;
         right: 17px;
         margin: 0 auto;
+    }
+
+    .main__imageContainer{
+        width: 50%;
     }
 
     .main__logo {
@@ -272,7 +275,6 @@
 
     #otinov__photo {
         height: 388px;
-        left: 35px;
     }
 
     .main {
@@ -289,12 +291,10 @@
 @media screen and (max-width: 375px) {
     #gorbunov__photo {
         height: 388px;
-        left: -95px;
     }
 
     #otinov__photo {
         height: 388px;
-        left: -38px;
     }
 
     .main {

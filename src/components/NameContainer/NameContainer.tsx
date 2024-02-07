@@ -1,30 +1,29 @@
 import React from "react";
-import styles from './styles.module.css';
-import './NameContainer.css'
+import "./NameContainer.css";
 
 interface NameContainerPropTypes {
     title: string;
     subTitle: string;
-    modify: string;
+    id: string;
 }
 
 const NameContainer: React.FC<NameContainerPropTypes> = ({
     title,
     subTitle,
-    modify
+    id
 }) => {
 
-     const classes = styles.nameContainer + ' ' + `nameContainer_${modify}`
     return (
         <div
-        className = {classes}
+            className="nameContainer"
+            id={id}
         >
-            <p className={styles.nameContainerTitle}>{title}</p>
-            <p className={styles.nameContainerSubtitle}>{subTitle}</p>
+            <p className="nameContainerTitle">{title}</p>
+            <p className="nameContainerSubtitle">{subTitle}</p>
         </div>
     )
 }
 
-export { NameContainer }
+export default NameContainer;
 
 

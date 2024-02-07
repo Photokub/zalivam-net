@@ -1,53 +1,58 @@
-.nameContainer_gorbunov {
-    border-radius: 20px 20px 0 20px;
-    right: 280px;
+#otinovNameContainer {
+  border-radius: 0 20px 20px 20px;
 }
 
-.nameContainer_otinov {
-    border-radius: 0 20px 20px 20px;
-    left: 75px;
+#gorbunovNameContainer {
+  border-radius: 20px 20px 0 20px;
+}
+
+.nameContainer {
+  max-height: 88px;
+  min-height: 74px;
+  width: 212px;
+  background-color: #F3F3F3;
+  padding: 16px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 76px;
+  color: #171A28;
+  z-index: 2;
+}
+
+.nameContainerTitle {
+  margin: 0 0 4px 0;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.nameContainerSubtitle {
+  margin: 0;
+  font-family: Proxima Nova;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 @media screen and (max-width: 984px) {
-    .nameContainer_gorbunov {
-        right: 0;
-        left: 293px;
-    }
-
-    .nameContainer_otinov {
-        left: 40px;
-    }
+  .nameContainer {
+    margin: 0 auto;
+  }
 }
-
-@media screen and (max-width: 768px) {
-    .nameContainer_gorbunov {
-        left: 293px;
-        bottom: 20px;
-    }
-
-    .nameContainer_otinov{
-        left: 40px;
-        bottom: 20px;
-
-    }
-}
-
 @media screen and (max-width: 568px) {
-    .nameContainer_gorbunov {
-        left: 280px;
-    }
-
-    .nameContainer_otinov {
-        left: 100px;
-    }
+  .nameContainer {
+    width: 107px;
+    bottom: 26px;
+  }
 }
-
 @media screen and (max-width: 375px) {
-    .nameContainer_gorbunov {
-        left: 90px;
-    }
-
-    .nameContainer_otinov {
-        left: 20px;
-    }
-}
+  #otinovNameContainer {
+    left: 40px;
+  }
+  #gorbunovNameContainer {
+    right: 6px;
+  }
+}/*# sourceMappingURL=NameContainer.css.map */
