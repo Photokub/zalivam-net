@@ -39,4 +39,10 @@
   color: var(--Header, #07F);
   font-size: 43px;
   margin: 0;
+}
+
+@media screen and (max-width: 568px) {
+  .statElement__title {
+    font-size: 64px;
+  }
 }/*# sourceMappingURL=StatElement.css.map */
