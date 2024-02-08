@@ -1,13 +1,63 @@
+@import '../../variables/variaables.scss';
+
 .popup {
     width: 100%;
-    position:fixed;
-    top:0;
+    position: fixed;
+    top: 0;
     justify-content: center;
     background-color: rgba(0, 0, 0, .9);
-    display:flex;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     height: 100%;
     z-index: 3;
-    // opacity: 0;
+    opacity: 1;
     transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+
+.popup__container {
+    max-width: 482px;
+    max-height: 770px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup_closeButton {
+    width: 44px;
+    height: 44px;
+    align-self: end;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.popup_closeButtonImg {
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.popup__figure {
+    width: 482px;
+    height: 770px;
+    margin: 7px 0;
+}
+
+.popup__image {
+    width: 100%;
+    height: auto;
+}
+
+.popup__caption {
+    text-align: center;
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: $paragraph-font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
 }

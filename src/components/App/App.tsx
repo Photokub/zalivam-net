@@ -17,7 +17,6 @@ function App() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   //Определение размеров окна START//
-
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -32,7 +31,6 @@ function App() {
     const { innerWidth, innerHeight } = window;
     return { innerWidth, innerHeight };
   }
-
   //Определение размеров окна END//
 
 
@@ -41,6 +39,7 @@ function App() {
       <Header
         windowSize={windowSize}
       />
+      <Popup children={undefined} />
       <Main />
       <About />
       <Solutions />
