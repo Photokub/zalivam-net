@@ -7,6 +7,12 @@
   gap: 10px;
 }
 
+.contacts_hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
 .contacts__adress {
   width: 100px;
   color: #0077FF;
@@ -32,12 +38,4 @@
   font-weight: 600;
   line-height: normal;
   font-variant: all-small-caps;
-}
-
-@media screen and (max-width: 568px) {
-  .contacts {
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-  }
 }/*# sourceMappingURL=Contacts.css.map */

@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./BurgerMenu.css"
 import { Link, NavLink } from "react-router-dom";
+import Contacts from "../Contacts/Contacts";
 
 interface BurgerMunuPropTypes {
-    value?: boolean
+    value?: boolean,
+    windowSize: any;
 }
 
-const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({ value}) => {
+const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
+    value,
+    windowSize
+}) => {
 
     const page = document.body
     const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
@@ -35,7 +40,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({ value}) => {
                 <ul className='burger-menu-list'>
                     <li className='burger-menu-list__string'>
                         <Link to='#'
-                        className='burger-menu__list-navlink'>О нас</Link>
+                            className='burger-menu__list-navlink'>О нас</Link>
                     </li>
                     <li className='burger-menu-list__string'>
                         <NavLink
@@ -61,6 +66,9 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({ value}) => {
                         <NavLink
                             className="burger-menu__list-navlink"
                             to='#'>Связаться с нами</NavLink>
+                    </li>
+                    <li className='burger-menu-list__string'>
+                        {windowSize.innerWidth <= 568 && <Contacts displayStyle=""/>}
                     </li>
                 </ul>
                 <span className='burger__substrate' />

@@ -6,33 +6,33 @@ import Navigation from "../Navigation/Navigation";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Contacts from "../Contacts/Contacts";
 
-const Header: React.FC = ({ }) => {
+interface HeaderPropTypes {
+    windowSize?: {
+        innerWidth?: number,
+    },
+}
 
-    const [windowSize, setWindowSize] = useState(getWindowSize());
-
-    useEffect(() => {
-        function handleWindowResize() {
-            setWindowSize(getWindowSize());
-        }
-        window.addEventListener('resize', handleWindowResize);
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        }
-    });
-
-    function getWindowSize() {
-        const { innerWidth, innerHeight } = window;
-        return { innerWidth, innerHeight };
-    }
-
+const Header: React.FC<HeaderPropTypes> = ({ windowSize }) => {
 
     return (
         <header className="header">
             <div className="header__wrap">
                 <p className="header__logo">ЗАЛИВАМ <span className="header__logoHighlight">НЕТ</span></p>
                 <div className="header__menuAndContactsBlock">
-                    {windowSize.innerWidth <= 984 ? <BurgerMenu /> : <Navigation />}
-                    <Contacts />
+                    {windowSize!.innerWidth! <= 984 ?
+                        <BurgerMenu
+                            windowSize={windowSize}
+                        /> : <Navigation />}
+                    {windowSize!.innerWidth! >= 568 ?
+                        <Contacts
+                            windowSize={windowSize}
+                            displayStyle=""
+                        /> :
+                        <Contacts
+                            windowSize={windowSize}
+                            displayStyle="contacts_hidden"
+                        />
+                    }
                 </div>
             </div>
         </header>
