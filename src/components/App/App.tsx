@@ -39,7 +39,7 @@ function App() {
       <Header
         windowSize={windowSize}
       />
-      <Popup children={undefined} />
+      {/* <Popup children={undefined} /> */}
       <Main />
       <About />
       <Solutions />
