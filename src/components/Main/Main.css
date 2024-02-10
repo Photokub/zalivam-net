@@ -1,0 +1,290 @@
+@charset "UTF-8";
+#gorbunov__photo {
+  z-index: 0;
+  position: relative;
+  top: 1px;
+  left: 40px;
+}
+
+#otinov__photo {
+  z-index: 1;
+}
+
+.main {
+  background-color: #F3F3F3;
+  background-image: url("../../images/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  padding: 106px 0 0 0;
+  overflow: hidden;
+}
+
+.main__wrap {
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: minmax(400px, 637px) auto;
+  overflow: hidden;
+  padding: 0 0 0 140px;
+}
+
+.main__textContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 89px;
+}
+
+.main__imagesContainer {
+  display: grid;
+  grid-template-columns: 1fr minmax(160px, 800px);
+  align-self: flex-end;
+  justify-content: start;
+  right: 70px;
+  position: relative;
+}
+
+.main__image {
+  width: auto;
+  height: 100%;
+}
+
+.main__logo {
+  color: #000;
+  max-width: 700px;
+  margin: 0 0 32px 0;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+}
+
+.main__logo::after {
+  content: "НЕТ";
+  color: #07F;
+}
+
+.main__title {
+  max-width: 637px;
+  color: var(--Text-bodyText, #171A28);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 40px;
+  margin: 0 0 96px 0;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: left;
+}
+
+.main__subtitle {
+  max-width: 522px;
+  margin: 0 0 20px 0;
+  color: var(--Text-bodyText, #171A28);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+}
+
+.main__paragraph {
+  max-width: 522px;
+  color: var(--Text-titleText, #454545);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.main__list {
+  max-width: 455px;
+  text-align: left;
+  padding: 0;
+  margin: 0 20px 17px 25px;
+}
+
+.main__listitem {
+  margin: 0 0 24px 0;
+  list-style-type: none;
+  position: relative;
+  list-style-position: inside;
+  letter-spacing: 0.75px;
+  line-height: normal;
+}
+
+.main__listitem::before {
+  content: url("../../images/check 1.svg");
+  width: 17px;
+  height: 17px;
+  padding-right: 8px;
+  position: absolute;
+  left: -25px;
+}
+
+.main__button {
+  display: flex;
+  width: 296px;
+  height: 62px;
+  padding: 0 60px;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--Buttons, #3390EC);
+  box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.17);
+  transition: 0.25s;
+  color: #fff;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.main__button:hover {
+  background: var(--Buttons, #539de8);
+  box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.35);
+}
+
+.main__button:active {
+  transform: translateX(1px) translateY(1px);
+}
+
+.main__buttonicon {
+  width: 24px;
+  height: 24px;
+}
+
+.main__imageContainer {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1450px) {
+  .main__wrap {
+    overflow: visible;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .main__wrap {
+    grid-template-columns: minmax(360px, 460px) 1fr;
+  }
+}
+@media screen and (max-width: 1124px) {
+  .main__wrap {
+    padding: 0 0 0 50px;
+  }
+  .main__title {
+    margin: 0 0 36px 0;
+  }
+}
+@media screen and (max-width: 984px) {
+  #gorbunov__photo {
+    position: relative;
+    height: 503px;
+    right: 0;
+    left: 0;
+    top: 32px;
+  }
+  #otinov__photo {
+    height: 504px;
+    top: 32px;
+  }
+  .main {
+    background-image: url("../../images/background-768.png");
+    background-position: 0 104%;
+    background-size: contain;
+    background-attachment: unset;
+    padding: 100px 74px 0 74px;
+  }
+  .main__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    flex-direction: column;
+    overflow: visible;
+  }
+  .main__textContainer {
+    margin-bottom: 0;
+  }
+  .main__imagesContainer {
+    width: 100%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: start;
+    right: 0;
+    margin: 0 auto;
+  }
+  .main__imageContainer {
+    width: 50%;
+  }
+  .main__logo {
+    font-size: 36px;
+    margin: 0 0 16px 0;
+  }
+  .main__title {
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 0 68px 0;
+  }
+  .main__subtitle {
+    margin: 0 0 23px 0;
+  }
+  .main__list {
+    max-width: 100%;
+    margin: 0 0 6px 25px;
+  }
+  .main__listitem {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 0 27px 0;
+  }
+  .main__button {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 568px) {
+  #gorbunov__photo {
+    height: 388px;
+    left: 25px;
+  }
+  #otinov__photo {
+    height: 388px;
+  }
+  .main {
+    padding: 100px 16px 0 16px;
+    background-size: 768px 258px;
+    background-position: bottom;
+  }
+  .main__textContainer {
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #gorbunov__photo {
+    height: 388px;
+  }
+  #otinov__photo {
+    height: 388px;
+  }
+  .main {
+    padding: 100px 16px 0 16px;
+    background-size: 768px 258px;
+    background-position: bottom;
+  }
+  .main__textContainer {
+    margin-bottom: 45px;
+  }
+}/*# sourceMappingURL=Main.css.map */
