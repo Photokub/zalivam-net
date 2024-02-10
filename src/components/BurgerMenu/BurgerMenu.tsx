@@ -4,12 +4,12 @@ import { Link, NavLink } from "react-router-dom";
 import Contacts from "../Contacts/Contacts";
 
 interface BurgerMunuPropTypes {
-    value?: boolean,
+    // value?: boolean,
     windowSize: any;
 }
 
 const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
-    value,
+    // value,
     windowSize
 }) => {
 

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css"
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 interface NavigationPropTypes {
 
