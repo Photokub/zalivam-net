@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/zalivam-net/static/css/main.f3de2ab8.css",
-    "main.js": "/zalivam-net/static/js/main.21c4ca57.js",
+    "main.css": "/zalivam-net/static/css/main.09277fdc.css",
+    "main.js": "/zalivam-net/static/js/main.96067992.js",
     "static/js/787.3a0a764e.chunk.js": "/zalivam-net/static/js/787.3a0a764e.chunk.js",
     "static/media/main-bg.jpg": "/zalivam-net/static/media/main-bg.495618dd07eee429c62c.jpg",
     "static/media/gorbunov-main.png": "/zalivam-net/static/media/gorbunov-main.fafd50d46dcce915a67a.png",
     "static/media/background-768.png": "/zalivam-net/static/media/background-768.123f104dc7a2ed4c194b.png",
     "static/media/otinov-main.png": "/zalivam-net/static/media/otinov-main.ebfe07bc73078cf36218.png",
     "static/media/about_BG_image.png": "/zalivam-net/static/media/about_BG_image.8380c275759f9ec97713.png",
-    "static/media/ad-image.png": "/zalivam-net/static/media/ad-image.f5726749c1445f8e028b.png",
+    "static/media/ad-image.png": "/zalivam-net/static/media/ad-image.66929d7f9bc385d71b7e.png",
     "static/media/certificate.png": "/zalivam-net/static/media/certificate.245eb9d3ab8f307eddd0.png",
     "static/media/ProximaNova-Regular.woff": "/zalivam-net/static/media/ProximaNova-Regular.99528640efded3e12591.woff",
     "static/media/ProximaNova-Bold.woff": "/zalivam-net/static/media/ProximaNova-Bold.1f267da183b3d4fe3d5b.woff",
@@ -17,12 +17,12 @@
     "static/media/header_phone_icon.svg": "/zalivam-net/static/media/header_phone_icon.ff91174ad102895930e6ef934b5e45da.svg",
     "static/media/check 1.svg": "/zalivam-net/static/media/check 1.e6df7214e298441f5c95.svg",
     "index.html": "/zalivam-net/index.html",
-    "main.f3de2ab8.css.map": "/zalivam-net/static/css/main.f3de2ab8.css.map",
-    "main.21c4ca57.js.map": "/zalivam-net/static/js/main.21c4ca57.js.map",
+    "main.09277fdc.css.map": "/zalivam-net/static/css/main.09277fdc.css.map",
+    "main.96067992.js.map": "/zalivam-net/static/js/main.96067992.js.map",
     "787.3a0a764e.chunk.js.map": "/zalivam-net/static/js/787.3a0a764e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3de2ab8.css",
-    "static/js/main.21c4ca57.js"
+    "static/css/main.09277fdc.css",
+    "static/js/main.96067992.js"
   ]
 }
