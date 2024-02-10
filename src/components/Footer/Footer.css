@@ -82,6 +82,11 @@
   text-align: center;
 }
 
+@media screen and (max-width: 1124px) {
+  .footer {
+    padding: 70px 50px 0 50px;
+  }
+}
 @media screen and (max-width: 984px) {
   .footer {
     padding: 60px 74px 0 74px;

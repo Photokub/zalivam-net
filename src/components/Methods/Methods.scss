@@ -29,6 +29,12 @@
     margin: 34px 0 0 0;
 }
 
+@media screen and (max-width: 1124px){
+    .methods__warp {
+        padding: 100px 50px 150px 50px;
+    }
+}
+
 @media screen and (max-width: 984px) {
     .methods__warp {
         padding: 100px 74px 148px 74px;

@@ -20,6 +20,11 @@
   line-height: normal;
 }
 
+@media screen and (max-width: 1124px) {
+  .about__wrap {
+    padding: 100px 50px 158px 50px;
+  }
+}
 @media screen and (max-width: 984px) {
   .about {
     height: 1138px;
