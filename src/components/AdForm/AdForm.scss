@@ -56,11 +56,14 @@
     border-radius: 5px;
     box-sizing: border-box;
     background: #F9F9F9;
+    margin-bottom: 20px;
 }
 
 .adFormInput_message {
-    height: 158px;
+    height: 100%;
+    //height: 158px;
     resize: none;
+    margin-bottom: 0;
 }
 
 .adFormBtnContainer {
@@ -175,6 +178,11 @@
     .adFormInput {
         width: 100%;
         max-width: unset;
+        margin-bottom: unset;
+    }
+
+    .adFormInput_message {
+        min-height: 208px;
     }
 
     .adFormBtnContainer {
