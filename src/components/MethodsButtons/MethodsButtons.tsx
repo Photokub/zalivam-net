@@ -1,25 +1,35 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import "./MethodsButtons.css"
 import { BsArrowLeft } from "react-icons/bs"
 import { BsArrowRight } from "react-icons/bs"
 import MethodsButton from "../MethodsButton/MethodsButton";
 
 interface MethodsButtonsPropTypes {
-
+    clickToNextMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
+    clickToPreviousMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
 };
 
-const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({ }) => {
+const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({ 
+    clickToNextMethod,
+    clickToPreviousMethod
+}) => {
+
+
     return (
         <div className="methodsButtons">
             <MethodsButton
                 icon={<BsArrowLeft className="methodsButton__icon"/>}
                 label="Предыдущий шаг"
-                buttonClass="methodsButton"
+                buttonClass="methodsButton methodsButton__back"
+                clickToNextMethod={clickToNextMethod}
+                clickToPreviousMethod={clickToPreviousMethod}
             />
             <MethodsButton
                 icon={<BsArrowRight className="methodsButton__icon"/>}
                 label="Следующий шаг"
-                buttonClass="methodsButton methodsButton__right"
+                buttonClass="methodsButton methodsButton__next"
+                clickToNextMethod={clickToNextMethod}
+                clickToPreviousMethod={clickToPreviousMethod}
             />
         </div>
     )

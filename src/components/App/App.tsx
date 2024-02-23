@@ -11,8 +11,33 @@ import Feedback from '../Feedback/Feedback';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
+import MethodsData from '../../data/MethodsData.json'
 
 function App() {
+
+  const [selectedMethod, setSelectedMethod] = useState(0)
+
+  const MethodsDataArray = MethodsData.steps
+
+  //сделать переход по массиву кнопками
+
+  useEffect(() => {
+
+  })
+
+  const clickToNextMethod = () => {
+    setSelectedMethod(selectedMethod + 1)
+    console.log(selectedMethod)
+  }
+
+  const clickToPreviousMethod = () => {
+    setSelectedMethod(selectedMethod - 1)
+    console.log(selectedMethod)
+
+  }
+  //сделать выбор активного метода
+  //пеедать данные активного метода в элемент Method focus
+
 
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -43,7 +68,11 @@ function App() {
       <Main />
       <About />
       <Solutions />
-      <Methods />
+      <Methods
+        MethodsDataArray={MethodsDataArray}
+        clickToNextMethod={clickToNextMethod}
+        clickToPreviousMethod={clickToPreviousMethod}
+      />
       <Ad />
       <Reviews />
       <Feedback />

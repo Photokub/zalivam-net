@@ -1,10 +1,13 @@
-import React, { ReactNode, useState, useEffect } from "react";
+import React, { ReactNode, useState, useEffect, MouseEventHandler } from "react";
 import "./MethodsButton.css"
 
 interface MethodsButtonPropTypes {
     icon: ReactNode;
     label: string;
     buttonClass: string;
+    clickToNextMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
+    clickToPreviousMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
+
 }
 
 const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
@@ -13,14 +16,19 @@ const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
     buttonClass,
 }) => {
 
-    const button = <button className={buttonClass} type="button">
+    const handleClickType = (event: any) => {    
+        event.currentTarget.classList.contains("methodsButton__next") ? console.log('вперед') : console.log('назад')    
+    }
+
+    const button = <button className={buttonClass} type="button" onClick={(event) => handleClickType(event)}>
         {icon}
         {label}
     </button>
 
-    const buttonSmall = <button className="methodsButton methodsButton_small" type="button">
+    const buttonSmall = <button className={"methodsButton_small" + " " + `${buttonClass}`} type="button" onClick={(event) => handleClickType(event)}>
         {icon}
     </button>
+
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 

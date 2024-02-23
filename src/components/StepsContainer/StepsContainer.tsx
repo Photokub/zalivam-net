@@ -4,17 +4,22 @@ import "../StepCard/StepCard"
 import StepCard from "../StepCard/StepCard";
 
 interface StepsContainerProptypes {
-
+    MethodsDataArray: []
 };
 
-const StepsContainer: React.FC<StepsContainerProptypes> = ({ }) => {
+const StepsContainer: React.FC<StepsContainerProptypes> = ({
+    MethodsDataArray
+}) => {
     return (
         <div className="stepsContainer">
-            <StepCard />
-            <StepCard />
-            <StepCard />
-            <StepCard />
-            <StepCard />
+            {
+                MethodsDataArray.map((data: any, id: number) =>
+                    <StepCard key={id}
+                        id={data.id}
+                        stepName={data.stepName}
+                    />
+                )
+            }
         </div>
     )
 }
