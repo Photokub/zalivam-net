@@ -7,29 +7,39 @@ import MethodsButton from "../MethodsButton/MethodsButton";
 interface MethodsButtonsPropTypes {
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
+    // disableBackButton: boolean,
+    // disableNextButton: boolean
 };
 
-const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({ 
+const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({
     clickToNextMethod,
-    clickToPreviousMethod
+    clickToPreviousMethod,
+    // disableBackButton,
+    // disableNextButton
 }) => {
 
 
     return (
         <div className="methodsButtons">
             <MethodsButton
-                icon={<BsArrowLeft className="methodsButton__icon"/>}
+                id="backBtn"
+                icon={<BsArrowLeft className="methodsButton__icon" />}
                 label="Предыдущий шаг"
                 buttonClass="methodsButton methodsButton__back"
                 clickToNextMethod={clickToNextMethod}
                 clickToPreviousMethod={clickToPreviousMethod}
+                // disableBackButton={disableBackButton}
+                // disableNextButton={disableNextButton}
             />
             <MethodsButton
-                icon={<BsArrowRight className="methodsButton__icon"/>}
+                id="nextBtn"
+                icon={<BsArrowRight className="methodsButton__icon" />}
                 label="Следующий шаг"
                 buttonClass="methodsButton methodsButton__next"
                 clickToNextMethod={clickToNextMethod}
                 clickToPreviousMethod={clickToPreviousMethod}
+                // disableBackButton={disableBackButton}
+                // disableNextButton={disableNextButton}
             />
         </div>
     )

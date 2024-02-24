@@ -2,32 +2,37 @@ import React, { ReactNode, useState, useEffect, MouseEventHandler } from "react"
 import "./MethodsButton.css"
 
 interface MethodsButtonPropTypes {
+    id: string,
     icon: ReactNode;
     label: string;
     buttonClass: string;
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
-
+    // disableBackButton: boolean,
+    // disableNextButton: boolean
 }
 
 const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
+    id,
     icon,
     label,
     buttonClass,
     clickToNextMethod,
-    clickToPreviousMethod
+    clickToPreviousMethod,
+    // disableNextButton,
+    // disableBackButton,
 }) => {
 
-    const handleClickType = (event: any) => {    
-        event.currentTarget.classList.contains("methodsButton__next") ? clickToNextMethod(event) : clickToPreviousMethod(event)    
+    const handleClickType = (event: any) => {
+        event.currentTarget.classList.contains("methodsButton__next") ? clickToNextMethod(event) : clickToPreviousMethod(event)
     }
 
-    const button = <button className={buttonClass} type="button" onClick={(event) => handleClickType(event)}>
+    const button = <button id={id} className={buttonClass} type="button" onClick={(event) => handleClickType(event)}>
         {icon}
         {label}
     </button>
 
-    const buttonSmall = <button className={"methodsButton_small" + " " + `${buttonClass}`} type="button" onClick={(event) => handleClickType(event)}>
+    const buttonSmall = <button id={id} className={"methodsButton_small" + " " + `${buttonClass}`} type="button" onClick={(event) => handleClickType(event)}>
         {icon}
     </button>
 

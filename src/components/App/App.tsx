@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Main from '../Main/Main';
@@ -15,13 +15,20 @@ import MethodsData from '../../data/MethodsData.json'
 
 function App() {
 
-  const [selectedMethod, setSelectedMethod] = useState(0)
+  const [selectedMethod, setSelectedMethod] = useState(0);
+  const [disableBackButton, setDisableBackButon] = useState(true);
+  const [disableNextButton, setDisableNextButon] = useState(false);
+  const [methodButtonsArray, setMethodButtonsArray] = useState<Element[]>([]);
+  const [nextBtn, setNextBtn] = useState<any>({});
+  const [backBtn, setBackBtn] = useState<any>({});
 
-//Методы навигации по шагам блока Methods START//
+  //Методы навигации по шагам блока Methods START//
   const MethodsDataArray = MethodsData.steps
 
   useEffect(() => {
     console.log(selectedMethod)
+    selectedMethod <= 0 ? setDisableBackButon(true) : setDisableBackButon(false);
+    selectedMethod >= MethodsDataArray.length - 1 ? setDisableNextButon(true) : setDisableNextButon(false);
   })
 
   const clickToNextMethod = (e: MouseEvent) => {
@@ -30,6 +37,33 @@ function App() {
 
   const clickToPreviousMethod = (e: MouseEvent) => {
     setSelectedMethod(selectedMethod - 1)
+  }
+
+  useEffect(() => {
+    const methdoButtons = document.querySelectorAll(".methodsButton")
+    const nextButton = document.querySelector("#nextBtn")
+    const backButton = document.querySelector("#backBtn")
+    setNextBtn(nextButton)
+    setBackBtn(backButton)
+    const methodButtonsArr = Array.from(methdoButtons)
+    setMethodButtonsArray(methodButtonsArr)
+  }, [])
+
+  useEffect(() => {
+    nextBtn.disabled = disableNextButton
+    backBtn.disabled = disableBackButton
+    setDisabledStyle(nextBtn)
+    setDisabledStyle(backBtn)
+  })
+
+  function setDisabledStyle(item: any) {
+    if (item.style != undefined) {
+      if (item.disabled) {
+        item.style.opacity = .4
+      } else {
+        item.style.opacity = 1
+      }
+    }
   }
   //Методы навигации по шагам блока Methods END//
 
@@ -69,6 +103,8 @@ function App() {
         clickToNextMethod={clickToNextMethod}
         clickToPreviousMethod={clickToPreviousMethod}
         selectedMethod={selectedMethod}
+      // disableBackButton={disableBackButton}
+      // disableNextButton={disableNextButton}
       />
       <Ad />
       <Reviews />

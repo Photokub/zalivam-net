@@ -9,14 +9,18 @@ interface MethodsPropTypes {
     MethodsDataArray: { id: number; stepName: string; stepText: string; }[],
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
-    selectedMethod: number
+    selectedMethod: number,
+    // disableBackButton: boolean,
+    // disableNextButton: boolean
 }
 
 const Methods: React.FC<MethodsPropTypes> = ({
     MethodsDataArray,
     selectedMethod,
     clickToNextMethod,
-    clickToPreviousMethod
+    clickToPreviousMethod,
+    // disableBackButton,
+    // disableNextButton
 }) => {
     return (
         <section className='methods'>
@@ -33,6 +37,8 @@ const Methods: React.FC<MethodsPropTypes> = ({
                 <MethodsButtons
                     clickToNextMethod={clickToNextMethod}
                     clickToPreviousMethod={clickToPreviousMethod}
+                    // disableBackButton={disableBackButton}
+                    // disableNextButton={disableNextButton}
                 />
             </div>
         </section>
