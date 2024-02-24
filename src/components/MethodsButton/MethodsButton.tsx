@@ -5,8 +5,8 @@ interface MethodsButtonPropTypes {
     icon: ReactNode;
     label: string;
     buttonClass: string;
-    clickToNextMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
-    clickToPreviousMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
+    clickToNextMethod: (e: MouseEvent) => void,
+    clickToPreviousMethod: (e: MouseEvent) => void,
 
 }
 
@@ -14,10 +14,12 @@ const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
     icon,
     label,
     buttonClass,
+    clickToNextMethod,
+    clickToPreviousMethod
 }) => {
 
     const handleClickType = (event: any) => {    
-        event.currentTarget.classList.contains("methodsButton__next") ? console.log('вперед') : console.log('назад')    
+        event.currentTarget.classList.contains("methodsButton__next") ? clickToNextMethod(event) : clickToPreviousMethod(event)    
     }
 
     const button = <button className={buttonClass} type="button" onClick={(event) => handleClickType(event)}>

@@ -5,8 +5,8 @@ import { BsArrowRight } from "react-icons/bs"
 import MethodsButton from "../MethodsButton/MethodsButton";
 
 interface MethodsButtonsPropTypes {
-    clickToNextMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
-    clickToPreviousMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
+    clickToNextMethod: (e: MouseEvent) => void,
+    clickToPreviousMethod: (e: MouseEvent) => void,
 };
 
 const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({ 

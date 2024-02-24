@@ -17,26 +17,22 @@ function App() {
 
   const [selectedMethod, setSelectedMethod] = useState(0)
 
+//Методы навигации по шагам блока Methods START//
   const MethodsDataArray = MethodsData.steps
 
-  //сделать переход по массиву кнопками
-
   useEffect(() => {
-
+    console.log(selectedMethod)
   })
 
-  const clickToNextMethod = () => {
+  const clickToNextMethod = (e: MouseEvent) => {
     setSelectedMethod(selectedMethod + 1)
-    console.log(selectedMethod)
   }
 
-  const clickToPreviousMethod = () => {
+  const clickToPreviousMethod = (e: MouseEvent) => {
     setSelectedMethod(selectedMethod - 1)
-    console.log(selectedMethod)
-
   }
-  //сделать выбор активного метода
-  //пеедать данные активного метода в элемент Method focus
+  //Методы навигации по шагам блока Methods END//
+
 
 
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -72,6 +68,7 @@ function App() {
         MethodsDataArray={MethodsDataArray}
         clickToNextMethod={clickToNextMethod}
         clickToPreviousMethod={clickToPreviousMethod}
+        selectedMethod={selectedMethod}
       />
       <Ad />
       <Reviews />

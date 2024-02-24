@@ -6,13 +6,15 @@ import MethodFocus from '../MethodFocus/MethodFocus';
 import MethodsButtons from '../MethodsButtons/MethodsButtons';
 
 interface MethodsPropTypes {
-    MethodsDataArray: [],
-    clickToNextMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
-    clickToPreviousMethod: (event: MouseEventHandler<HTMLButtonElement>) => {},
+    MethodsDataArray: { id: number; stepName: string; stepText: string; }[],
+    clickToNextMethod: (e: MouseEvent) => void,
+    clickToPreviousMethod: (e: MouseEvent) => void,
+    selectedMethod: number
 }
 
 const Methods: React.FC<MethodsPropTypes> = ({
     MethodsDataArray,
+    selectedMethod,
     clickToNextMethod,
     clickToPreviousMethod
 }) => {
@@ -26,6 +28,7 @@ const Methods: React.FC<MethodsPropTypes> = ({
                 <hr className="methods__bottomline" />
                 <MethodFocus
                     MethodsDataArray={MethodsDataArray}
+                    selectedMethod={selectedMethod}
                 />
                 <MethodsButtons
                     clickToNextMethod={clickToNextMethod}

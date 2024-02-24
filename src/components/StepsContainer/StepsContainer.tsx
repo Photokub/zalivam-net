@@ -4,7 +4,7 @@ import "../StepCard/StepCard"
 import StepCard from "../StepCard/StepCard";
 
 interface StepsContainerProptypes {
-    MethodsDataArray: []
+    MethodsDataArray: { id: number; stepName: string; stepText: string; }[]
 };
 
 const StepsContainer: React.FC<StepsContainerProptypes> = ({
