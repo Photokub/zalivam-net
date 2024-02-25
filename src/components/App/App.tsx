@@ -12,15 +12,18 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
 import MethodsData from '../../data/MethodsData.json'
+import { act } from '@testing-library/react';
 
 function App() {
 
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
-  const [methodButtonsArray, setMethodButtonsArray] = useState<Element[]>([]);
+  // const [methodButtonsArray, setMethodButtonsArray] = useState<Element[]>([]);
+  const [stepCardsArray, setStepCardsArray] = useState<Element[]>([]);
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
+  const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([])
 
   //Методы навигации по шагам блока Methods START//
   const MethodsDataArray = MethodsData.steps
@@ -40,13 +43,20 @@ function App() {
   }
 
   useEffect(() => {
-    const methdoButtons = document.querySelectorAll(".methodsButton")
+    // const methdoButtons = document.querySelectorAll(".methodsButton")
+    const stepCards = document.querySelectorAll(".stepCard")
+    const checkMarks = document.querySelectorAll(".stepCard__checkmark")
     const nextButton = document.querySelector("#nextBtn")
     const backButton = document.querySelector("#backBtn")
+    // const methodButtonsArr = Array.from(methdoButtons)
+    const stepCardsArr = Array.from(stepCards)
+    const cardCheckMarksArr = Array.from(checkMarks)
     setNextBtn(nextButton)
     setBackBtn(backButton)
-    const methodButtonsArr = Array.from(methdoButtons)
-    setMethodButtonsArray(methodButtonsArr)
+    setStepCardsArray(stepCardsArr)
+    setCardCheckMarksArray(cardCheckMarksArr)
+    console.log(cardCheckMarksArray)
+    // setMethodButtonsArray(methodButtonsArr)
   }, [])
 
   useEffect(() => {
@@ -54,6 +64,15 @@ function App() {
     backBtn.disabled = disableBackButton
     setDisabledStyle(nextBtn)
     setDisabledStyle(backBtn)
+    // setStepCardActive()
+    stepCardsArray.forEach(card => {
+      stepCardsArray.indexOf(card) === selectedMethod ? card.classList.add("stepCard_active") : card.classList.remove("stepCard_active");
+      stepCardsArray.indexOf(card) < selectedMethod ? card.classList.add("stepCard_checked") : card.classList.remove("stepCard_checked");
+    })
+
+    cardCheckMarksArray.forEach((item: any) => {
+      cardCheckMarksArray.indexOf(item) <= selectedMethod ? (item.style.display = "block") : (item.style.display = "none")
+    })
   })
 
   function setDisabledStyle(item: any) {
@@ -65,6 +84,7 @@ function App() {
       }
     }
   }
+
   //Методы навигации по шагам блока Methods END//
 
 

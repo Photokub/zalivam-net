@@ -1,4 +1,5 @@
 import React from "react";
+import {RiCheckFill} from "react-icons/ri"
 import "./StepCard.css";
 
 interface StepCardPropTypes {
@@ -13,6 +14,7 @@ const StepCard: React.FC<StepCardPropTypes> = ({
 }) => {
     return (
         <div className="stepCard">
+            <RiCheckFill className="stepCard__checkmark"/>
             <p className="stepCard__number">{id}</p>
             <p className="stepCard__title">{stepName}</p>
         </div>
