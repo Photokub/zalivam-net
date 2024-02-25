@@ -37,8 +37,6 @@ const Methods: React.FC<MethodsPropTypes> = ({
                 <MethodsButtons
                     clickToNextMethod={clickToNextMethod}
                     clickToPreviousMethod={clickToPreviousMethod}
-                    // disableBackButton={disableBackButton}
-                    // disableNextButton={disableNextButton}
                 />
             </div>
         </section>

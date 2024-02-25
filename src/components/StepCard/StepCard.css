@@ -49,6 +49,7 @@
   right: 0;
   color: #FFF;
   background-color: #28B289;
+  transition: translateY(50px) 4s ease-in-out;
 }
 
 .stepCard_checked {

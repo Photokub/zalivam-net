@@ -11,7 +11,6 @@
     border-radius: 20px;
     position: relative;
     color: #D2D1D1;
-
     background: #F3F3F3;
 }
 
@@ -23,7 +22,6 @@
 .stepCard__number {
     width: 188px;
     margin: 0 0 5px 0;
-    // color: #D2D1D1;
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: "Proxima Nova";
@@ -36,7 +34,6 @@
 .stepCard__title {
     width: 170px;
     margin: 0;
-    // color: #D2D1D1;
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: "Proxima Nova";
@@ -46,7 +43,7 @@
     line-height: 16px;
 }
 
-.stepCard__checkmark{
+.stepCard__checkmark {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -55,6 +52,7 @@
     right: 0;
     color: #FFF;
     background-color: #28B289;
+    transition: translateY(50px) 4s ease-in-out;
 }
 
 .stepCard_checked {

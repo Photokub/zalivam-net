@@ -16,10 +16,11 @@ import { act } from '@testing-library/react';
 
 function App() {
 
+
+  const [windowSize, setWindowSize] = useState(getWindowSize());
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
-  // const [methodButtonsArray, setMethodButtonsArray] = useState<Element[]>([]);
   const [stepCardsArray, setStepCardsArray] = useState<Element[]>([]);
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
@@ -43,12 +44,10 @@ function App() {
   }
 
   useEffect(() => {
-    // const methdoButtons = document.querySelectorAll(".methodsButton")
     const stepCards = document.querySelectorAll(".stepCard")
     const checkMarks = document.querySelectorAll(".stepCard__checkmark")
     const nextButton = document.querySelector("#nextBtn")
     const backButton = document.querySelector("#backBtn")
-    // const methodButtonsArr = Array.from(methdoButtons)
     const stepCardsArr = Array.from(stepCards)
     const cardCheckMarksArr = Array.from(checkMarks)
     setNextBtn(nextButton)
@@ -56,7 +55,6 @@ function App() {
     setStepCardsArray(stepCardsArr)
     setCardCheckMarksArray(cardCheckMarksArr)
     console.log(cardCheckMarksArray)
-    // setMethodButtonsArray(methodButtonsArr)
   }, [])
 
   useEffect(() => {
@@ -64,7 +62,6 @@ function App() {
     backBtn.disabled = disableBackButton
     setDisabledStyle(nextBtn)
     setDisabledStyle(backBtn)
-    // setStepCardActive()
     stepCardsArray.forEach(card => {
       stepCardsArray.indexOf(card) === selectedMethod ? card.classList.add("stepCard_active") : card.classList.remove("stepCard_active");
       stepCardsArray.indexOf(card) < selectedMethod ? card.classList.add("stepCard_checked") : card.classList.remove("stepCard_checked");
@@ -84,12 +81,7 @@ function App() {
       }
     }
   }
-
   //Методы навигации по шагам блока Methods END//
-
-
-
-  const [windowSize, setWindowSize] = useState(getWindowSize());
 
   //Определение размеров окна START//
   useEffect(() => {
@@ -123,8 +115,6 @@ function App() {
         clickToNextMethod={clickToNextMethod}
         clickToPreviousMethod={clickToPreviousMethod}
         selectedMethod={selectedMethod}
-      // disableBackButton={disableBackButton}
-      // disableNextButton={disableNextButton}
       />
       <Ad />
       <Reviews />

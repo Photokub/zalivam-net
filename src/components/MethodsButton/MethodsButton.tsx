@@ -8,8 +8,6 @@ interface MethodsButtonPropTypes {
     buttonClass: string;
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
-    // disableBackButton: boolean,
-    // disableNextButton: boolean
 }
 
 const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
@@ -19,8 +17,6 @@ const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
     buttonClass,
     clickToNextMethod,
     clickToPreviousMethod,
-    // disableNextButton,
-    // disableBackButton,
 }) => {
 
     const handleClickType = (event: any) => {
