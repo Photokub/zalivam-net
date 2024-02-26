@@ -9,14 +9,32 @@
 }
 
 .methods__title {
-  margin: 0;
+  margin: 0 0 25px 0;
   color: #171A28;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Proxima Nova;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
-  line-height: 16px;
+  line-height: normal;
+}
+
+.methods__textContainer {
+  max-width: 627px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.methods__paragraph {
+  margin: 0;
+  padding: 20px;
+  color: #171A28;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Proxima Nova;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 .methods__bottomline {

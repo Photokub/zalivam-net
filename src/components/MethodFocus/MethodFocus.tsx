@@ -33,7 +33,7 @@ const MethodFocus: React.FC<MethodFocusPropTypes> = ({
                 </ul>
             </li>
             <li className="methodFocus__subtitle methodFocus__listItem">уведомить о заливе управляющую компанию Вашего дома</li>
-            <li className="methodFocus__subtitle methodFocus__listItem">получить акт о заливе. Акт о заливе выдает инженер управляющей компании, в акте описывается нанесённый ущерб и указывается причина протечки воды.</li>
+            <li className="methodFocus__subtitle methodFocus__listItem"><span className="methodFocus__subtitle methodFocus__subtitle_bold">получить акт о заливе.</span> Акт о заливе выдает инженер управляющей компании, в акте описывается нанесённый ущерб и указывается причина протечки воды.</li>
         </ul>
     </div>
 

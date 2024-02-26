@@ -42,6 +42,10 @@
   line-height: 21px;
 }
 
+.methodFocus__subtitle_bold {
+  font-weight: 700;
+}
+
 .methodFocus__link {
   color: #0077FF !important;
 }
