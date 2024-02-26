@@ -8,6 +8,8 @@ interface MethodsButtonPropTypes {
     buttonClass: string;
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
+    handleAnimationNextBtn: any,
+    handleAnimationBackBtn: any,
 }
 
 const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
@@ -17,13 +19,24 @@ const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
     buttonClass,
     clickToNextMethod,
     clickToPreviousMethod,
+    handleAnimationNextBtn,
+    handleAnimationBackBtn
 }) => {
 
     const handleClickType = (event: any) => {
         event.currentTarget.classList.contains("methodsButton__next") ? clickToNextMethod(event) : clickToPreviousMethod(event)
     }
 
-    const button = <button id={id} className={buttonClass} type="button" onClick={(event) => handleClickType(event)}>
+    const handleAnimationType = (event: any) => {
+        event.currentTarget.classList.contains("methodsButton__next") ?  handleAnimationNextBtn(event) : handleAnimationBackBtn(event)
+    }
+
+    const handleclick = (e: any) => {
+        handleAnimationType(e)
+        handleClickType(e)
+    }
+
+    const button = <button id={id} className={buttonClass} type="button" onClick={(event) => handleclick(event)}>
         {icon}
         {label}
     </button>

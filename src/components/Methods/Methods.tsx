@@ -1,4 +1,5 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, useLayoutEffect } from 'react';
+import gsap from 'gsap';
 import "./Methods.css";
 import "../StepsContainer/StepsContainer"
 import StepsContainer from '../StepsContainer/StepsContainer';
@@ -6,12 +7,12 @@ import MethodFocus from '../MethodFocus/MethodFocus';
 import MethodsButtons from '../MethodsButtons/MethodsButtons';
 
 interface MethodsPropTypes {
-    MethodsDataArray: { id: number; stepName: string; stepText: string; }[],
+    MethodsDataArray: any,
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
     selectedMethod: number,
-    // disableBackButton: boolean,
-    // disableNextButton: boolean
+    handleAnimationNextBtn: any
+    handleAnimationBackBtn: any
 }
 
 const Methods: React.FC<MethodsPropTypes> = ({
@@ -19,9 +20,10 @@ const Methods: React.FC<MethodsPropTypes> = ({
     selectedMethod,
     clickToNextMethod,
     clickToPreviousMethod,
-    // disableBackButton,
-    // disableNextButton
-}) => {
+    handleAnimationNextBtn,
+    handleAnimationBackBtn
+}) => { 
+
     return (
         <section className='methods'>
             <div className="methods__warp">
@@ -37,6 +39,8 @@ const Methods: React.FC<MethodsPropTypes> = ({
                 <MethodsButtons
                     clickToNextMethod={clickToNextMethod}
                     clickToPreviousMethod={clickToPreviousMethod}
+                    handleAnimationNextBtn={handleAnimationNextBtn}
+                    handleAnimationBackBtn={handleAnimationBackBtn}
                 />
             </div>
         </section>

@@ -7,15 +7,15 @@ import MethodsButton from "../MethodsButton/MethodsButton";
 interface MethodsButtonsPropTypes {
     clickToNextMethod: (e: MouseEvent) => void,
     clickToPreviousMethod: (e: MouseEvent) => void,
-    // disableBackButton: boolean,
-    // disableNextButton: boolean
+    handleAnimationNextBtn: any,
+    handleAnimationBackBtn: any,
 };
 
 const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({
     clickToNextMethod,
     clickToPreviousMethod,
-    // disableBackButton,
-    // disableNextButton
+    handleAnimationNextBtn,
+    handleAnimationBackBtn
 }) => {
 
 
@@ -28,8 +28,8 @@ const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({
                 buttonClass="methodsButton methodsButton__back"
                 clickToNextMethod={clickToNextMethod}
                 clickToPreviousMethod={clickToPreviousMethod}
-                // disableBackButton={disableBackButton}
-                // disableNextButton={disableNextButton}
+                handleAnimationNextBtn={handleAnimationNextBtn}
+                handleAnimationBackBtn={handleAnimationBackBtn}
             />
             <MethodsButton
                 id="nextBtn"
@@ -38,8 +38,8 @@ const MethodsButtons: React.FC<MethodsButtonsPropTypes> = ({
                 buttonClass="methodsButton methodsButton__next"
                 clickToNextMethod={clickToNextMethod}
                 clickToPreviousMethod={clickToPreviousMethod}
-                // disableBackButton={disableBackButton}
-                // disableNextButton={disableNextButton}
+                handleAnimationNextBtn={handleAnimationNextBtn}
+                handleAnimationBackBtn={handleAnimationBackBtn}
             />
         </div>
     )

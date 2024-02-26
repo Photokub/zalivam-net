@@ -1,5 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Main from '../Main/Main';
 import About from '../About/About';
@@ -12,11 +11,10 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
 import MethodsData from '../../data/MethodsData.json'
-import { act } from '@testing-library/react';
+import gsap from 'gsap';
 
 function App() {
-
-
+  
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
@@ -28,6 +26,7 @@ function App() {
 
   //Методы навигации по шагам блока Methods START//
   const MethodsDataArray = MethodsData.steps
+  console.log(MethodsDataArray)
 
   useEffect(() => {
     console.log(selectedMethod)
@@ -81,6 +80,15 @@ function App() {
       }
     }
   }
+
+  const handleAnimationNextBtn = () => {
+    gsap.fromTo(".methodFocus", { opacty: 0, x: -25 }, { opacty: 1, x: 0 })
+  };
+
+  const handleAnimationBackBtn = () => {
+    gsap.fromTo(".methodFocus", { opacty: 0, x: 25 }, { opacty: 1, x: 0 })
+  };
+
   //Методы навигации по шагам блока Methods END//
 
   //Определение размеров окна START//
@@ -115,6 +123,8 @@ function App() {
         clickToNextMethod={clickToNextMethod}
         clickToPreviousMethod={clickToPreviousMethod}
         selectedMethod={selectedMethod}
+        handleAnimationNextBtn={handleAnimationNextBtn}
+        handleAnimationBackBtn={handleAnimationBackBtn}
       />
       <Ad />
       <Reviews />
