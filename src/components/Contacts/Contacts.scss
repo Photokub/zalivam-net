@@ -1,7 +1,6 @@
 @import '../../variables/variaables.scss';
 
 .contacts {
-    width: 284px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,7 +15,7 @@
 }
 
 .contacts__adress {
-    width: 100px;
+    width: 152px;
 
     color: $text-highlight-color;
     text-align: center;

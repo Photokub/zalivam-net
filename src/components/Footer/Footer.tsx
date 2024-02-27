@@ -20,7 +20,7 @@ const Footer: React.FC<FooterPropTypes> = ({ }) => {
                     </div>
                     <div className="footer__adress">
                         <p className="footer__paragraph">Юридический адрес:</p>
-                        <p className="footer__paragraph">Москва, Красная площадь д. 1</p>
+                        <p className="footer__paragraph">Москва, Земляной Вал 64с2, кабинет 323</p>
                     </div>
                     <div className="footer__socialMedia">
                         <p className="footer__paragraph">Мы в соцсетях</p>
