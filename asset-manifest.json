@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/zalivam-net/static/css/main.cec10eaa.css",
-    "main.js": "/zalivam-net/static/js/main.9226d8ec.js",
+    "main.css": "/zalivam-net/static/css/main.d5fa94cc.css",
+    "main.js": "/zalivam-net/static/js/main.2482affb.js",
     "static/js/787.3a0a764e.chunk.js": "/zalivam-net/static/js/787.3a0a764e.chunk.js",
     "static/media/main-bg.jpg": "/zalivam-net/static/media/main-bg.495618dd07eee429c62c.jpg",
     "static/media/gorbunov-main.png": "/zalivam-net/static/media/gorbunov-main.fafd50d46dcce915a67a.png",
@@ -14,15 +14,15 @@
     "static/media/ProximaNova-Bold.woff": "/zalivam-net/static/media/ProximaNova-Bold.1f267da183b3d4fe3d5b.woff",
     "static/media/ProximaNova-Semibold.woff": "/zalivam-net/static/media/ProximaNova-Semibold.a71877a1eef65838ed4c.woff",
     "static/media/review_img.png": "/zalivam-net/static/media/review_img.2c3ba440d88af2537e11.png",
-    "static/media/header_phone_icon.svg": "/zalivam-net/static/media/header_phone_icon.ff91174ad102895930e6ef934b5e45da.svg",
-    "static/media/check 1.svg": "/zalivam-net/static/media/check 1.e6df7214e298441f5c95.svg",
+    "static/media/header_phone_icon.svg": "/zalivam-net/static/media/header_phone_icon.61deae962fc404a7ec1777dd9effd208.svg",
+    "static/media/check 1.svg": "/zalivam-net/static/media/check 1.7038ebb91fe835743b1c.svg",
     "index.html": "/zalivam-net/index.html",
-    "main.cec10eaa.css.map": "/zalivam-net/static/css/main.cec10eaa.css.map",
-    "main.9226d8ec.js.map": "/zalivam-net/static/js/main.9226d8ec.js.map",
+    "main.d5fa94cc.css.map": "/zalivam-net/static/css/main.d5fa94cc.css.map",
+    "main.2482affb.js.map": "/zalivam-net/static/js/main.2482affb.js.map",
     "787.3a0a764e.chunk.js.map": "/zalivam-net/static/js/787.3a0a764e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cec10eaa.css",
-    "static/js/main.9226d8ec.js"
+    "static/css/main.d5fa94cc.css",
+    "static/js/main.2482affb.js"
   ]
 }
