@@ -27,7 +27,6 @@
 
 .methods__paragraph {
   margin: 0;
-  padding: 20px;
   color: #171A28;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Proxima Nova;
@@ -53,6 +52,9 @@
   .methods__warp {
     padding: 100px 74px 148px 74px;
   }
+  .methods__textContainer {
+    margin-bottom: 44px !important;
+  }
 }
 @media screen and (max-width: 568px) {
   .methods__warp {
@@ -60,6 +62,10 @@
   }
   .methods__title {
     line-height: normal;
+  }
+  .methods__textContainer {
+    margin-bottom: 20px !important;
+    padding: 0 !important;
   }
   .methods__bottomline {
     width: 100%;
