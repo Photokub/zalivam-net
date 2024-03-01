@@ -3,14 +3,18 @@ import "./CarouselNav.css"
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 
 interface CarouselNavPropTypes {
-
+    handleClickCarouselForward: (e: any) => void,
+    handleClickCarouselBack: (e: any) => void
 }
 
-const CarouselNav: React.FC<CarouselNavPropTypes> = ({ }) => {
+const CarouselNav: React.FC<CarouselNavPropTypes> = ({
+    handleClickCarouselForward,
+    handleClickCarouselBack
+}) => {
     return (
         <div className="carouselNav">
-            <FaLongArrowAltLeft className="carouselNav__arrow" />
-            <FaLongArrowAltRight className="carouselNav__arrow" />
+            <button className="carouselNav__button" type="button" onClick={(e) => handleClickCarouselBack(e)}><FaLongArrowAltLeft className="carouselNav__arrow" /></button>
+            <button className="carouselNav__button" type="button" onClick={(e) => handleClickCarouselForward(e)}><FaLongArrowAltRight className="carouselNav__arrow" /></button>
         </div>
     )
 }

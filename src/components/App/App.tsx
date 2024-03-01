@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Main from '../Main/Main';
 import About from '../About/About';
@@ -12,9 +12,10 @@ import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
 import MethodsData from '../../data/MethodsData.json'
 import gsap from 'gsap';
+import { useActionData } from 'react-router-dom';
 
 function App() {
-  
+
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
@@ -22,7 +23,8 @@ function App() {
   const [stepCardsArray, setStepCardsArray] = useState<Element[]>([]);
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
-  const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([])
+  const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([]);
+  const [selectedSolution, setSelectedSolution] = useState<number>(0)
 
   //Методы навигации по шагам блока Methods START//
   const MethodsDataArray = MethodsData.steps
@@ -88,7 +90,7 @@ function App() {
   const handleAnimationBackBtn = () => {
     gsap.fromTo(".methodFocus", { opacty: 0, x: 25 }, { opacty: 1, x: 0 })
   };
-
+  
   //Методы навигации по шагам блока Methods END//
 
   //Определение размеров окна START//
@@ -109,6 +111,40 @@ function App() {
   //Определение размеров окна END//
 
 
+  //Универсальные методы галерей START//
+  function сlickCarouselForward(
+    e: MouseEvent,
+    targetItem: number,
+    targetItemSetMethod: React.Dispatch<React.SetStateAction<number>>,
+  ) {
+    targetItemSetMethod(targetItem + 1)
+    console.log(targetItem)
+  }
+
+  function сlickCarouselBack(
+    e: MouseEvent,
+    targetItem: number,
+    targetItemSetMethod: React.Dispatch<React.SetStateAction<number>>,
+  ) {
+    targetItemSetMethod(targetItem - 1)
+    console.log(targetItem)
+  }
+
+  const handleClickCarouselForward = (e: MouseEvent) => сlickCarouselForward(
+    e,
+    selectedSolution,
+    setSelectedSolution
+  )
+
+  const handleClickCarouselBack = (e: MouseEvent) => сlickCarouselBack(
+    e,
+    selectedSolution,
+    setSelectedSolution
+  )
+
+  //Универсальные методы галерей END//
+
+
   return (
     <div className="App">
       <Header
@@ -117,7 +153,10 @@ function App() {
       {/* <Popup children={undefined} /> */}
       <Main />
       <About />
-      <Solutions />
+      <Solutions
+        handleClickCarouselForward={handleClickCarouselForward}
+        handleClickCarouselBack={handleClickCarouselBack}
+      />
       <Methods
         MethodsDataArray={MethodsDataArray}
         clickToNextMethod={clickToNextMethod}
@@ -127,7 +166,10 @@ function App() {
         handleAnimationBackBtn={handleAnimationBackBtn}
       />
       <Ad />
-      <Reviews />
+      <Reviews
+        handleClickCarouselForward={handleClickCarouselForward}
+        handleClickCarouselBack={handleClickCarouselBack}
+      />
       <Feedback />
       <Footer />
     </div>

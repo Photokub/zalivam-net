@@ -18,4 +18,8 @@
 }
 .carouselNav .carouselNav__arrow:active {
   transform: translateX(1px) translateY(1px);
+}
+.carouselNav .carouselNav__button {
+  border: none;
+  background: none;
 }/*# sourceMappingURL=CarouselNav.css.map */

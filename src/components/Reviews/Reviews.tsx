@@ -3,10 +3,14 @@ import "./Reviews.css"
 import ReviewCardsContainer from "../ReviewCardsContainer/ReviewCardsContainer";
 
 interface ReviewsPropTypes {
-
+    handleClickCarouselForward: (e: MouseEvent) => void,
+    handleClickCarouselBack: (e: MouseEvent) => void
 }
 
-const Reviews: React.FC<ReviewsPropTypes> = ({ }) => {
+const Reviews: React.FC<ReviewsPropTypes> = ({
+    handleClickCarouselForward,
+    handleClickCarouselBack
+}) => {
     return (
         <section className="reviews">
             <div className="reviews__wrap">
@@ -16,7 +20,10 @@ const Reviews: React.FC<ReviewsPropTypes> = ({ }) => {
                     <p className="reviews__paragraph">Lorem ipsum dolor sit amet consectetur. Suspendisse turpis faucibus in massa non in id. Vivamus rhoncus quam mi nisl dui. Sed in integer aliquet egestas dolor pellentesque.</p>
                 </div>
             </div>
-            <ReviewCardsContainer />
+            <ReviewCardsContainer
+                handleClickCarouselForward={handleClickCarouselForward}
+                handleClickCarouselBack={handleClickCarouselBack}
+            />
         </section>
     )
 }
