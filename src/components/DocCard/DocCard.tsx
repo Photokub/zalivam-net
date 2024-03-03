@@ -4,7 +4,13 @@ import docImage from '../../images/certificate.png'
 
 
 interface DocCardPropTypes {
-
+    key: number,
+    id: number,
+    name: string,
+    cause: string,
+    solution: object,
+    link: object,
+    image: []
 }
 
 const DocCard: React.FC<DocCardPropTypes> = ({ }) => {
