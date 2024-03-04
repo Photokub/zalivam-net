@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./BurgerMenu.css"
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
+import {Link, animateScroll as scroll} from "react-scroll";
 import Contacts from "../Contacts/Contacts";
 
 interface BurgerMunuPropTypes {
@@ -25,6 +26,10 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
         setIsSubscribed(current => !current);
     };
 
+    const scrollToTop: any = () => {
+        scroll.scrollToTop();
+    };
+
     return (
         <nav className="burger">
             <div className='burger__container'>
@@ -39,33 +44,58 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                 <span className='burger__container__stripe'></span>
                 <ul className='burger-menu-list'>
                     <li className='burger-menu-list__string'>
-                        <Link to='#'
-                            className='burger-menu__list-navlink'>О нас</Link>
+                        <Link
+                            className='burger-menu__list-navlink'
+                            to="about"
+                            spy={true}
+                            smooth={true}                            
+                            onClick={scrollToTop}
+                            >О нас</Link>
                     </li>
                     <li className='burger-menu-list__string'>
-                        <NavLink
+                        <Link
                             className="burger-menu__list-navlink"
-                            to='#'>Решения</NavLink>
+                            to="solutions"
+                            spy={true}
+                            smooth={true}
+                            onClick={scrollToTop}
+                            >Решения</Link>
                     </li>
                     <li className='burger-menu-list__string'>
-                        <NavLink
+                        <Link
                             className="burger-menu__list-navlink"
-                            to='#'>Как мы работаем?</NavLink>
+                            to="methods"
+                            spy={true}
+                            smooth={true}
+                            onClick={scrollToTop}
+                            >Как мы работаем?</Link>
                     </li>
                     <li className='burger-menu-list__string'>
-                        <NavLink
+                        <Link
                             className="burger-menu__list-navlink"
-                            to='#'>Подать заявку</NavLink>
+                            to="ad"
+                            spy={true}
+                            smooth={true}
+                            onClick={scrollToTop}
+                            >Подать заявку</Link>
                     </li>
                     <li className='burger-menu-list__string'>
-                        <NavLink
+                        <Link
                             className="burger-menu__list-navlink"
-                            to='#'>Отзывы</NavLink>
+                            to="reviews"
+                            spy={true}
+                            smooth={true}
+                            onClick={scrollToTop}
+                            >Отзывы</Link>
                     </li>
                     <li className='burger-menu-list__string'>
-                        <NavLink
+                        <Link
                             className="burger-menu__list-navlink"
-                            to='#'>Связаться с нами</NavLink>
+                            to="feedback"
+                            spy={true}
+                            smooth={true}
+                            onClick={scrollToTop}
+                            >Связаться с нами</Link>
                     </li>
                     <li className='burger-menu-list__string'>
                         {windowSize.innerWidth <= 568 && <Contacts displayStyle=""/>}

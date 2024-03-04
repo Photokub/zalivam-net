@@ -25,4 +25,8 @@
   font-variant: all-small-caps;
   text-decoration: none;
   cursor: pointer;
+}
+.nav__link:hover {
+  transition: 0.3s ease-in-out;
+  opacity: 0.5;
 }/*# sourceMappingURL=Navigation.css.map */

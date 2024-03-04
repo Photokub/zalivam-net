@@ -113,6 +113,11 @@
   line-height: normal;
   font-variant: all-small-caps;
   text-decoration: none;
+  cursor: pointer;
+}
+.burger-menu__list-navlink:hover {
+  transition: 0.3s ease-in-out;
+  opacity: 0.5;
 }
 
 .burger-menu__list-navlink_active {

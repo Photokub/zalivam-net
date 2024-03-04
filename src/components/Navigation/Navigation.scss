@@ -28,4 +28,9 @@
     font-variant: all-small-caps;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover{
+        transition: .3s ease-in-out;
+        opacity: .5
+    }
 }
