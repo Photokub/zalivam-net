@@ -32,7 +32,23 @@ function App() {
   const [backSolutionBtn, setBackSolutionBtn] = useState<any>({});
   const [disableBackSolutionButton, setDisableBackSolutionButon] = useState(true);
   const [disableNextSolutionButton, setDisableNextSolutionButon] = useState(false);
-  const ScrollTriggerObject: any = ScrollTrigger
+
+
+  //логика Header START//
+  const header = document.querySelector('.header') as HTMLElement;
+  const headerTop = header.offsetTop
+
+  function headerTopFix() {
+    if (window.scrollY >= headerTop) {
+      header.classList.add("header_sticky");
+    } else {
+      header.classList.remove("header_sticky");
+    }
+  }
+
+  window.onscroll = function () { headerTopFix() };
+
+    //логика Header END//
 
 
   //Методы навигации по шагам блока Methods START//
@@ -154,7 +170,7 @@ function App() {
   //Универсальные методы галерей END//
 
   //навигация по галерее Solutions START//
-  useEffect(() => {    
+  useEffect(() => {
     selectedSolution <= 0 ? setDisableBackSolutionButon(true) : setDisableBackSolutionButon(false);
     selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
   })
@@ -170,7 +186,7 @@ function App() {
     console.log(docCardsArr)
   }, [])
 
-  
+
   useEffect(() => {
     nextSolutionBtn.disabled = disableNextSolutionButton
     backSolutionBtn.disabled = disableBackSolutionButton
