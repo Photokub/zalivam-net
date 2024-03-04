@@ -179,11 +179,11 @@ function App() {
   })
 
   const handleAnimationNextSolutionBtn = () => {
-    gsap.fromTo(".docCard__image", { opacty: 0, x: -55 }, { opacty: 1, x: 0 })
+    gsap.fromTo(".docCard__image", { opacty: 0, x: 55 }, { opacty: 1, x: 0 })
   };
 
   const handleAnimationBackSolutionBtn = () => {
-    gsap.fromTo(".docCard__image", { opacty: 0, x: 55 }, { opacty: 1, x: 0 })
+    gsap.fromTo(".docCard__image", { opacty: 0, x: -55 }, { opacty: 1, x: 0 })
   };
 
   //навигация по галерее Solutions END//
