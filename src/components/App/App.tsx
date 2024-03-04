@@ -26,7 +26,12 @@ function App() {
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
   const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([]);
+  const [docCardsArray, setDocCardsArray] = useState<Element[]>([]);
   const [selectedSolution, setSelectedSolution] = useState<number>(0);
+  const [nextSolutionBtn, setNextSolutionBtn] = useState<any>({});
+  const [backSolutionBtn, setBackSolutionBtn] = useState<any>({});
+  const [disableBackSolutionButton, setDisableBackSolutionButon] = useState(true);
+  const [disableNextSolutionButton, setDisableNextSolutionButon] = useState(false);
   const ScrollTriggerObject: any = ScrollTrigger
 
 
@@ -147,6 +152,41 @@ function App() {
   )
 
   //Универсальные методы галерей END//
+
+  //навигация по галерее Solutions START//
+  useEffect(() => {    
+    selectedSolution <= 0 ? setDisableBackSolutionButon(true) : setDisableBackSolutionButon(false);
+    selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
+  })
+
+  useEffect(() => {
+    const DocCards = document.querySelectorAll(".docCard")
+    const nextSolutionButton = document.querySelector("#nextSolutionBtn")
+    const backSolutionButton = document.querySelector("#backSolutionBtn")
+    const docCardsArr = Array.from(DocCards)
+    setNextSolutionBtn(nextSolutionButton)
+    setBackSolutionBtn(backSolutionButton)
+    setDocCardsArray(docCardsArr)
+    console.log(docCardsArr)
+  }, [])
+
+  
+  useEffect(() => {
+    nextSolutionBtn.disabled = disableNextSolutionButton
+    backSolutionBtn.disabled = disableBackSolutionButton
+    setDisabledStyle(nextSolutionBtn)
+    setDisabledStyle(backSolutionBtn)
+  })
+
+  const handleAnimationNextSolutionBtn = () => {
+    gsap.fromTo(".docCard__image", { opacty: 0, x: -55 }, { opacty: 1, x: 0 })
+  };
+
+  const handleAnimationBackSolutionBtn = () => {
+    gsap.fromTo(".docCard__image", { opacty: 0, x: 55 }, { opacty: 1, x: 0 })
+  };
+
+  //навигация по галерее Solutions END//
 
 
   //галерея GSAP START//
@@ -275,6 +315,8 @@ function App() {
         handleClickCarouselForward={handleClickCarouselForward}
         handleClickCarouselBack={handleClickCarouselBack}
         selectedSolution={selectedSolution}
+        handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
+        handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
       />
       <Methods
         MethodsDataArray={MethodsDataArray}
@@ -288,6 +330,8 @@ function App() {
       <Reviews
         handleClickCarouselForward={handleClickCarouselForward}
         handleClickCarouselBack={handleClickCarouselBack}
+        handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
+        handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
       />
       <Feedback />
       <Footer />

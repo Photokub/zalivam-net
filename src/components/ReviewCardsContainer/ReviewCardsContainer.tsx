@@ -4,13 +4,17 @@ import ReviewCard from "../ReviewCard/ReviewCard";
 import CarouselNav from "../CarouselNav/CarouselNav";
 
 interface ReviewCardsContainer {
+    handleAnimationNextSolutionBtn: any,
+    handleAnimationBackSolutionBtn: any,
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void
 }
 
 const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
     handleClickCarouselForward,
-    handleClickCarouselBack
+    handleClickCarouselBack,
+    handleAnimationNextSolutionBtn,
+    handleAnimationBackSolutionBtn
 }) => {
     return (
         <div className="ReviewContainer">
@@ -22,6 +26,8 @@ const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
             <CarouselNav
                 handleClickCarouselForward={handleClickCarouselForward}
                 handleClickCarouselBack={handleClickCarouselBack}
+                handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
+                handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
             />
         </div>
     )

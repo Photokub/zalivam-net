@@ -31,12 +31,12 @@ const MethodsButton: React.FC<MethodsButtonPropTypes> = ({
         event.currentTarget.classList.contains("methodsButton__next") ?  handleAnimationNextBtn(event) : handleAnimationBackBtn(event)
     }
 
-    const handleclick = (e: any) => {
+    const handleClick = (e: any) => {
         handleAnimationType(e)
         handleClickType(e)
     }
 
-    const button = <button id={id} className={buttonClass} type="button" onClick={(event) => handleclick(event)}>
+    const button = <button id={id} className={buttonClass} type="button" onClick={(event) => handleClick(event)}>
         {icon}
         {label}
     </button>

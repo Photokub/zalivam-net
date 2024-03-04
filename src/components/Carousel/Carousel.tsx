@@ -4,6 +4,8 @@ import DocCard from "../DocCard/DocCard";
 import CarouselNav from "../CarouselNav/CarouselNav";
 
 interface CarouselPropTypes {
+    handleAnimationNextSolutionBtn: any,
+    handleAnimationBackSolutionBtn: any,
     selectedSolution: any,
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void,
@@ -14,7 +16,9 @@ const Carousel: React.FC<CarouselPropTypes> = ({
     handleClickCarouselForward,
     handleClickCarouselBack,
     SolutionsArray,
-    selectedSolution
+    selectedSolution,
+    handleAnimationNextSolutionBtn,
+    handleAnimationBackSolutionBtn
 }) => {
     return (
         <div className='carousel'>
@@ -34,6 +38,8 @@ const Carousel: React.FC<CarouselPropTypes> = ({
             <CarouselNav
                 handleClickCarouselForward={handleClickCarouselForward}
                 handleClickCarouselBack={handleClickCarouselBack}
+                handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
+                handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
             />
         </div>
     )

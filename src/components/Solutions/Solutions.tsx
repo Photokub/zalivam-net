@@ -5,6 +5,8 @@ import Carousel from "../Carousel/Carousel";
 
 
 interface SolutionsPropTypes {
+    handleAnimationNextSolutionBtn: any,
+    handleAnimationBackSolutionBtn: any,
     selectedSolution: any,
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void,
@@ -15,7 +17,9 @@ const Solutions: React.FC<SolutionsPropTypes> = ({
     handleClickCarouselForward,
     handleClickCarouselBack,
     SolutionsArray,
-    selectedSolution
+    selectedSolution,
+    handleAnimationNextSolutionBtn,
+    handleAnimationBackSolutionBtn
 }) => {
     return (
         <section className="solutions">
@@ -30,6 +34,8 @@ const Solutions: React.FC<SolutionsPropTypes> = ({
                     SolutionsArray={SolutionsArray}
                     handleClickCarouselForward={handleClickCarouselForward}
                     handleClickCarouselBack={handleClickCarouselBack}
+                    handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
+                    handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
                 />
 
             </div>
