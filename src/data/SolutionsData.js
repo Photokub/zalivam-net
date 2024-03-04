@@ -48,7 +48,7 @@ const solutionsData = [
             linkText: "Информация по делу на сайте Одинцовского городского суда Московской области.",
         },
         image: [
-            "/images/certificate.png"
+            "/images/solutions/Ashakov.jpg"
         ]
     },
 ];

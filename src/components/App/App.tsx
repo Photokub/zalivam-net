@@ -274,6 +274,7 @@ function App() {
         SolutionsArray={solutionsData}
         handleClickCarouselForward={handleClickCarouselForward}
         handleClickCarouselBack={handleClickCarouselBack}
+        selectedSolution={selectedSolution}
       />
       <Methods
         MethodsDataArray={MethodsDataArray}

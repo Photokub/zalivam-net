@@ -10,7 +10,8 @@ interface DocCardPropTypes {
     cause: string,
     solution: object,
     link: object,
-    image: any
+    image: any,
+    selectedSolution: any
 }
 
 const DocCard: React.FC<DocCardPropTypes> = ({    
@@ -19,12 +20,12 @@ const DocCard: React.FC<DocCardPropTypes> = ({
     cause,
     solution,
     link,
-    image    
+    image,
+    selectedSolution   
 }) => {    
 
-    console.log(image[0])
     return (
-        <figure className="docCard">
+        <figure className={selectedSolution !== id ? "docCard docCard_invisible" : "docCard"} >
             <img src={process.env.PUBLIC_URL + image[0]} alt={name} className="docCard__image" />
             <figcaption className="docCard__caption">{name}</figcaption>
         </figure>
