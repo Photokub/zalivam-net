@@ -16,7 +16,7 @@ const Reviews: React.FC<ReviewsPropTypes> = ({
     handleAnimationBackSolutionBtn
 }) => {
     return (
-        <section className="reviews">
+        <section className="reviews" id="reviews">
             <div className="reviews__wrap">
                 <h2 className="reviews__title">Отзывы</h2>
                 <div className="reviews__textContainer">

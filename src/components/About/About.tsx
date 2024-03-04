@@ -9,7 +9,7 @@ interface AboutPropTypes {
 
 const About: React.FC<AboutPropTypes> = ({ }) => {
     return (
-        <section className="about">
+        <section className="about" id="about">
             <div className="about__wrap">
                 <h2 className="about__title">О нас в цифрах</h2>
                 <StatContainer />

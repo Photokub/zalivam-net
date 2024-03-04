@@ -22,7 +22,7 @@ const Solutions: React.FC<SolutionsPropTypes> = ({
     handleAnimationBackSolutionBtn
 }) => {
     return (
-        <section className="solutions">
+        <section className="solutions" id="solutions">
             <div className="solutions__wrap">
                 <h2 className="solutions__title">Решения</h2>
                 <div className="solutions__textContainer">

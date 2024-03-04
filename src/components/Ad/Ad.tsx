@@ -9,7 +9,7 @@ interface AdPropTypes {
 
 const Ad: React.FC<AdPropTypes> = ({ }) => {
     return (
-        <section className="ad">
+        <section className="ad" id="ad">
             <div className="ad__wrap">
                 <div className="ad__image">
                     <img src={womenPhoto} alt='Девушка-юрист' id="womenPhoto" />
