@@ -18,6 +18,7 @@ import { useActionData } from 'react-router-dom';
 
 function App() {
 
+  const [headerElement, setHeaderElement] = useState<any>({})
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
@@ -35,14 +36,18 @@ function App() {
 
 
   //логика Header START//
-  const header = document.querySelector('.header') as HTMLElement;
-  const headerTop = header.offsetTop
+  useEffect(() => {
+    const header = document.querySelector('.header') as HTMLElement;
+    setHeaderElement(header)
+  },[])
+  
+  const headerTop = headerElement.offsetTop
 
   function headerTopFix() {
     if (window.scrollY >= headerTop) {
-      header.classList.add("header_sticky");
+      headerElement.classList.add("header_sticky");
     } else {
-      header.classList.remove("header_sticky");
+      headerElement.classList.remove("header_sticky");
     }
   }
 
