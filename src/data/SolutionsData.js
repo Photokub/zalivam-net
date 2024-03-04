@@ -13,8 +13,8 @@ const solutionsData = [
             linkText: "Информация по делу на сайте Мосгорсуда.",
         },
         image: [
-            "../images/solutions/Krugov-1.jpg",
-            "../images/solutions/Krugov-2.jpg",
+            "/images/solutions/Krugov-1.jpg",
+            "/images/solutions/Krugov-2.jpg",
         ]
     },
     {
@@ -31,7 +31,7 @@ const solutionsData = [
             linkText: "Информация по делу на сайте Мосгорсуда.",
         },
         image: [
-            "../images/solutions/Mullahodzhaev.jpg"
+            "/images/solutions/Mullahodzhaev.jpg"
         ]
     },
     {
@@ -48,7 +48,7 @@ const solutionsData = [
             linkText: "Информация по делу на сайте Одинцовского городского суда Московской области.",
         },
         image: [
-            "../images/certificate.png"
+            "/images/certificate.png"
         ]
     },
 ];

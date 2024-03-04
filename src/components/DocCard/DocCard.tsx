@@ -10,14 +10,23 @@ interface DocCardPropTypes {
     cause: string,
     solution: object,
     link: object,
-    image: []
+    image: any
 }
 
-const DocCard: React.FC<DocCardPropTypes> = ({ }) => {
+const DocCard: React.FC<DocCardPropTypes> = ({    
+    id,
+    name,
+    cause,
+    solution,
+    link,
+    image    
+}) => {    
+
+    console.log(image[0])
     return (
         <figure className="docCard">
-            <img src={docImage} alt="document" className="docCard__image" />
-            <figcaption className="docCard__caption">Subtitle Subtitle Subtitle</figcaption>
+            <img src={process.env.PUBLIC_URL + image[0]} alt={name} className="docCard__image" />
+            <figcaption className="docCard__caption">{name}</figcaption>
         </figure>
     )
 }
