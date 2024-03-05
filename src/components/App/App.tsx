@@ -33,14 +33,16 @@ function App() {
   const [backSolutionBtn, setBackSolutionBtn] = useState<any>({});
   const [disableBackSolutionButton, setDisableBackSolutionButon] = useState(true);
   const [disableNextSolutionButton, setDisableNextSolutionButon] = useState(false);
+  const popupSolution = document.querySelector(".popup");
+  const selectedSolutionData = solutionsData[selectedSolution]
 
 
   //логика Header START//
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement;
     setHeaderElement(header)
-  },[])
-  
+  }, [])
+
   const headerTop = headerElement.offsetTop
 
   function headerTopFix() {
@@ -53,7 +55,7 @@ function App() {
 
   window.onscroll = function () { headerTopFix() };
 
-    //логика Header END//
+  //логика Header END//
 
 
   //Методы навигации по шагам блока Methods START//
@@ -207,6 +209,19 @@ function App() {
     gsap.fromTo(".docCard__image", { opacty: 0, x: -55 }, { opacty: 1, x: 0 })
   };
 
+
+  function openPopupSolution(e: MouseEvent) {
+    // if(popupSolution){
+    popupSolution?.classList.add("popup_visible")
+    console.log(selectedSolutionData)
+    // }
+  }
+
+  function closePopupSolution(e: MouseEvent) {
+    popupSolution?.classList.remove("popup_visible")
+  }
+
+
   //навигация по галерее Solutions END//
 
 
@@ -323,12 +338,19 @@ function App() {
   //галерея GSAP END// 
 
 
+
+
   return (
     <div className="App">
       <Header
         windowSize={windowSize}
       />
-      {/* <Popup children={undefined} /> */}
+      <Popup
+        closePopupSolution={closePopupSolution}
+        selectedSolution={selectedSolution}
+        selectedSolutionData={selectedSolutionData}
+        children={undefined}
+      />
       <Main />
       <About />
       <Solutions
@@ -338,6 +360,7 @@ function App() {
         selectedSolution={selectedSolution}
         handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
         handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
+        openPopupSolution={openPopupSolution}
       />
       <Methods
         MethodsDataArray={MethodsDataArray}

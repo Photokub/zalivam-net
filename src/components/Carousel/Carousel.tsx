@@ -10,6 +10,7 @@ interface CarouselPropTypes {
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void,
     SolutionsArray: any,
+    openPopupSolution: (e: MouseEvent)=>void,
 }
 
 const Carousel: React.FC<CarouselPropTypes> = ({
@@ -18,7 +19,8 @@ const Carousel: React.FC<CarouselPropTypes> = ({
     SolutionsArray,
     selectedSolution,
     handleAnimationNextSolutionBtn,
-    handleAnimationBackSolutionBtn
+    handleAnimationBackSolutionBtn,
+    openPopupSolution,
 }) => {
     return (
         <div className='carousel'>
@@ -31,7 +33,8 @@ const Carousel: React.FC<CarouselPropTypes> = ({
                         solution={card.solution}
                         link={card.link}
                         image={card.image}    
-                        selectedSolution={selectedSolution}                    
+                        selectedSolution={selectedSolution}
+                        openPopupSolution={openPopupSolution}
                     />
                 )
             }

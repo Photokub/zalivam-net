@@ -4,19 +4,30 @@ import TemplateImage from "../../images/certificate.png"
 import "./Popup.css"
 
 interface PopupPropTypes {
-    children: ReactNode;
+    children: ReactNode,
+    closePopupSolution: (e: any)=>void,
+    selectedSolution: number,
+    selectedSolutionData: any
 }
 
-const Popup: React.FC<PopupPropTypes> = ({ children }) => {
+const Popup: React.FC<PopupPropTypes> = ({ 
+    children,
+    selectedSolution,
+    closePopupSolution,
+    selectedSolutionData 
+}) => {
+
+    // const selectedDoc = docCardsArray[selectedSolution]
+
     return (
-        <div className="popup">
+        <div className="popup" aria-label="попап полноразмерного изображения">
             <div className="popup__container">
-                <button className="popup_closeButton" type="button">
+                <button className="popup_closeButton" type="button" onClick={(e) => closePopupSolution(e)}>
                     <IoMdClose className="popup_closeButtonImg" />
                 </button>
                 <figure className="popup__figure">
-                    <img src={TemplateImage} alt="изображение" className="popup__image" />
-                    <figcaption className="popup__caption">Subtitle Subtitle Subtitle</figcaption>
+                    <img src={process.env.PUBLIC_URL + selectedSolutionData?.image[0]} alt={selectedSolutionData?.name} className="popup__image" />
+                    <figcaption className="popup__caption">{selectedSolutionData?.name}</figcaption>
                 </figure>
                 {/* {children} */}
             </div>

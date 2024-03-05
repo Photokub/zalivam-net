@@ -23,6 +23,16 @@
   font-weight: 400;
   line-height: 21px;
 }
+.docCard .docCard__imageButton {
+  border: none;
+  background: none;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+.docCard .docCard__imageButton:active {
+  transform: translateX(1px) translateY(1px);
+}
 
 .docCard_invisible {
   display: none;

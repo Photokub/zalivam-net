@@ -10,6 +10,7 @@ interface SolutionsPropTypes {
     selectedSolution: any,
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void,
+    openPopupSolution: (e: MouseEvent)=>void,
     SolutionsArray: { id: number; name: string; cause: string; solution: { primaryText: string; amount: string; srcondaryText: string; }; link: { url: string; linkText: string; }; image: string[]; }[],
 }
 
@@ -19,7 +20,8 @@ const Solutions: React.FC<SolutionsPropTypes> = ({
     SolutionsArray,
     selectedSolution,
     handleAnimationNextSolutionBtn,
-    handleAnimationBackSolutionBtn
+    handleAnimationBackSolutionBtn,
+    openPopupSolution
 }) => {
     return (
         <section className="solutions" id="solutions">
@@ -36,6 +38,7 @@ const Solutions: React.FC<SolutionsPropTypes> = ({
                     handleClickCarouselBack={handleClickCarouselBack}
                     handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
                     handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
+                    openPopupSolution={openPopupSolution}
                 />
 
             </div>

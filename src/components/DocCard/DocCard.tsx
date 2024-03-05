@@ -11,22 +11,26 @@ interface DocCardPropTypes {
     solution: object,
     link: object,
     image: any,
-    selectedSolution: any
+    selectedSolution: any,
+    openPopupSolution: (e: any) => void,
 }
 
-const DocCard: React.FC<DocCardPropTypes> = ({    
+const DocCard: React.FC<DocCardPropTypes> = ({
     id,
     name,
     cause,
     solution,
     link,
     image,
-    selectedSolution   
-}) => {    
+    selectedSolution,
+    openPopupSolution,
+}) => {
 
     return (
         <figure className={selectedSolution !== id ? "docCard docCard_invisible" : "docCard"} >
-            <img src={process.env.PUBLIC_URL + image[0]} alt={name} className="docCard__image" />
+            <button className="docCard__imageButton" type="button" onClick={(e) => openPopupSolution(e)}>
+                <img src={process.env.PUBLIC_URL + image[0]} alt={name} className="docCard__image" />
+            </button>
             <figcaption className="docCard__caption">{name}</figcaption>
         </figure>
     )
