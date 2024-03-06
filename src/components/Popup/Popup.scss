@@ -23,11 +23,13 @@
 }
 
 .popup__container {
-    max-width: 482px;
+    // max-width: 482px;
     max-height: 770px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+    align-items: start;
+    position: relative;
 }
 
 .popup_closeButton {
@@ -38,6 +40,14 @@
     padding: 0;
     background: none;
     border: none;
+    position:absolute;
+    top: -45px;
+    right: -45px;
+    transition: .25;
+
+    &:hover{
+        opacity: .8;
+    }
 }
 
 .popup_closeButtonImg {
@@ -50,12 +60,13 @@
 .popup__figure {
     width: 482px;
     height: 770px;
-    margin: 7px 0;
+    margin: 0;
 }
 
 .popup__image {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .popup__caption {
@@ -67,4 +78,57 @@
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
+}
+
+.popup__captionButton{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup__captionButtonArrow{
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+}
+
+.popup__descriptionBar{
+    max-width: 350px;
+}
+
+.popup__descriptionBarTitle{
+    margin: 0 0 24px 0;
+
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: $h4-font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.popup__descriptionBarSubTitle{
+    margin: 0 0 24px 0;
+
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: $paragraph-font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.popup__descriptionBarLink{
+    text-decoration: none;
+    color: $text-highlight-color
+}
+
+.popup__descriptionBarHighlight{
+    font-weight: 700;
 }

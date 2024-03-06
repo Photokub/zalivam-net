@@ -33,8 +33,16 @@ function App() {
   const [backSolutionBtn, setBackSolutionBtn] = useState<any>({});
   const [disableBackSolutionButton, setDisableBackSolutionButon] = useState(true);
   const [disableNextSolutionButton, setDisableNextSolutionButon] = useState(false);
+  const [selectedSolutionImagesArray, setSelectedSolutionImagesArray] = useState<string[]>([]);
+  const [selectedSolutionImage, setSelectedSolutionImage] = useState<number>(0);
+  const [nextSolutionImageBtn, setNextSolutionImageBtn] = useState<any>({});
+  const [backSolutionImageBtn, setBackSolutionImageBtn] = useState<any>({});
+  const [disableBackSolutionImageButton, setDisableBackSolutionImageButton] = useState(true);
+  const [disableNextSolutionImageButton, setDisableNextSolutionImageButton] = useState(false);
   const popupSolution = document.querySelector(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
+
+  
 
 
   //логика Header START//
@@ -162,6 +170,47 @@ function App() {
     console.log(targetItem)
   }
 
+  //Универсальные методы галерей END//
+
+  //навигация по галерее Solutions START//
+  useEffect(() => {
+    selectedSolution <= 0 ? setDisableBackSolutionButon(true) : setDisableBackSolutionButon(false);
+    selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
+    selectedSolutionImage <= 0 ? setDisableBackSolutionImageButton(true) : setDisableBackSolutionImageButton(false);
+    selectedSolutionImage >= selectedSolutionImagesArray.length - 1 ? setDisableNextSolutionImageButton(true) : setDisableNextSolutionImageButton(false);
+  })
+
+  useEffect(() => {
+    const DocCards = document.querySelectorAll(".docCard")
+    const nextSolutionButton = document.querySelector("#nextSolutionBtn")
+    const backSolutionButton = document.querySelector("#backSolutionBtn")
+    const nextSolutionImageButton = document.querySelector("#nextSolutionImageBtn")
+    const backSolutionImageButton = document.querySelector("#backSolutionImageBtn")
+    const docCardsArr = Array.from(DocCards)
+    const selectedImagesArray = selectedSolutionData.image
+    // const selectedImagesArr = Array.from(selectedImagesArray)
+    setSelectedSolutionImagesArray(selectedImagesArray)
+    setNextSolutionBtn(nextSolutionButton)
+    setBackSolutionBtn(backSolutionButton)
+    setNextSolutionImageBtn(nextSolutionImageButton)
+    setBackSolutionImageBtn(backSolutionImageButton)
+    setDocCardsArray(docCardsArr)
+    console.log(docCardsArr)
+  }, [])
+
+
+  useEffect(() => {
+    nextSolutionBtn.disabled = disableNextSolutionButton
+    backSolutionBtn.disabled = disableBackSolutionButton
+    setDisabledStyle(nextSolutionBtn)
+    setDisabledStyle(backSolutionBtn)
+    nextSolutionImageBtn.disabled = disableNextSolutionImageButton
+    backSolutionImageBtn.disabled = disableBackSolutionImageButton
+    setDisabledStyle(nextSolutionImageBtn)
+    setDisabledStyle(backSolutionImageBtn)
+  })
+
+
   const handleClickCarouselForward = (e: MouseEvent) => сlickCarouselForward(
     e,
     selectedSolution,
@@ -174,33 +223,6 @@ function App() {
     setSelectedSolution
   )
 
-  //Универсальные методы галерей END//
-
-  //навигация по галерее Solutions START//
-  useEffect(() => {
-    selectedSolution <= 0 ? setDisableBackSolutionButon(true) : setDisableBackSolutionButon(false);
-    selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
-  })
-
-  useEffect(() => {
-    const DocCards = document.querySelectorAll(".docCard")
-    const nextSolutionButton = document.querySelector("#nextSolutionBtn")
-    const backSolutionButton = document.querySelector("#backSolutionBtn")
-    const docCardsArr = Array.from(DocCards)
-    setNextSolutionBtn(nextSolutionButton)
-    setBackSolutionBtn(backSolutionButton)
-    setDocCardsArray(docCardsArr)
-    console.log(docCardsArr)
-  }, [])
-
-
-  useEffect(() => {
-    nextSolutionBtn.disabled = disableNextSolutionButton
-    backSolutionBtn.disabled = disableBackSolutionButton
-    setDisabledStyle(nextSolutionBtn)
-    setDisabledStyle(backSolutionBtn)
-  })
-
   const handleAnimationNextSolutionBtn = () => {
     gsap.fromTo(".docCard__image", { opacty: 0, x: 55 }, { opacty: 1, x: 0 })
   };
@@ -208,6 +230,20 @@ function App() {
   const handleAnimationBackSolutionBtn = () => {
     gsap.fromTo(".docCard__image", { opacty: 0, x: -55 }, { opacty: 1, x: 0 })
   };
+
+
+  const handleClickSolutionImageForward = (e: MouseEvent) => сlickCarouselForward(
+    e,
+    selectedSolutionImage,
+    setSelectedSolutionImage
+  )
+
+  const handleClickSolutionImageBack = (e: MouseEvent) => сlickCarouselBack(
+    e,
+    selectedSolutionImage,
+    setSelectedSolutionImage
+  )
+
 
 
   function openPopupSolution(e: MouseEvent) {
@@ -349,7 +385,10 @@ function App() {
         closePopupSolution={closePopupSolution}
         selectedSolution={selectedSolution}
         selectedSolutionData={selectedSolutionData}
+        selectedSolutionImage={selectedSolutionImage}
         children={undefined}
+        handleClickSolutionImageForward={handleClickSolutionImageForward}
+        handleClickSolutionImageBack={handleClickSolutionImageBack}
       />
       <Main />
       <About />
