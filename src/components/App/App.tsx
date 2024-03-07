@@ -266,6 +266,7 @@ function App() {
   function closePopupSolution(e: MouseEvent) {
     popupSolution?.classList.remove("popup_visible")
     setIsPopupOpen(false)
+    setSelectedSolutionImage(0)
     console.log(isPopupOpen)
   }
 
