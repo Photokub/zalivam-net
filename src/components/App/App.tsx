@@ -39,10 +39,12 @@ function App() {
   const [backSolutionImageBtn, setBackSolutionImageBtn] = useState<any>({});
   const [disableBackSolutionImageButton, setDisableBackSolutionImageButton] = useState(true);
   const [disableNextSolutionImageButton, setDisableNextSolutionImageButton] = useState(false);
-  const popupSolution = document.querySelector(".popup");
+  // const [body, setBody] = useState<any>({})
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
 
-  
+
 
 
   //логика Header START//
@@ -208,6 +210,14 @@ function App() {
     backSolutionImageBtn.disabled = disableBackSolutionImageButton
     setDisabledStyle(nextSolutionImageBtn)
     setDisabledStyle(backSolutionImageBtn)
+    //setBody(bodyElement)
+    console.log(popupSolution)
+    if (bodyElement != null || bodyElement != undefined) {
+      { isPopupOpen ? bodyElement.style.overflow = "hidden" : bodyElement.style.overflow = "auto" }
+    }
+    if (popupSolution != null || popupSolution != undefined) {
+      { isPopupOpen ? popupSolution.style.overflow = "auto" : popupSolution.style.overflow = "hidden" }
+    }
   })
 
 
@@ -244,18 +254,27 @@ function App() {
     setSelectedSolutionImage
   )
 
-
-
   function openPopupSolution(e: MouseEvent) {
     // if(popupSolution){
     popupSolution?.classList.add("popup_visible")
-    console.log(selectedSolutionData)
+    setIsPopupOpen(true)
+    console.log(isPopupOpen)
+
     // }
   }
 
   function closePopupSolution(e: MouseEvent) {
     popupSolution?.classList.remove("popup_visible")
+    setIsPopupOpen(false)
+    console.log(isPopupOpen)
   }
+
+  const bodyElement = document.querySelector("body")
+
+  // if (body !== null || body !== undefined) {
+  //   isPopupOpen ? body.style.owerflow = "hidden" : body.style.owerflow = "auto"
+  // }
+
 
 
   //навигация по галерее Solutions END//
