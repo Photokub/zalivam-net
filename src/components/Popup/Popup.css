@@ -24,7 +24,6 @@
 
 .popup__container {
   max-width: 857px;
-  min-width: 400px;
   display: flex;
   flex-direction: row;
   gap: 25px;
