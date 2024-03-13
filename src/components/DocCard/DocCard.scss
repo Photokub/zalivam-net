@@ -41,3 +41,9 @@
 .docCard_invisible {
     display: none;
 }
+
+@media screen and (max-width: 548px){
+    .docCard {
+        height: 520px;
+    }
+}
