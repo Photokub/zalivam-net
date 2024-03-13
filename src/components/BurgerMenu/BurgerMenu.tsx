@@ -14,6 +14,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
     windowSize
 }) => {
 
+    const burger = document.querySelector("burger__container__input")
     const page = document.body
     const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
 
@@ -25,6 +26,15 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
         }
         setIsSubscribed(current => !current);
     };
+
+    const closeMenu = () => {
+        if (burger?.checked) {
+            page.style.overflowY = 'hidden'
+        } else {
+            page.style.overflowY = 'scroll'
+        }
+        setIsSubscribed(current => !current);
+    }
 
     const scrollToTop: any = () => {
         scroll.scrollToTop();
@@ -49,7 +59,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="about"
                             spy={true}
                             smooth={true}                            
-                            onClick={scrollToTop}
+                            onClick={() =>closeMenu()}
                             >О нас</Link>
                     </li>
                     <li className='burger-menu-list__string'>
