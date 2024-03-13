@@ -69,6 +69,8 @@
 }
 
 .popup__caption {
+  display: flex;
+  justify-content: center;
   text-align: center;
   color: #FFF;
   font-variant-numeric: lining-nums proportional-nums;
@@ -132,6 +134,7 @@
 
 @media screen and (max-width: 984px) {
   .popup {
+    padding: 100px 20px;
     align-items: flex-start;
   }
   .popup__container {

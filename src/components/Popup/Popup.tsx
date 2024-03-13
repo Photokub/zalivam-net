@@ -46,10 +46,10 @@ const Popup: React.FC<PopupPropTypes> = ({
                 <figure className="popup__figure">
                     <img src={process.env.PUBLIC_URL + selectedSolutionData?.image[selectedSolutionImage]} alt={selectedSolutionData?.name} className="popup__image" />
                     <figcaption className="popup__caption">
-                        <button id="backSolutionImageBtn" className="popup__captionButton" type="button"><VscChevronLeft className="popup__captionButtonArrow" onClick={(e) => handleClickSolutionImageBack(e)}/></button>
+                        <button id="backSolutionImageBtn" className="popup__captionButton" type="button"><VscChevronLeft className="popup__captionButtonArrow" onClick={(e) => handleClickSolutionImageBack(e)} /></button>
                         Страница {selectedSolutionImage + 1} из {selectedImagesArray.length}
-                        <button id="nextSolutionImageBtn" className="popup__captionButton" type="button"><VscChevronRight className="popup__captionButtonArrow" onClick={(e) => handleClickSolutionImageForward(e)}/></button>
-                        </figcaption>
+                        <button id="nextSolutionImageBtn" className="popup__captionButton" type="button"><VscChevronRight className="popup__captionButtonArrow" onClick={(e) => handleClickSolutionImageForward(e)} /></button>
+                    </figcaption>
                 </figure>
                 <div className="popup__descriptionBar">
                     <h4 className="popup__descriptionBarTitle">{selectedName}</h4>
