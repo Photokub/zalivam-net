@@ -176,29 +176,34 @@ function App() {
 
   //навигация по галерее Solutions START//
   useEffect(() => {
-    selectedSolution <= 0 ? setDisableBackSolutionButon(true) : setDisableBackSolutionButon(false);
+    selectedSolution == 0 ? setDisableBackSolutionButon(true) : setDisableBackSolutionButon(false);
     selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
-    selectedSolutionImage <= 0 ? setDisableBackSolutionImageButton(true) : setDisableBackSolutionImageButton(false);
-    selectedSolutionImage >= selectedSolutionImagesArray.length - 1 ? setDisableNextSolutionImageButton(true) : setDisableNextSolutionImageButton(false);
+    selectedSolutionImage === 0 ? setDisableBackSolutionImageButton(true) : setDisableBackSolutionImageButton(false);
+    selectedSolutionImage === selectedSolutionImagesArray.length - 1 ? setDisableNextSolutionImageButton(true) : setDisableNextSolutionImageButton(false);
+    console.log(`selectedSolutionImage = ${selectedSolutionImage}`)
+    console.log(`selectedSolutionImagesArray = ${selectedSolutionImagesArray.length}`)
+
   })
 
   useEffect(() => {
-    const DocCards = document.querySelectorAll(".docCard")
     const nextSolutionButton = document.querySelector("#nextSolutionBtn")
     const backSolutionButton = document.querySelector("#backSolutionBtn")
     const nextSolutionImageButton = document.querySelector("#nextSolutionImageBtn")
     const backSolutionImageButton = document.querySelector("#backSolutionImageBtn")
-    const docCardsArr = Array.from(DocCards)
-    const selectedImagesArray = selectedSolutionData.image
-    // const selectedImagesArr = Array.from(selectedImagesArray)
-    setSelectedSolutionImagesArray(selectedImagesArray)
     setNextSolutionBtn(nextSolutionButton)
     setBackSolutionBtn(backSolutionButton)
     setNextSolutionImageBtn(nextSolutionImageButton)
     setBackSolutionImageBtn(backSolutionImageButton)
+  }, [])
+
+  useEffect(() => {
+    const DocCards = document.querySelectorAll(".docCard")
+    const docCardsArr = Array.from(DocCards)
+    const selectedImagesArray = selectedSolutionData.image
+    setSelectedSolutionImagesArray(selectedImagesArray)
     setDocCardsArray(docCardsArr)
     console.log(docCardsArr)
-  }, [])
+  },[selectedSolution])
 
 
   useEffect(() => {
@@ -267,6 +272,7 @@ function App() {
     popupSolution?.classList.remove("popup_visible")
     setIsPopupOpen(false)
     setSelectedSolutionImage(0)
+    setSelectedSolutionImagesArray([])
     console.log(isPopupOpen)
   }
 
