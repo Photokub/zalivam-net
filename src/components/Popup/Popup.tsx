@@ -25,17 +25,12 @@ const Popup: React.FC<PopupPropTypes> = ({
     selectedSolutionImage
 }) => {
 
-    // const selectedDoc = docCardsArray[selectedSolution]
-
     const selectedName = selectedSolutionData.name
     const selectedCause = selectedSolutionData.cause
     const selectedSolutionText = selectedSolutionData.solution
     const selectedLink = selectedSolutionData.link
     const selectedImagesArray = selectedSolutionData.image
 
-
-
-    console.log(selectedImagesArray)
 
     return (
         <div className="popup" aria-label="попап полноразмерного изображения">
@@ -57,7 +52,6 @@ const Popup: React.FC<PopupPropTypes> = ({
                     <p className="popup__descriptionBarSubTitle">{selectedSolutionText.primaryText}<span className="popup__descriptionBarHighlight">{selectedSolutionText.amount}</span>{selectedSolutionText.srcondaryText}</p>
                     <Link className="popup__descriptionBarLink" to={selectedLink.url} target="blank">{selectedLink.linkText}</Link>
                 </div>
-                {/* {children} */}
             </div>
         </div>
     )

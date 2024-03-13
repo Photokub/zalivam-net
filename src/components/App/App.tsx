@@ -39,13 +39,10 @@ function App() {
   const [backSolutionImageBtn, setBackSolutionImageBtn] = useState<any>({});
   const [disableBackSolutionImageButton, setDisableBackSolutionImageButton] = useState(true);
   const [disableNextSolutionImageButton, setDisableNextSolutionImageButton] = useState(false);
-  // const [body, setBody] = useState<any>({})
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
-
-
-
+  const bodyElement = document.querySelector("body")
 
   //логика Header START//
   useEffect(() => {
@@ -73,7 +70,6 @@ function App() {
   console.log(MethodsDataArray)
 
   useEffect(() => {
-    console.log(selectedMethod)
     selectedMethod <= 0 ? setDisableBackButon(true) : setDisableBackButon(false);
     selectedMethod >= MethodsDataArray.length - 1 ? setDisableNextButon(true) : setDisableNextButon(false);
   })
@@ -97,7 +93,6 @@ function App() {
     setBackBtn(backButton)
     setStepCardsArray(stepCardsArr)
     setCardCheckMarksArray(cardCheckMarksArr)
-    console.log(cardCheckMarksArray)
   }, [])
 
   useEffect(() => {
@@ -202,7 +197,6 @@ function App() {
     const selectedImagesArray = selectedSolutionData.image
     setSelectedSolutionImagesArray(selectedImagesArray)
     setDocCardsArray(docCardsArr)
-    console.log(docCardsArr)
   },[selectedSolution])
 
 
@@ -215,8 +209,6 @@ function App() {
     backSolutionImageBtn.disabled = disableBackSolutionImageButton
     setDisabledStyle(nextSolutionImageBtn)
     setDisabledStyle(backSolutionImageBtn)
-    //setBody(bodyElement)
-    console.log(popupSolution)
     if (bodyElement != null || bodyElement != undefined) {
       { isPopupOpen ? bodyElement.style.overflow = "hidden" : bodyElement.style.overflow = "auto" }
     }
@@ -260,12 +252,8 @@ function App() {
   )
 
   function openPopupSolution(e: MouseEvent) {
-    // if(popupSolution){
     popupSolution?.classList.add("popup_visible")
     setIsPopupOpen(true)
-    console.log(isPopupOpen)
-
-    // }
   }
 
   function closePopupSolution(e: MouseEvent) {
@@ -273,133 +261,7 @@ function App() {
     setIsPopupOpen(false)
     setSelectedSolutionImage(0)
     setSelectedSolutionImagesArray([])
-    console.log(isPopupOpen)
   }
-
-  const bodyElement = document.querySelector("body")
-
-  // if (body !== null || body !== undefined) {
-  //   isPopupOpen ? body.style.owerflow = "hidden" : body.style.owerflow = "auto"
-  // }
-
-
-
-  //навигация по галерее Solutions END//
-
-
-  //галерея GSAP START//
-  // gsap.registerPlugin(ScrollTrigger);
-
-  // let iteration = 0; // повторяется, когда мы прокручиваем до конца или начинаем и оборачиваемся - позволяет нам плавно продолжить прокрутку курсора воспроизведения в правильном направлении.
-
-  // const spacing = 0.1,    // расстояние между картами (в шахматном порядке)
-  //   snap = gsap.utils.snap(spacing), // мы будем использовать это, чтобы привязать курсор воспроизведения к бесшовному циклу
-  //   cards = gsap.utils.toArray('.docCard'),
-  //   seamlessLoop = buildSeamlessLoop(cards, spacing),
-  //   scrub = gsap.to(seamlessLoop, { //мы повторно используем эту анимацию, чтобы плавно перемещать точку воспроизведения в бесшовном цикле.
-  //     totalTime: 0,
-  //     duration: 0.5,
-  //     ease: "power3",
-  //     paused: true
-  //   }),
-  //   trigger = ScrollTriggerObject.create({
-  //     start: 0,
-  //     onUpdate(self: any) {
-  //       if (self.progress === 1 && self.direction > 0 && !self.wrapping) {
-  //         wrapForward(self);
-  //       } else if (self.progress < 1e-5 && self.direction < 0 && !self.wrapping) {
-  //         wrapBackward(self);
-  //       } else {
-  //         scrub.vars.totalTime = snap((iteration + self.progress) * seamlessLoop.duration());
-  //         scrub.invalidate().restart(); // чтобы повысить производительность, мы просто делаем недействительным и перезапускаем ту же анимацию. Нет необходимости перезаписывать или создавать новую анимацию при каждом обновлении.
-  //         self.wrapping = false;
-  //       }
-  //     },
-  //     end: "+=3000",
-  //     pin: ".gallery"
-  //   });
-
-  // function wrapForward(trigger: any) { // когда ScrollTrigger достигнет конца, плавно вернитесь к началу
-  //   iteration++;
-  //   trigger.wrapping = true;
-  //   trigger.scroll(trigger.start + 1);
-  // }
-
-  // function wrapBackward(trigger: any) { // когда ScrollTrigger снова достигает начала (в обратном направлении), плавно возвращается к концу
-  //   iteration--;
-  //   if (iteration < 0) { // чтобы курсор воспроизведения не остановился в начале, мы перескакиваем на 10 итераций вперед
-  //     iteration = 9;
-  //     seamlessLoop.totalTime(seamlessLoop.totalTime() + seamlessLoop.duration() * 10);
-  //     scrub.pause(); //в противном случае он может обновить totalTime непосредственно перед обновлением триггера, в результате чего начальное значение будет отличаться от того, которое мы только что установили выше.
-  //   }
-  //   trigger.wrapping = true;
-  //   trigger.scroll(trigger.end - 1);
-  // }
-
-  // function scrubTo(totalTime: any) { // перемещает позицию прокрутки в место, соответствующее значению totalTime бесшовного цикла, и при необходимости выполняет перенос.
-  //   let progress = (totalTime - seamlessLoop.duration() * iteration) / seamlessLoop.duration();
-  //   if (progress > 1) {
-  //     wrapForward(trigger);
-  //   } else if (progress < 0) {
-  //     wrapBackward(trigger);
-  //   } else {
-  //     trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
-  //   }
-  // }
-
-  // document.querySelector(".carouselNav__button_next")?.addEventListener("click", () => scrubTo(scrub.vars.totalTime + spacing));
-  // document.querySelector(".carouselNav__button_prev")?.addEventListener("click", () => scrubTo(scrub.vars.totalTime - spacing));
-
-
-
-
-  // function buildSeamlessLoop(items: any, spacing: any) {
-  //   let overlap = Math.ceil(1 / spacing), // количество ДОПОЛНИТЕЛЬНЫХ анимаций по обе стороны от начала/конца для обеспечения плавного зацикливания
-  //     startTime = items.length * spacing + 0.5, // время в rawSequence, с которого мы начнем плавный цикл
-  //     loopTime = (items.length + overlap) * spacing + 1, // место в конце, где мы возвращаемся к началу времени
-  //     rawSequence = gsap.timeline({ paused: true }), // здесь живут все «настоящие» анимации
-  //     seamlessLoop = gsap.timeline({ // это просто очищает точку воспроизведения rawSequence, чтобы казалось, что она плавно зацикливается
-  //       paused: true,
-  //       repeat: -1, // для обеспечения бесконечной прокрутки/цикла
-  //       onRepeat() { // работает вокруг очень редкой ошибки, исправленной в GSAP 3.6.1.
-  //         this._time === this._dur && (this._tTime += this._dur - 0.01);
-  //       }
-  //     }),
-  //     l = items.length + overlap * 2,
-  //     time = 0,
-  //     i, index, item;
-
-  //   // установить начальное состояние элементов
-  //   gsap.set(items, { xPercent: 400, opacity: 0, scale: 0 });
-
-  //   // теперь пройдите по циклу и создайте все анимации в шахматном порядке. Помните, что в конце мы должны создать ДОПОЛНИТЕЛЬНЫЕ анимации, чтобы обеспечить плавное зацикливание.
-  //   for (i = 0; i < l; i++) {
-  //     index = i % items.length;
-  //     item = items[index];
-  //     time = i * spacing;
-  //     rawSequence.fromTo(item, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, zIndex: 100, duration: 0.5, yoyo: true, repeat: 1, ease: "power1.in", immediateRender: false }, time)
-  //       .fromTo(item, { xPercent: 400 }, { xPercent: -400, duration: 1, ease: "none", immediateRender: false }, time);
-  //     i <= items.length && seamlessLoop.add("label" + i, time); // we don't really need these, but if you wanted to jump to key spots using labels, here ya go.
-  //   }
-
-  //   // здесь мы настраиваем очистку курсора воспроизведения, чтобы он выглядел плавно.
-  //   rawSequence.time(startTime);
-  //   seamlessLoop.to(rawSequence, {
-  //     time: loopTime,
-  //     duration: loopTime - startTime,
-  //     ease: "none"
-  //   }).fromTo(rawSequence, { time: overlap * spacing + 1 }, {
-  //     time: startTime,
-  //     duration: startTime - (overlap * spacing + 1),
-  //     immediateRender: false,
-  //     ease: "none"
-  //   });
-  //   return seamlessLoop;
-  // }
-
-  //галерея GSAP END// 
-
-
 
 
   return (
