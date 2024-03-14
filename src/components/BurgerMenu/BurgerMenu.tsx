@@ -5,16 +5,16 @@ import {Link, animateScroll as scroll} from "react-scroll";
 import Contacts from "../Contacts/Contacts";
 
 interface BurgerMunuPropTypes {
-    // value?: boolean,
+    value?: boolean,
     windowSize: any;
 }
 
 const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
-    // value,
+    value,
     windowSize
 }) => {
 
-    const burger = document.querySelector("burger__container__input")
+    const burger = document.querySelector(".burger__container__input") as HTMLInputElement
     const page = document.body
     const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
 
@@ -28,10 +28,12 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
     };
 
     const closeMenu = () => {
-        if (burger?.checked) {
+        if (burger.checked) {
             page.style.overflowY = 'hidden'
+            console.log(burger.checked)
         } else {
             page.style.overflowY = 'scroll'
+            console.log(burger.checked)
         }
         setIsSubscribed(current => !current);
     }
@@ -40,6 +42,11 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
         scroll.scrollToTop();
     };
 
+    const handleOnClick = () => {
+        setTimeout( closeMenu, 200)
+        scrollToTop()
+    }
+
     return (
         <nav className="burger">
             <div className='burger__container'>
@@ -47,6 +54,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                     className='burger__container__input'
                     type="checkbox"
                     //value={isSubscribed}
+                    checked={isSubscribed}
                     onChange={handleChange}
                 />
                 <span className='burger__container__stripe'></span>
@@ -59,7 +67,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="about"
                             spy={true}
                             smooth={true}                            
-                            onClick={() =>closeMenu()}
+                            onClick={handleOnClick}
                             >О нас</Link>
                     </li>
                     <li className='burger-menu-list__string'>
@@ -68,7 +76,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="solutions"
                             spy={true}
                             smooth={true}
-                            onClick={scrollToTop}
+                            onClick={handleOnClick}
                             >Решения</Link>
                     </li>
                     <li className='burger-menu-list__string'>
@@ -77,7 +85,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="methods"
                             spy={true}
                             smooth={true}
-                            onClick={scrollToTop}
+                            onClick={handleOnClick}
                             >Как мы работаем?</Link>
                     </li>
                     <li className='burger-menu-list__string'>
@@ -86,7 +94,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="ad"
                             spy={true}
                             smooth={true}
-                            onClick={scrollToTop}
+                            onClick={handleOnClick}
                             >Подать заявку</Link>
                     </li>
                     <li className='burger-menu-list__string'>
@@ -95,7 +103,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="reviews"
                             spy={true}
                             smooth={true}
-                            onClick={scrollToTop}
+                            onClick={handleOnClick}
                             >Отзывы</Link>
                     </li>
                     <li className='burger-menu-list__string'>
@@ -104,7 +112,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="feedback"
                             spy={true}
                             smooth={true}
-                            onClick={scrollToTop}
+                            onClick={handleOnClick}
                             >Связаться с нами</Link>
                     </li>
                     <li className='burger-menu-list__string'>
