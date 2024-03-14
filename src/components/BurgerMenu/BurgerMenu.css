@@ -116,7 +116,7 @@
   cursor: pointer;
 }
 .burger-menu__list-navlink:hover {
-  transition: 0.3s ease-in-out;
+  transition: 0.05s ease-in-out;
   opacity: 0.5;
 }
 

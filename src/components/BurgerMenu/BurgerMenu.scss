@@ -135,9 +135,10 @@
     
 
     &:hover{
-        transition: .3s ease-in-out;
+        transition: .05s ease-in-out;
         opacity: .5
     }
+
 }
 
 .burger-menu__list-navlink_active {
@@ -150,6 +151,7 @@
     font-size: 18px;
     line-height: 22px;
     color: #000;
+
 }
 
 .burger-menu__container_auth {
