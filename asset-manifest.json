@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/zalivam-net/static/css/main.43a2ab7e.css",
+    "main.css": "/zalivam-net/static/css/main.a414a56b.css",
     "main.js": "/zalivam-net/static/js/main.b2b99a68.js",
     "static/js/787.3a0a764e.chunk.js": "/zalivam-net/static/js/787.3a0a764e.chunk.js",
     "static/media/main-bg.jpg": "/zalivam-net/static/media/main-bg.495618dd07eee429c62c.jpg",
@@ -16,12 +16,12 @@
     "static/media/header_phone_icon.svg": "/zalivam-net/static/media/header_phone_icon.61deae962fc404a7ec1777dd9effd208.svg",
     "static/media/check 1.svg": "/zalivam-net/static/media/check 1.7038ebb91fe835743b1c.svg",
     "index.html": "/zalivam-net/index.html",
-    "main.43a2ab7e.css.map": "/zalivam-net/static/css/main.43a2ab7e.css.map",
+    "main.a414a56b.css.map": "/zalivam-net/static/css/main.a414a56b.css.map",
     "main.b2b99a68.js.map": "/zalivam-net/static/js/main.b2b99a68.js.map",
     "787.3a0a764e.chunk.js.map": "/zalivam-net/static/js/787.3a0a764e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43a2ab7e.css",
+    "static/css/main.a414a56b.css",
     "static/js/main.b2b99a68.js"
   ]
 }
