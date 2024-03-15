@@ -9,7 +9,7 @@ interface FeedbackPropTypes {
 const FeedbackForm: React.FC<FeedbackPropTypes> = ({ }) => {
     return (
         <div className="feedbackFormContainer">
-            <form name="feedbackForm" action="" className="feedbackForm">
+            <form name="feedbackForm" action="" className="feedbackForm" method="post">
                 <label htmlFor="" className="feedbackForm__field">
                     <input type="text" className="feedbackFormInput" name="feedbackInputName" placeholder="Ваше имя *" required />
                 </label>
