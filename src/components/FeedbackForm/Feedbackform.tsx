@@ -3,13 +3,15 @@ import "./FeedbackForm.css";
 import { Link } from "react-router-dom";
 
 interface FeedbackPropTypes {
-
+    sendFeedbackMessage: any
 }
 
-const FeedbackForm: React.FC<FeedbackPropTypes> = ({ }) => {
+const FeedbackForm: React.FC<FeedbackPropTypes> = ({
+    sendFeedbackMessage
+}) => {
     return (
         <div className="feedbackFormContainer">
-            <form name="feedbackForm" action="" className="feedbackForm" method="post">
+            <form name="feedbackForm" onSubmit={sendFeedbackMessage} className="feedbackForm" method="post">
                 <label htmlFor="" className="feedbackForm__field">
                     <input type="text" className="feedbackFormInput" name="feedbackInputName" placeholder="Ваше имя *" required />
                 </label>

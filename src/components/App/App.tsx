@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Main from '../Main/Main';
 import About from '../About/About';
@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
 import MethodsData from '../../data/MethodsData.json'
+import { api } from "../../utils/Api"
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
 import solutionsData from "../../data/SolutionsData"
@@ -43,6 +44,26 @@ function App() {
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
+
+  //отправка сообщений START//
+
+  const sendFeedbackMessage = useCallback(async ({
+    name,
+    email,
+    message
+  }: { name: string, email: string, message: string }) => {
+    try {
+      const messageData = await api.sendMessage({ name, email, message });
+      if (!messageData) {
+        console.log("Сообщение отсутствует")
+      }
+      console.log(`Сообщение ${messageData.message} успешно отправлено`)
+    } catch (err) {
+      console.error(err)
+    }
+  }, [])
+  //отправка сообщений END//
+
 
   //логика Header START//
   useEffect(() => {
@@ -197,7 +218,7 @@ function App() {
     const selectedImagesArray = selectedSolutionData.image
     setSelectedSolutionImagesArray(selectedImagesArray)
     setDocCardsArray(docCardsArr)
-  },[selectedSolution])
+  }, [selectedSolution])
 
 
   useEffect(() => {
@@ -304,7 +325,9 @@ function App() {
         handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
         handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
       />
-      <Feedback />
+      <Feedback
+        sendFeedbackMessage={sendFeedbackMessage}
+      />
       <Footer />
     </div>
   );
