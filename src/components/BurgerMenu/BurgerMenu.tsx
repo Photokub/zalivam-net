@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import "./BurgerMenu.css"
-// import { Link, NavLink } from "react-router-dom";
 import {Link, animateScroll as scroll} from "react-scroll";
 import Contacts from "../Contacts/Contacts";
 
 interface BurgerMunuPropTypes {
-    value?: boolean,
     windowSize: any;
 }
 
 const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
-    value,
     windowSize
 }) => {
 
@@ -53,7 +50,6 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                 <input
                     className='burger__container__input'
                     type="checkbox"
-                    //value={isSubscribed}
                     checked={isSubscribed}
                     onChange={handleChange}
                 />
@@ -77,7 +73,8 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             spy={true}
                             smooth={true}
                             onClick={handleOnClick}
-                            >Решения</Link>
+                            >Наша судебная практика
+                            </Link>
                     </li>
                     <li className='burger-menu-list__string'>
                         <Link

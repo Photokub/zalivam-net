@@ -31,7 +31,8 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     spy={true}
                     smooth={true}
                     onClick={scrollToTop}
-                    >Решения</Link>
+                    >Наша судебная практика
+                    </Link>
                 </li>
                 <li className="navList__item">
                     <Link
