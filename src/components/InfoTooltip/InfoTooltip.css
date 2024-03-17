@@ -1,0 +1,57 @@
+.tooltip {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 444.25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  display: none;
+  transition: 0.5 ease-in-out;
+}
+
+.tooltip_visible {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip__icon {
+  width: 120px;
+  height: 120px;
+}
+
+.tooltip__icon_sucsess {
+  outline: #03b44a;
+}
+
+.tooltip__icon_failure {
+  outline: #b40303;
+}
+
+.tooltip__text {
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-variant: small-caps;
+}
+
+.tooltip__text_sucsess {
+  color: #03b44a;
+}
+
+.tooltip__text_failure {
+  color: #b40303;
+}
+
+path {
+  fill: inherit;
+  stroke: inherit;
+}/*# sourceMappingURL=InfoTooltip.css.map */

@@ -5,11 +5,15 @@ import FeedbackForm from "../FeedbackForm/Feedbackform";
 interface FeedbackPropTypes {
     sendFeedbackMessage: any,
     isLoading: boolean,
+    isSent: boolean,
+    isSucsess: boolean
 }
 
 const Feedback: React.FC<FeedbackPropTypes> = ({
     sendFeedbackMessage,
-    isLoading
+    isLoading,
+    isSent,
+    isSucsess
 }) => {
     return (
         <section className="feedback" id="feedback">
@@ -19,6 +23,8 @@ const Feedback: React.FC<FeedbackPropTypes> = ({
                 <FeedbackForm
                     sendFeedbackMessage={sendFeedbackMessage}
                     isLoading={isLoading}
+                    isSent={isSent}
+                    isSucsess={isSucsess}
                 />
             </div>
         </section>

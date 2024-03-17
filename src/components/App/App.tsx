@@ -42,6 +42,8 @@ function App() {
   const [disableNextSolutionImageButton, setDisableNextSolutionImageButton] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [isSent, setIsSent] = useState(false)
+  const [isSucsess, setIsSucsess] = useState(true)
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
@@ -57,15 +59,33 @@ function App() {
       setIsLoading(true)
       const messageData = await api.sendMessage({ name, email, message });
       if (!messageData) {
-        console.log("Сообщение отсутствует")
+        handleSendMessage()
+        setIsSucsess(false)
+        console.log(isSucsess)
+        console.log("Сообщение не отправлено")
       }
+      handleSendMessage()
+      setIsSucsess(true)
+      console.log(isSent)
       console.log(`Сообщение ${message} успешно отправлено`)
     } catch (err) {
+      handleSendMessage()
+      setIsSucsess(false)
       console.error(err)
     } finally {
+      setTimeout(() => {
+        setIsSent(false)
+      }, 8000)
       setIsLoading(false)
     }
   }, [])
+
+  const handleSendMessage = () => {
+    setIsSent(true)
+    setTimeout(() => {
+      setIsSent(false)
+    }, 5000)
+  }
 
 
   //отправка сообщений END//
@@ -334,6 +354,8 @@ function App() {
       <Feedback
         sendFeedbackMessage={sendFeedbackMessage}
         isLoading={isLoading}
+        isSent={isSent}
+        isSucsess={isSucsess}
       />
       <Footer />
     </div>

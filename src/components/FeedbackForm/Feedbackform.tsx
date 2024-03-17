@@ -2,15 +2,20 @@ import React, { FormEvent, useRef } from "react";
 import "./FeedbackForm.css";
 import { Link } from "react-router-dom";
 import Preloader from "../Preloader/Preloader";
+import InfoTooltip from "../InfoTooltip/InfoTooltip";
 
 interface FeedbackPropTypes {
     sendFeedbackMessage: any,
-    isLoading: boolean
+    isLoading: boolean,
+    isSent: boolean,
+    isSucsess: boolean
 }
 
 const FeedbackForm: React.FC<FeedbackPropTypes> = ({
     sendFeedbackMessage,
-    isLoading
+    isLoading,
+    isSent,
+    isSucsess
 }) => {
 
     const feedbackNameRef = useRef() as any;
@@ -47,9 +52,17 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
                     <span className="feedbackFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="feedbackFormLegalText__link">согласие на обработку</Link> своих персональных данных</span>
                 </div>
             </form>
-            <Preloader
-                isLoading={isLoading}
-            />
+            {
+                isSent ?
+                    <InfoTooltip
+                        isSent={isSent}
+                        isSucsess={isSucsess}
+                    /> :
+                    <Preloader
+                        isLoading={isLoading}
+                    />
+            }
+
         </div>
     )
 }
