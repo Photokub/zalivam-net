@@ -1,6 +1,7 @@
 import React, { FormEvent, useRef } from "react";
 import "./FeedbackForm.css";
 import { Link } from "react-router-dom";
+import Preloader from "../Preloader/Preloader";
 
 interface FeedbackPropTypes {
     sendFeedbackMessage: any
@@ -44,6 +45,7 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
                     <span className="feedbackFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="feedbackFormLegalText__link">согласие на обработку</Link> своих персональных данных</span>
                 </div>
             </form>
+            <Preloader/>
         </div>
     )
 }
