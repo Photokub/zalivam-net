@@ -14,6 +14,11 @@ $color: #3390EC;
     min-height: 444.25px;
     background-color: rgba(255, 255, 255, .8);
     z-index: 1;
+    display: none;
+}
+
+.holder_visible {
+    display: block
 }
 
 .preloader {

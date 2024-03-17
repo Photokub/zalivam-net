@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import Preloader from "../Preloader/Preloader";
 
 interface FeedbackPropTypes {
-    sendFeedbackMessage: any
+    sendFeedbackMessage: any,
+    isLoading: boolean
 }
 
 const FeedbackForm: React.FC<FeedbackPropTypes> = ({
-    sendFeedbackMessage
+    sendFeedbackMessage,
+    isLoading
 }) => {
 
     const feedbackNameRef = useRef() as any;
@@ -45,7 +47,9 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
                     <span className="feedbackFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="feedbackFormLegalText__link">согласие на обработку</Link> своих персональных данных</span>
                 </div>
             </form>
-            <Preloader/>
+            <Preloader
+                isLoading={isLoading}
+            />
         </div>
     )
 }

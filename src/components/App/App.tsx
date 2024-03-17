@@ -41,6 +41,7 @@ function App() {
   const [disableBackSolutionImageButton, setDisableBackSolutionImageButton] = useState(true);
   const [disableNextSolutionImageButton, setDisableNextSolutionImageButton] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
@@ -53,6 +54,7 @@ function App() {
     message
   }: { name: string, email: string, message: string }) => {
     try {
+      setIsLoading(true)
       const messageData = await api.sendMessage({ name, email, message });
       if (!messageData) {
         console.log("Сообщение отсутствует")
@@ -60,10 +62,12 @@ function App() {
       console.log(`Сообщение ${message} успешно отправлено`)
     } catch (err) {
       console.error(err)
+    } finally {
+      setIsLoading(false)
     }
   }, [])
 
-  
+
   //отправка сообщений END//
 
 
@@ -329,6 +333,7 @@ function App() {
       />
       <Feedback
         sendFeedbackMessage={sendFeedbackMessage}
+        isLoading={isLoading}
       />
       <Footer />
     </div>
