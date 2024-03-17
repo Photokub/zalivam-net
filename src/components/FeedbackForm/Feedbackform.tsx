@@ -56,6 +56,6 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
 
 export default FeedbackForm;
 
-function useEffect(arg0: () => void, arg1: never[]) {
-    throw new Error("Function not implemented.");
-}
+// function useEffect(arg0: () => void, arg1: never[]) {
+//     throw new Error("Function not implemented.");
+// }
