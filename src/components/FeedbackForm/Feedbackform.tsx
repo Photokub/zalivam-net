@@ -22,17 +22,14 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
             email: feedbackEmailRef.current.value,
             message: feedbackMessageRef.current.value,
         })
+        feedbackNameRef.current.value = ("")
+        feedbackEmailRef.current.value = ("")
+        feedbackMessageRef.current.value = ("")
     }
-
-    // useEffect(() => {
-    //     feedbackNameRef.current.value = (""),
-    //     feedbackEmailRef.current.value = (""),
-    //     feedbackMessageRef.current.value = ("")
-    // },[handleSubmit])
 
     return (
         <div className="feedbackFormContainer">
-            <form name="feedbackForm" onSubmit={(e)=>{handleSubmit(e)}} className="feedbackForm" method="post">
+            <form name="feedbackForm" onSubmit={(e) => { handleSubmit(e) }} className="feedbackForm" method="post">
                 <label htmlFor="" className="feedbackForm__field">
                     <input ref={feedbackNameRef} type="text" className="feedbackFormInput" name="feedbackInputName" placeholder="Ваше имя *" required />
                 </label>
