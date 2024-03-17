@@ -57,11 +57,13 @@ function App() {
       if (!messageData) {
         console.log("Сообщение отсутствует")
       }
-      console.log(`Сообщение ${messageData.message} успешно отправлено`)
+      console.log(`Сообщение ${message} успешно отправлено`)
     } catch (err) {
       console.error(err)
     }
   }, [])
+
+  
   //отправка сообщений END//
 
 

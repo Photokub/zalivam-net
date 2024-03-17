@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent, useRef } from "react";
 import "./FeedbackForm.css";
 import { Link } from "react-router-dom";
 
@@ -9,17 +9,38 @@ interface FeedbackPropTypes {
 const FeedbackForm: React.FC<FeedbackPropTypes> = ({
     sendFeedbackMessage
 }) => {
+
+    const feedbackNameRef = useRef() as any;
+    const feedbackEmailRef = useRef() as any;
+    //const feedbackEmailRef = useRef() as LegacyRef<HTMLInputElement> | undefined;
+    const feedbackMessageRef = useRef() as any;
+
+    function handleSubmit(e: FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        sendFeedbackMessage({
+            name: feedbackNameRef.current.value,
+            email: feedbackEmailRef.current.value,
+            message: feedbackMessageRef.current.value,
+        })
+    }
+
+    // useEffect(() => {
+    //     feedbackNameRef.current.value = (""),
+    //     feedbackEmailRef.current.value = (""),
+    //     feedbackMessageRef.current.value = ("")
+    // },[handleSubmit])
+
     return (
         <div className="feedbackFormContainer">
-            <form name="feedbackForm" onSubmit={sendFeedbackMessage} className="feedbackForm" method="post">
+            <form name="feedbackForm" onSubmit={(e)=>{handleSubmit(e)}} className="feedbackForm" method="post">
                 <label htmlFor="" className="feedbackForm__field">
-                    <input type="text" className="feedbackFormInput" name="feedbackInputName" placeholder="Ваше имя *" required />
+                    <input ref={feedbackNameRef} type="text" className="feedbackFormInput" name="feedbackInputName" placeholder="Ваше имя *" required />
                 </label>
                 <label htmlFor="" className="feedbackForm__field">
-                    <input type="text" className="feedbackFormInput" name="feedbackInputEmail" placeholder="Email *" required />
+                    <input ref={feedbackEmailRef} type="text" className="feedbackFormInput" name="feedbackInputEmail" placeholder="Email *" required />
                 </label>
                 <label htmlFor="" className="feedbackForm__field">
-                    <textarea className="feedbackFormInput feedbackFormInput_message" name="feedbackInputMessage" placeholder="Сообщение *" required />
+                    <textarea ref={feedbackMessageRef} className="feedbackFormInput feedbackFormInput_message" name="feedbackInputMessage" placeholder="Сообщение *" required />
                 </label>
                 <div className="feedbackFormBtnContainer">
                     <button className="feedbackFormSubmitBtn" type="submit">Отправить</button>
@@ -31,3 +52,7 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
 }
 
 export default FeedbackForm;
+
+function useEffect(arg0: () => void, arg1: never[]) {
+    throw new Error("Function not implemented.");
+}

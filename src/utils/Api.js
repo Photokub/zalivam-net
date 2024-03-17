@@ -16,8 +16,8 @@ class Api {
     }
 
     sendMessage({ name, email, message }) {
-        return this._request(`${this._adress}/message`, {
-            method: "GET",
+        return this._request(`${this._adress}`, {
+            method: "POST",
             credentails: "include",
             headers: this._headers,
             body: JSON.stringify({
@@ -31,7 +31,7 @@ class Api {
 
 export const api = new Api({
     credentails: 'include',
-    baseUrl: 'https://localhost:3001',
+    baseUrl: 'http://localhost:3001',
     headers: {
         "content-type": "application/json",
         'Accept': 'application/json',
