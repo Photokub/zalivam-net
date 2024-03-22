@@ -20,7 +20,6 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
 
     const feedbackNameRef = useRef() as any;
     const feedbackEmailRef = useRef() as any;
-    //const feedbackEmailRef = useRef() as LegacyRef<HTMLInputElement> | undefined;
     const feedbackMessageRef = useRef() as any;
 
     function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -68,7 +67,3 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
 }
 
 export default FeedbackForm;
-
-// function useEffect(arg0: () => void, arg1: never[]) {
-//     throw new Error("Function not implemented.");
-// }

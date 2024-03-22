@@ -344,7 +344,12 @@ function App() {
         handleAnimationNextBtn={handleAnimationNextBtn}
         handleAnimationBackBtn={handleAnimationBackBtn}
       />
-      <Ad />
+      <Ad
+        sendFeedbackMessage={sendFeedbackMessage}
+        isLoading={isLoading}
+        isSent={isSent}
+        isSucsess={isSucsess}
+      />
       <Reviews
         handleClickCarouselForward={handleClickCarouselForward}
         handleClickCarouselBack={handleClickCarouselBack}

@@ -17,7 +17,7 @@ const InfoTooltip: React.FC<InfoTooltipPropTypes> = ({
 
     return (
         <div className={isSent ? "tooltip tooltip_visible" : "tooltip"}>
-            <img src={isSucsess ? sucsessIcon : failureIcon} className={isSucsess ? "tooltip__icon tooltip__icon_sucsess" : "tooltip__icon tooltip__icon_failure"} alt={isSucsess ? "Успех" : "Неудача"}/>
+            <img src={isSucsess ? sucsessIcon : failureIcon} className={isSucsess ? "tooltip__icon tooltip__icon_sucsess" : "tooltip__icon tooltip__icon_failure"} alt={isSucsess ? "Успех" : "Неудача"} />
             <p className={isSucsess ? "tooltip__text tooltip__text_sucsess" : "tooltip__text tooltip__text_failure"}>{isSucsess ? sucsessText : failureText}</p>
         </div>
     )
