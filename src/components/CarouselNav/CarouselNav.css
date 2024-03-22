@@ -1,20 +1,19 @@
 .carouselNav {
-  width: 72px;
+  width: 132px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 19px 0 0 0;
 }
 .carouselNav .carouselNav__arrow {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   color: #3390EC;
   cursor: pointer;
   transition: 0.25s;
 }
 .carouselNav .carouselNav__arrow:hover {
-  color: var(--Buttons, #539de8);
-  box-shadow: 0px 24.8px 29.76px -12.4px rgba(51, 144, 236, 0.35);
+  color: var(--Buttons, #77b3ee);
 }
 .carouselNav .carouselNav__arrow:active {
   transform: translateX(1px) translateY(1px);
