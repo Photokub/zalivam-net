@@ -3,7 +3,7 @@ import React from "react";
 import { FaPhoneAlt } from "react-icons/fa"
 import gorbunov from '../../images/gorbunov-main.png';
 import otinov from '../../images/otinov-main.png'
-import  NameContainer  from "../NameContainer/NameContainer";
+import NameContainer from "../NameContainer/NameContainer";
 import "./Main.css"
 
 
@@ -16,11 +16,10 @@ const Main: React.FC<MainPropTypes> = () => {
         <section className="main">
             <div className="main__wrap">
                 <div className="main__textContainer">
-                    <h1 className="main__logo">Заливам.</h1>
-                    <h2 className="main__title">Вас затопили?<br />
-                        Протекла крыша?<br />
-                        Соседи отрицают свою вину и отказываются возмещать ущерб?
-                        Не беда! Мы поможем Вам!</h2>
+                    <h1 className="main__logo">Юридический центр </h1>
+                    <h2 className="main__title">Проведение оценки ущерба<br />
+                        Полное сопровождение в суде<br />
+                        Поддержка клиента на всех этапах разрешения дела</h2>
                     <h3 className="main__subtitle">Наши приемущества:</h3>
                     <ul className="main__list">
                         <li className="main__listitem">Предоставление качественных услуг является нашей главной задачей</li>
