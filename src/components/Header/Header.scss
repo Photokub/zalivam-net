@@ -11,7 +11,7 @@
     backdrop-filter: blur(20px) grayscale(30%);
 }
 
-.header_sticky{
+.header_sticky {
     position: fixed;
     left: 0;
     top: 0;
@@ -26,18 +26,24 @@
 
 }
 
+// .header__logo {
+//     min-width: 100px;
+//     margin: 0 20px 0 0;
+//     color: #000;
+//     text-align: center;
+//     font-variant-numeric: lining-nums proportional-nums;
+//     font-family: "Proxima Nova";
+//     font-size: $nav-title;
+//     font-style: normal;
+//     font-weight: 600;
+//     line-height: normal;
+//     font-variant: all-small-caps;
+// }
+
 .header__logo {
-    min-width: 100px;
+    //width: auto;
+    height: 78px;
     margin: 0 20px 0 0;
-    color: #000;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: "Proxima Nova";
-    font-size: $nav-title;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-variant: all-small-caps;
 }
 
 .header__logoHighlight {
@@ -53,7 +59,7 @@
     font-variant: all-small-caps;
 }
 
-.header__menuAndContactsBlock{
+.header__menuAndContactsBlock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -67,27 +73,27 @@
 
 }
 
-@media screen and (max-width: 984px){
+@media screen and (max-width: 984px) {
     .header__wrap {
         margin: 0 74px;
     }
 
-    .header__menuAndContactsBlock{
+    .header__menuAndContactsBlock {
         width: 70%;
         flex-direction: row-reverse;
     }
 }
 
-@media screen and (max-width: 568px){
-    .header{
+@media screen and (max-width: 568px) {
+    .header {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding:  15px;
+        padding: 15px;
     }
 
-    .header__wrap{
+    .header__wrap {
         width: 100%;
         margin: 0;
     }

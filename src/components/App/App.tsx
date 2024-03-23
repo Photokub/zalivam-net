@@ -10,8 +10,8 @@ import Feedback from '../Feedback/Feedback';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
-import MethodsData from '../../data/MethodsData.json'
-import { api } from "../../utils/Api"
+import MethodsData from '../../data/MethodsData.json';
+import { api } from "../../utils/Api.js";
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
 import solutionsData from "../../data/SolutionsData"
