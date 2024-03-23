@@ -3,10 +3,10 @@
 .methodFocus {
     width: 100%;
     display: grid; 
-    grid-template-rows: 56px minmax(200px, auto);
+    grid-template-rows: 56px minmax(80px, auto);
     grid-template-columns: 55px auto;
     grid-column-gap: 14px;
-    margin: 0 0 84px 0;
+    margin: 0 0 24px 0;
 }
 
 .methodFocus__number {
@@ -58,14 +58,14 @@
 
 @media screen and (max-width: 986px){
     .methodFocus{
-        grid-template-rows: 56px minmax(280px, auto);
+        grid-template-rows: 56px minmax(160px, auto);
     }
 }
 
 @media screen and (max-width: 568px){
     .methodFocus{
         margin: 10px 0 20px 0;
-        grid-template-rows: 80px minmax(400px, auto);
+        grid-template-rows: 80px minmax(180px, auto);
 
     }
 
