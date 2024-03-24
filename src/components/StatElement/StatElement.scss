@@ -1,8 +1,14 @@
 .statElement {
+    height: 220px;
+    // width: 100%;
+    max-width: 220px;
+    // max-height: 256px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 256px;
-    padding: 45px 15px 22px 15px;
+    padding: 15px;
+    // padding: 15px 15px 22px 15px;
     box-sizing: border-box;
     align-items: center;
     border-radius: 25px;
@@ -11,16 +17,17 @@
 }
 
 .statElement__title {
-    margin: 0 0 10px 0;
+    margin:0;
     color: var(--Header, #07F);
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
     font-family: Proxima Nova;
-    font-size: 70px;
+    font-size: 26px;
+    // font-size: 70px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    word-spacing: -8px;
+    // word-spacing: -8px;
 }
 
 .statElement__subtitle {
@@ -41,8 +48,8 @@
     margin: 0;
 }
 
-@media screen and (max-width: 568px) {
-    .statElement__title {
-        font-size: 64px;
-    }
-}
+// @media screen and (max-width: 568px) {
+//     .statElement__title {
+//         font-size: 64px;
+//     }
+// }

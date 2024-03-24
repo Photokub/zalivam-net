@@ -21,6 +21,7 @@ function App() {
 
   const [headerElement, setHeaderElement] = useState<any>({})
   const [windowSize, setWindowSize] = useState(getWindowSize());
+  // const [headerTopValue, setHeaderTopValue] = useState(0)
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
@@ -92,12 +93,12 @@ function App() {
 
 
   //логика Header START//
+  const headerTop = headerElement.offsetTop
+
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement;
     setHeaderElement(header)
   }, [])
-
-  const headerTop = headerElement.offsetTop
 
   function headerTopFix() {
     if (window.scrollY >= headerTop) {

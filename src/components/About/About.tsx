@@ -11,7 +11,7 @@ const About: React.FC<AboutPropTypes> = ({ }) => {
     return (
         <section className="about" id="about">
             <div className="about__wrap">
-                <h2 className="about__title">О нас в цифрах</h2>
+                <h2 className="about__title">Направления работы</h2>
                 <StatContainer />
             </div>
         </section>

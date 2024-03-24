@@ -3,17 +3,17 @@ import "./StatElement.css"
 
 interface StatElementPropTypes {
     title: any,
-    subtitle: any,
+    //subtitle: any,
 }
 
 const StatElement: React.FC<StatElementPropTypes> = ({
     title,
-    subtitle
+    //subtitle
 }) => {
     return (
         <div className="statElement">
             <h3 className="statElement__title">{title}</h3>
-            <p className="statElement__subtitle">{subtitle}</p>
+            {/* <p className="statElement__subtitle">{subtitle}</p> */}
         </div>
     )
 }
