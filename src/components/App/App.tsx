@@ -87,9 +87,7 @@ function App() {
       setIsSent(false)
     }, 5000)
   }
-
-
-  //отправка сообщений END//
+//отправка сообщений END//
 
 
   //логика Header START//

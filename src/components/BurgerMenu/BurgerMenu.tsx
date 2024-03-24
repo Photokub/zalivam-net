@@ -26,11 +26,9 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
 
     const closeMenu = () => {
         if (burger.checked) {
-            page.style.overflowY = 'hidden'
-            console.log(burger.checked)
-        } else {
             page.style.overflowY = 'scroll'
-            console.log(burger.checked)
+        } else {
+            page.style.overflowY = 'hidden'
         }
         setIsSubscribed(current => !current);
     }
@@ -41,7 +39,6 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
 
     const handleOnClick = () => {
         setTimeout( closeMenu, 200)
-        //scrollToTop()
     }
 
     return (
@@ -91,6 +88,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
                             to="ad"
                             spy={true}
                             smooth={true}
+                            offset={-80}
                             onClick={handleOnClick}
                             >Подать заявку</Link>
                     </li>
