@@ -3,8 +3,8 @@ import './Preloader.css'
 
 export default function Preloader({ isLoading }) {
     return (
-        <div class={isLoading? "holder holder_visible" : "holder"}>
-            <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div className={isLoading? "holder holder_visible" : "holder"}>
+            <div className="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
     )
 }

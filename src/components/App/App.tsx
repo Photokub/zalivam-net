@@ -22,7 +22,7 @@ function App() {
 
   const [headerElement, setHeaderElement] = useState<any>({})
   const [windowSize, setWindowSize] = useState(getWindowSize());
-  // const [headerTopValue, setHeaderTopValue] = useState()
+  const [headerTopValue, setHeaderTopValue] = useState()
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
@@ -97,17 +97,27 @@ function App() {
   //логика Header START//
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement;
+    console.log(header)
     setHeaderElement(header)
-  }, [])
+  })
+
+  //const header = document.querySelector('.header') as HTMLElement;
+
 
   const headerTop = headerElement.offsetTop
+  useEffect(() => {
+    setHeaderTopValue(headerTop)
+  },[])
 
   function headerTopFix() {
-    if (headerElement != undefined) {
-      if (window.scrollY >= headerTop) {
+    if (headerElement !== undefined) {
+      if (window.scrollY >= headerTopValue!) {
         headerElement.classList.add("header_sticky");
       } else {
-        headerElement.classList.remove("header_sticky");
+        if (headerElement !== undefined && headerElement.classList.contains("header_sticky")) {
+          console.log(headerElement)
+          headerElement.classList.remove("header_sticky");
+        }
       }
     }
   }
