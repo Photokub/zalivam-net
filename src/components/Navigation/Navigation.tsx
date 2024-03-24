@@ -21,7 +21,7 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     to="about"
                     spy={true}
                     smooth={true}
-                    onClick={scrollToTop}
+                    //onClick={scrollToTop}
                     >О нас</Link>
                 </li>
                 <li className="navList__item">
@@ -30,7 +30,7 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     to="solutions"
                     spy={true}
                     smooth={true}
-                    onClick={scrollToTop}
+                    //onClick={scrollToTop}
                     >Наша судебная практика
                     </Link>
                 </li>
@@ -40,7 +40,7 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     to="methods"
                     spy={true}
                     smooth={true}
-                    onClick={scrollToTop}
+                    //onClick={scrollToTop}
                     >Как мы работаем?</Link>
                 </li>
                 <li className="navList__item">
@@ -49,7 +49,8 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     to="ad"
                     spy={true}
                     smooth={true}
-                    onClick={scrollToTop}
+                    offset={-70}
+                    //onClick={scrollToTop}
                     >Подать заявку</Link>
                 </li>
                 <li className="navList__item">
@@ -58,7 +59,7 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     to="reviews"
                     spy={true}
                     smooth={true}
-                    onClick={scrollToTop}
+                    //onClick={scrollToTop}
                     >Отзывы</Link>
                 </li>
                 <li className="navList__item">
@@ -67,7 +68,7 @@ const Navigation: React.FC<NavigationPropTypes> = ({ }) => {
                     to="feedback"
                     spy={true}
                     smooth={true}
-                    onClick={scrollToTop}
+                    //onClick={scrollToTop}
                     >Связаться с нами</Link>
                 </li>
             </ul>

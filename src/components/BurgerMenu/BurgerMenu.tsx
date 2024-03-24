@@ -41,7 +41,7 @@ const BurgerMenu: React.FC<BurgerMunuPropTypes> = ({
 
     const handleOnClick = () => {
         setTimeout( closeMenu, 200)
-        scrollToTop()
+        //scrollToTop()
     }
 
     return (
