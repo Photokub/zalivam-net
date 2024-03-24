@@ -95,30 +95,19 @@ function App() {
 
 
   //логика Header START//
+
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement;
-    console.log(header)
     setHeaderElement(header)
-  })
-
-  //const header = document.querySelector('.header') as HTMLElement;
-
+  }, [])
 
   const headerTop = headerElement.offsetTop
-  useEffect(() => {
-    setHeaderTopValue(headerTop)
-  },[])
 
   function headerTopFix() {
-    if (headerElement !== undefined) {
-      if (window.scrollY >= headerTopValue!) {
-        headerElement.classList.add("header_sticky");
-      } else {
-        if (headerElement !== undefined && headerElement.classList.contains("header_sticky")) {
-          console.log(headerElement)
-          headerElement.classList.remove("header_sticky");
-        }
-      }
+    if (window.scrollY >= headerTop) {
+      headerElement.classList.add("header_sticky");
+    } else {
+      headerElement.classList.remove("header_sticky");
     }
   }
 
