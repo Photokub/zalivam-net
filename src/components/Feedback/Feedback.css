@@ -4,12 +4,15 @@
   justify-content: center;
   background: url("../../images/about_BG_image.png") no-repeat, #2C3333;
   background-size: cover;
+  padding: 0 15px;
 }
 
 .feedbck__wrap {
   max-width: 568px;
   min-width: 345px;
   margin: 100px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .feedback__title {

@@ -3,6 +3,7 @@
 
 .feedbackFormContainer {
     position: relative;
+    align-self: center;
     padding: 5px;
     margin: 28px 0 0 0;
     border-radius: 4px;
@@ -13,7 +14,6 @@
 }
 
 .feedbackForm {
-    height: 100%;
     border: 1px dashed #D2D1D1;
     border-radius: 4px;
     display: flex;

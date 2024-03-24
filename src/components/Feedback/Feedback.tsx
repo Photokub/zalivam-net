@@ -19,7 +19,7 @@ const Feedback: React.FC<FeedbackPropTypes> = ({
         <section className="feedback" id="feedback">
             <div className="feedbck__wrap">
                 <h2 className="feedback__title">Обратная связь</h2>
-                <p className="feedback__paragraph">Заполните заявку и с вами свяжемся</p>
+                <p className="feedback__paragraph">Оставьте свои контакты, и наш менеджер свяжется с вами для обсуждения деталей</p>
                 <FeedbackForm
                     sendFeedbackMessage={sendFeedbackMessage}
                     isLoading={isLoading}
