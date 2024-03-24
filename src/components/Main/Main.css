@@ -54,7 +54,7 @@
   margin: 0 0 32px 0;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Proxima Nova;
-  font-size: 56px;
+  font-size: 54px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -66,8 +66,9 @@
   color: #07F;
 }
 
-.main__title {
+.main__titleList {
   max-width: 637px;
+  padding: 0;
   color: var(--Text-bodyText, #171A28);
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Proxima Nova;
@@ -77,6 +78,11 @@
   font-weight: 600;
   line-height: 40px;
   text-align: left;
+  list-style-type: none;
+}
+
+.main__titleListItem {
+  margin: 0 0 18px 0;
 }
 
 .main__subtitle {
@@ -182,10 +188,19 @@
   }
 }
 @media screen and (max-width: 1124px) {
+  .main {
+    background-position: 120% 0px;
+  }
+  .main__logo {
+    font-size: 36px;
+    margin: 0 0 16px 0;
+  }
   .main__wrap {
     padding: 0 0 0 50px;
   }
-  .main__title {
+  .main__titleList {
+    font-size: 26px;
+    line-height: 26px;
     margin: 0 0 36px 0;
   }
 }
@@ -234,11 +249,9 @@
     font-size: 36px;
     margin: 0 0 16px 0;
   }
-  .main__title {
+  .main__titleList {
     width: 100%;
-    font-size: 36px;
-    line-height: 36px;
-    margin: 0 0 68px 0;
+    margin: 0 0 48px 0;
   }
   .main__subtitle {
     margin: 0 0 23px 0;

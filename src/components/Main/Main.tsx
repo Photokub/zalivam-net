@@ -17,9 +17,14 @@ const Main: React.FC<MainPropTypes> = () => {
             <div className="main__wrap">
                 <div className="main__textContainer">
                     <h1 className="main__logo">Юридический центр </h1>
-                    <h2 className="main__title">Проведение оценки ущерба<br />
+                    <ul className="main__titleList">
+                        <li className="main__titleListItem">Проведение оценки ущерба</li>
+                        <li className="main__titleListItem">Полное сопровождение в суде</li>
+                        <li className="main__titleListItem">Поддержка клиента на всех этапах разрешения дела</li>
+                    </ul>
+                    {/* <h2 className="main__title">Проведение оценки ущерба<br />
                         Полное сопровождение в суде<br />
-                        Поддержка клиента на всех этапах разрешения дела</h2>
+                        Поддержка клиента на всех этапах разрешения дела</h2> */}
                     <h3 className="main__subtitle">Наши приемущества:</h3>
                     <ul className="main__list">
                         <li className="main__listitem">Предоставление качественных услуг является нашей главной задачей</li>
