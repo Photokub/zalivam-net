@@ -1,16 +1,7 @@
 .statContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
-}
-
-@media screen and (max-width: 984px) {
-  .statContainer {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
 }/*# sourceMappingURL=StatContainer.css.map */
