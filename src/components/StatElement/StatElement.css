@@ -41,4 +41,14 @@
   color: var(--Header, #07F);
   font-size: 43px;
   margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .statElement {
+    height: 160px;
+    width: 160px;
+  }
+  .statElement__title {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=StatElement.css.map */

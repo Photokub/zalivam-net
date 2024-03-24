@@ -48,8 +48,14 @@
     margin: 0;
 }
 
-// @media screen and (max-width: 568px) {
-//     .statElement__title {
-//         font-size: 64px;
-//     }
-// }
+@media screen and (max-width: 1024px) {
+
+    .statElement{
+        height: 160px;
+        width: 160px;
+    }
+
+    .statElement__title {
+        font-size: 20px;
+    }
+}

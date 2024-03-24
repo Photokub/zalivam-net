@@ -9,12 +9,8 @@
     grid-row-gap: 20px;
 }
 
-// @media screen and (max-width: 984px) {
-//     .statContainer {
-//         height: 100%;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         align-items: center;
-//     }
-// }
+@media screen and (max-width: 1024px) {
+    .statContainer {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
