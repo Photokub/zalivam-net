@@ -3,6 +3,7 @@ import "./Header.css"
 import Navigation from "../Navigation/Navigation";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Contacts from "../Contacts/Contacts";
+import { Link } from "react-scroll";
 import logo from "../../images/logo.svg"
 
 interface HeaderPropTypes {
@@ -17,7 +18,14 @@ const Header: React.FC<HeaderPropTypes> = ({ windowSize }) => {
         <header className="header">
             <div className="header__wrap">
                 {/* <p className="header__logo">ЗАЛИВАМ <span className="header__logoHighlight">НЕТ</span></p> */}
-                <img src={logo} alt="логотип" className="header__logo" />
+                <Link
+                    className="header__link"
+                    to="main"
+                    spy={true}
+                    smooth={true}
+                >
+                    <img src={logo} alt="логотип" className="header__logo" />
+                </Link>
                 <div className="header__menuAndContactsBlock">
                     {windowSize!.innerWidth! <= 984 ?
                         <BurgerMenu

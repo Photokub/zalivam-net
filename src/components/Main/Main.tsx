@@ -13,7 +13,7 @@ interface MainPropTypes {
 
 const Main: React.FC<MainPropTypes> = () => {
     return (
-        <section className="main">
+        <section className="main" id="main">
             <div className="main__wrap">
                 <div className="main__textContainer">
                     <h1 className="main__logo">Юридический центр </h1>
