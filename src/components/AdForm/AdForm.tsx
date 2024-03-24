@@ -8,14 +8,18 @@ interface AdFormPropTypes {
     sendFeedbackMessage: any,
     isLoading: boolean,
     isSent: boolean,
-    isSucsess: boolean
+    isSucsess: boolean,
+    openPopup: any,
+    agreementPopup: Element | null,
 }
 
 const AdForm: React.FC<AdFormPropTypes> = ({
     sendFeedbackMessage,
     isLoading,
     isSent,
-    isSucsess
+    isSucsess,
+    openPopup,
+    agreementPopup
 }) => {
 
     const adNameRef = useRef() as any;
@@ -34,6 +38,8 @@ const AdForm: React.FC<AdFormPropTypes> = ({
         adMessageRef.current.value = ("")
     }
 
+    // const agreementPopup = document.querySelector(".agreement")
+
     return (
         <div className="adFormContainer">
             <form name="adFormFeedbck" action="" onSubmit={(e) => { handleSubmit(e) }} className="adForm">
@@ -45,7 +51,8 @@ const AdForm: React.FC<AdFormPropTypes> = ({
                 </div>
                 <div className="adFormBtnContainer">
                     <button className="adFormSubmitBtn" type="submit">Проконсультироваться с экспертом</button>
-                    <span className="adFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="adFormLegalText__link">согласие на обработку</Link> своих персональных данных</span>
+                    <span className="adFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="adFormLegalText__link" onClick={(e) => openPopup(e, agreementPopup, "agreement")}>согласие на обработку</Link> своих персональных данных</span>
+                    {/* <span className="adFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="adFormLegalText__link">согласие на обработку</Link> своих персональных данных</span> */}
                 </div>
             </form>
             {

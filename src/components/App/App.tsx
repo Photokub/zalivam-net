@@ -16,6 +16,7 @@ import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
 import solutionsData from "../../data/SolutionsData"
 import { useActionData } from 'react-router-dom';
+import Agreement from '../Agreement/Agreement';
 
 function App() {
 
@@ -48,6 +49,9 @@ function App() {
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
+  const agreementPopup = document.querySelector(".agreement")
+
+  const Data = new Date()
 
   //отправка сообщений START//
 
@@ -87,7 +91,7 @@ function App() {
       setIsSent(false)
     }, 5000)
   }
-//отправка сообщений END//
+  //отправка сообщений END//
 
 
   //логика Header START//
@@ -311,11 +315,23 @@ function App() {
     setSelectedSolutionImagesArray([])
   }
 
+  function openPopup(e: MouseEvent, currentPopupElement: any, classNamePart: string) {
+    currentPopupElement?.classList.add(`${classNamePart}_visible`)
+    setIsPopupOpen(true)
+  }
+
+  function closePopup(e: MouseEvent, currentPopupElement: any, classNamePart: string) {
+    currentPopupElement?.classList.remove(`${classNamePart}_visible`)
+    setIsPopupOpen(false)
+  }
 
   return (
     <div className="App">
       <Header
         windowSize={windowSize}
+      />
+      <Agreement
+        closePopup={closePopup}
       />
       <Popup
         closePopupSolution={closePopupSolution}
@@ -350,6 +366,8 @@ function App() {
         isLoading={isLoading}
         isSent={isSent}
         isSucsess={isSucsess}
+        openPopup={openPopup}
+        agreementPopup={agreementPopup}
       />
       <Reviews
         handleClickCarouselForward={handleClickCarouselForward}
@@ -362,8 +380,12 @@ function App() {
         isLoading={isLoading}
         isSent={isSent}
         isSucsess={isSucsess}
+        openPopup={openPopup}
+        agreementPopup={agreementPopup}
       />
-      <Footer />
+      <Footer
+        Data={Data}
+      />
     </div>
   );
 }

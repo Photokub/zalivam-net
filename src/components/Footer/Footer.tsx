@@ -5,10 +5,13 @@ import { FaVk } from "react-icons/fa"
 import { FaTelegramPlane } from "react-icons/fa"
 
 interface FooterPropTypes {
-
+    Data: any;
 }
 
-const Footer: React.FC<FooterPropTypes> = ({ }) => {
+const Footer: React.FC<FooterPropTypes> = ({
+    Data
+ }) => {
+
     return (
         <footer className="footer">
             <div className="footer__wrap">
@@ -41,8 +44,8 @@ const Footer: React.FC<FooterPropTypes> = ({ }) => {
                 </div>
                 <div className="footer__leegalTextContainer">
                     <p className="footer__leegalTextParagraph">Информация, представленная на сайте, не является публичной офертой</p>
-                    <p className="footer__leegalTextParagraph">Дизайн и разработка A. Kubyshkin</p>
-                    <p className="footer__leegalTextParagraph">ООО «ЗАЛИВАМНЕТ» ©  2023</p>
+                    <p className="footer__leegalTextParagraph">Дизайн и разработка <Link className="footer__link" to="http://photokub.ru/" target="blank">A. Kubyshkin</Link></p>
+                    <p className="footer__leegalTextParagraph">{`ООО «ЗАЛИВАМНЕТ» ©  2023 - ${Data.getFullYear()}`}</p>
                 </div>
             </div>
         </footer>

@@ -1,0 +1,67 @@
+.agreement {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 80px 35px;
+  box-sizing: border-box;
+  z-index: 3;
+  color: #FFF;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.agreement_visible {
+  display: flex;
+  opacity: 1;
+  overflow: auto;
+}
+
+.agreement__closeButton {
+  width: 44px;
+  height: 44px;
+  align-self: end;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  transition: 0.25;
+}
+.agreement__closeButton:hover {
+  opacity: 0.8;
+}
+
+.agreement__title {
+  font-family: "Proxima Nova";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-variant: all-small-caps;
+}
+
+.agreement__subtitle {
+  margin: 0 0 6px 0;
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-variant: all-small-caps;
+}
+
+.agreement__text {
+  margin: 0;
+}
+
+.agreement__link {
+  color: #FFF;
+}
+
+.agreement__listItem {
+  margin-bottom: 40px;
+}/*# sourceMappingURL=Agreement.css.map */

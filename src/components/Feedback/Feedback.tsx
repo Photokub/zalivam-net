@@ -6,14 +6,18 @@ interface FeedbackPropTypes {
     sendFeedbackMessage: any,
     isLoading: boolean,
     isSent: boolean,
-    isSucsess: boolean
+    isSucsess: boolean,
+    openPopup: any;
+    agreementPopup: Element | null,
 }
 
 const Feedback: React.FC<FeedbackPropTypes> = ({
     sendFeedbackMessage,
     isLoading,
     isSent,
-    isSucsess
+    isSucsess,
+    openPopup,
+    agreementPopup
 }) => {
     return (
         <section className="feedback" id="feedback">
@@ -25,6 +29,8 @@ const Feedback: React.FC<FeedbackPropTypes> = ({
                     isLoading={isLoading}
                     isSent={isSent}
                     isSucsess={isSucsess}
+                    openPopup={openPopup}
+                    agreementPopup={agreementPopup}
                 />
             </div>
         </section>

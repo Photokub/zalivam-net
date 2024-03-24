@@ -7,14 +7,18 @@ interface AdPropTypes {
     sendFeedbackMessage: any,
     isLoading: boolean,
     isSent: boolean,
-    isSucsess: boolean
+    isSucsess: boolean,
+    openPopup: any,
+    agreementPopup: Element | null,
 }
 
 const Ad: React.FC<AdPropTypes> = ({
     sendFeedbackMessage,
     isLoading,
     isSent,
-    isSucsess
+    isSucsess,
+    openPopup,
+    agreementPopup
 }) => {
     return (
         <section className="ad" id="ad">
@@ -29,6 +33,8 @@ const Ad: React.FC<AdPropTypes> = ({
                     isLoading={isLoading}
                     isSent={isSent}
                     isSucsess={isSucsess}
+                    openPopup={openPopup}
+                    agreementPopup={agreementPopup}
                 />
             </div>
         </section>

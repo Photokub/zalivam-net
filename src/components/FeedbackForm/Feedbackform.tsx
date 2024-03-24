@@ -8,14 +8,18 @@ interface FeedbackPropTypes {
     sendFeedbackMessage: any,
     isLoading: boolean,
     isSent: boolean,
-    isSucsess: boolean
+    isSucsess: boolean,
+    openPopup: any,
+    agreementPopup: Element | null,
 }
 
 const FeedbackForm: React.FC<FeedbackPropTypes> = ({
     sendFeedbackMessage,
     isLoading,
     isSent,
-    isSucsess
+    isSucsess,
+    openPopup,
+    agreementPopup
 }) => {
 
     const feedbackNameRef = useRef() as any;
@@ -48,7 +52,7 @@ const FeedbackForm: React.FC<FeedbackPropTypes> = ({
                 </label>
                 <div className="feedbackFormBtnContainer">
                     <button className="feedbackFormSubmitBtn" type="submit">Отправить</button>
-                    <span className="feedbackFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="feedbackFormLegalText__link">согласие на обработку</Link> своих персональных данных</span>
+                    <span className="feedbackFormLegalText">*Нажимая на кнопку вы даете <Link to="#" className="feedbackFormLegalText__link" onClick={(e) => openPopup(e, agreementPopup, "agreement")}>согласие на обработку</Link> своих персональных данных</span>
                 </div>
             </form>
             {
