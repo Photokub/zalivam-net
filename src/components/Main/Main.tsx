@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 //import styles from './styles.module.css';
 import { FaPhoneAlt } from "react-icons/fa"
 import gorbunov from '../../images/gorbunov-main.png';
@@ -9,12 +9,16 @@ import "./Main.css"
 
 interface MainPropTypes {
     openPopup: any,
-    popupWithCBForm: Element | null
+    popupWithCBForm: Element | null,
+    setIsCBPopupOpen: Dispatch<SetStateAction<boolean>>
+
 }
 
 const Main: React.FC<MainPropTypes> = ({
     openPopup,
-    popupWithCBForm
+    popupWithCBForm,
+    setIsCBPopupOpen
+
 }) => {
     return (
         <section className="main" id="main">
@@ -35,7 +39,7 @@ const Main: React.FC<MainPropTypes> = ({
                         <li className="main__listitem">Для нас важен комфорт клиента</li>
                         <li className="main__listitem">Мы делаем, а не просто говорим</li>
                     </ul>
-                    <button className="main__button" type="button" onClick={(e) => {openPopup(e, popupWithCBForm, "popup-with-CB-form")}}><FaPhoneAlt className="main__buttonicon" />Заказать звонок</button>
+                    <button className="main__button" type="button" onClick={(e) => {openPopup(e, popupWithCBForm, "popup-with-CB-form", setIsCBPopupOpen(true))}}><FaPhoneAlt className="main__buttonicon" />Заказать звонок</button>
                 </div>
                 <div className="main__imagesContainer">
                     <div className="main__imageContainer">

@@ -44,6 +44,7 @@ function App() {
   const [disableBackSolutionImageButton, setDisableBackSolutionImageButton] = useState(true);
   const [disableNextSolutionImageButton, setDisableNextSolutionImageButton] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [isCBPopupOpen, setIsCBPopupOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isSucsess, setIsSucsess] = useState(true)
@@ -127,7 +128,7 @@ function App() {
   //     setIsSent(false)
   //   }, 5000)
   // }
-//заказать звонок END//
+  //заказать звонок END//
 
 
 
@@ -298,11 +299,13 @@ function App() {
     setDisabledStyle(nextSolutionImageBtn)
     setDisabledStyle(backSolutionImageBtn)
     if (bodyElement != null || bodyElement != undefined) {
-      { isPopupOpen ? bodyElement.style.overflow = "hidden" : bodyElement.style.overflow = "auto" }
+      { isPopupOpen || isCBPopupOpen ? bodyElement.style.overflow = "hidden" : bodyElement.style.overflow = "auto" }
     }
     if (popupSolution != null || popupSolution != undefined) {
       { isPopupOpen ? popupSolution.style.overflow = "auto" : popupSolution.style.overflow = "hidden" }
     }
+    console.log(isPopupOpen)
+
   })
 
 
@@ -384,6 +387,7 @@ function App() {
         isSucsess={isSucsess}
         openPopup={openPopup}
         agreementPopup={agreementPopup}
+        setIsCBPopupOpen={setIsCBPopupOpen}
       />
       <Popup
         closePopupSolution={closePopupSolution}
@@ -397,6 +401,8 @@ function App() {
       <Main
         openPopup={openPopup}
         popupWithCBForm={popupWithCBForm}
+        setIsCBPopupOpen={setIsCBPopupOpen}
+
       />
       <About />
       <Solutions

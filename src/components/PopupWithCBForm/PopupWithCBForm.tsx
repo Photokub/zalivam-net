@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import "./PopupWithCBForm.css"
 import { IoMdClose } from "react-icons/io";
 import CBForm from "../CBForm/CBForm";
@@ -13,6 +13,7 @@ interface PopupWithCBFormPropTypes {
     openPopup: any,
     // closePopup: any,
     agreementPopup: Element | null,
+    setIsCBPopupOpen: Dispatch<SetStateAction<boolean>>
 }
 
 const PopupWithCBForm: React.FC<PopupWithCBFormPropTypes> = ({
@@ -23,11 +24,13 @@ const PopupWithCBForm: React.FC<PopupWithCBFormPropTypes> = ({
     agreementPopup,
     isLoading,
     isSent,
-    isSucsess
+    isSucsess,
+    setIsCBPopupOpen
 }) => {
+
     return (
         <section className="popup-with-CB-form">
-            <button className="popup-with-CB-form__closeButton" type="button" onClick={(e) => closePopup(e, popupWithCBForm, "popup-with-CB-form")}>
+            <button className="popup-with-CB-form__closeButton" type="button" onClick={(e) => closePopup(e, popupWithCBForm, "popup-with-CB-form", setIsCBPopupOpen(false))}>
                 <IoMdClose className="popup_closeButtonImg" />
             </button>
             <CBForm
