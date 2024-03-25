@@ -16,7 +16,7 @@ class Api {
     }
 
     sendMessage({ name, email, message }) {
-        return this._request(`${this._adress}`, {
+        return this._request(`${this._adress}/mail`, {
             method: "POST",
             credentails: "include",
             headers: this._headers,
@@ -29,7 +29,7 @@ class Api {
     }
 
     sendCallBackMessage({ name, phone }) {
-        return this._request(`${this._adress}`, {
+        return this._request(`${this._adress}/cb`, {
             method: "POST",
             credentails: "include",
             headers: this._headers,

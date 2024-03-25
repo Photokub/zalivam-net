@@ -20,7 +20,10 @@ const PopupWithCBForm: React.FC<PopupWithCBFormPropTypes> = ({
     popupWithCBForm,
     sendCBMessage,
     openPopup,
-    agreementPopup
+    agreementPopup,
+    isLoading,
+    isSent,
+    isSucsess
 }) => {
     return (
         <section className="popup-with-CB-form">
@@ -29,9 +32,9 @@ const PopupWithCBForm: React.FC<PopupWithCBFormPropTypes> = ({
             </button>
             <CBForm
                 sendCBMessage={sendCBMessage}
-                isLoading={false}
-                isSent={false}
-                isSucsess={false}
+                isLoading={isLoading}
+                isSent={isSent}
+                isSucsess={isSucsess}
                 openPopup={openPopup}
                 agreementPopup={agreementPopup} 
                 // closePopup={closePopup}
