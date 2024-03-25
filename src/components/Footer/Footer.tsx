@@ -19,7 +19,7 @@ const Footer: React.FC<FooterPropTypes> = ({
                 <div className="footer__contactContainer">
                     <div className="footer__requisites">
                         <p className="footer__paragraph">ИП Отинов А.А.<br/>ИНН 772168817907<br/>ОГРНИП 323774600460286</p>
-                        <p className="footer__paragraph">ИП Горбунов А.Б<br/>ИНН 772153219573О<br/>ГРНИП 322774600270288</p>
+                        <p className="footer__paragraph">ИП Горбунов А.Б.<br/>ИНН 772153219573<br/>ОГРНИП 322774600270288</p>
                     </div>
                     <div className="footer__adress">
                         <p className="footer__paragraph">Наш адрес:</p>
