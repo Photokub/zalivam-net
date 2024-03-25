@@ -27,6 +27,18 @@ class Api {
             })
         })
     }
+
+    sendCallBackMessage({ name, phone }) {
+        return this._request(`${this._adress}`, {
+            method: "POST",
+            credentails: "include",
+            headers: this._headers,
+            body: JSON.stringify({
+                name: name,
+                phone: phone,
+            })
+        })
+    }
 }
 
 export const api = new Api({

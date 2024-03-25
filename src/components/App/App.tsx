@@ -17,6 +17,7 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 import solutionsData from "../../data/SolutionsData"
 import { useActionData } from 'react-router-dom';
 import Agreement from '../Agreement/Agreement';
+import PopupWithCBForm from '../PopupWithCBForm/PopupWithCBForm';
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
   const agreementPopup = document.querySelector(".agreement")
+  const popupWithCBForm = document.querySelector(".popup-with-CB-form")
 
   const Data = new Date()
 
@@ -92,6 +94,41 @@ function App() {
     }, 5000)
   }
   //отправка сообщений END//
+
+  //заказать звонок START//
+  const sendCBMessage = useCallback(async ({
+    name,
+    phone,
+  }: { name: string, phone: string }) => {
+    try {
+      setIsLoading(true)
+      const CBData = await api.sendCallBackMessage({ name, phone });
+      if (!CBData) {
+        handleSendMessage()
+        setIsSucsess(false)
+      }
+      handleSendMessage()
+      setIsSucsess(true)
+    } catch (err) {
+      handleSendMessage()
+      setIsSucsess(false)
+      console.error(err)
+    } finally {
+      setTimeout(() => {
+        setIsSent(false)
+      }, 8000)
+      setIsLoading(false)
+    }
+  }, [])
+
+  // const handleSend = () => {
+  //   setIsSent(true)
+  //   setTimeout(() => {
+  //     setIsSent(false)
+  //   }, 5000)
+  // }
+//заказать звонок END//
+
 
 
   //логика Header START//
@@ -313,6 +350,9 @@ function App() {
     setSelectedSolutionImage(0)
     setSelectedSolutionImagesArray([])
   }
+  //навигация по галерее Solutions END//
+
+  //общие методы попапов START//
 
   function openPopup(e: MouseEvent, currentPopupElement: any, classNamePart: string) {
     currentPopupElement?.classList.add(`${classNamePart}_visible`)
@@ -324,6 +364,9 @@ function App() {
     setIsPopupOpen(false)
   }
 
+  //общие методы попапов END//
+
+
   return (
     <div className="App">
       <Header
@@ -331,6 +374,16 @@ function App() {
       />
       <Agreement
         closePopup={closePopup}
+      />
+      <PopupWithCBForm
+        closePopup={closePopup}
+        popupWithCBForm={popupWithCBForm}
+        sendCBMessage={sendCBMessage}
+        isLoading={isLoading}
+        isSent={isSent}
+        isSucsess={isSucsess}
+        openPopup={openPopup}
+        agreementPopup={agreementPopup}
       />
       <Popup
         closePopupSolution={closePopupSolution}
@@ -341,7 +394,10 @@ function App() {
         handleClickSolutionImageForward={handleClickSolutionImageForward}
         handleClickSolutionImageBack={handleClickSolutionImageBack}
       />
-      <Main />
+      <Main
+        openPopup={openPopup}
+        popupWithCBForm={popupWithCBForm}
+      />
       <About />
       <Solutions
         SolutionsArray={solutionsData}

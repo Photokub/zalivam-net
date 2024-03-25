@@ -8,10 +8,14 @@ import "./Main.css"
 
 
 interface MainPropTypes {
-
+    openPopup: any,
+    popupWithCBForm: Element | null
 }
 
-const Main: React.FC<MainPropTypes> = () => {
+const Main: React.FC<MainPropTypes> = ({
+    openPopup,
+    popupWithCBForm
+}) => {
     return (
         <section className="main" id="main">
             <div className="main__wrap">
@@ -31,7 +35,7 @@ const Main: React.FC<MainPropTypes> = () => {
                         <li className="main__listitem">Для нас важен комфорт клиента</li>
                         <li className="main__listitem">Мы делаем, а не просто говорим</li>
                     </ul>
-                    <button className="main__button" type="button"><FaPhoneAlt className="main__buttonicon" />Заказать звонок</button>
+                    <button className="main__button" type="button" onClick={(e) => {openPopup(e, popupWithCBForm, "popup-with-CB-form")}}><FaPhoneAlt className="main__buttonicon" />Заказать звонок</button>
                 </div>
                 <div className="main__imagesContainer">
                     <div className="main__imageContainer">
