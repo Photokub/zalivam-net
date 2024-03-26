@@ -1,0 +1,19 @@
+.stepsContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 188px);
+    justify-content: space-between;
+    grid-column-gap: 5px;
+    grid-row-gap: 40px;
+    margin: 124px 0 0 0;
+}
+
+@media screen and (max-width: 984px) {
+    .stepsContainer {
+        display: flex;
+        height: 947px;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0 0 0;
+    }
+}

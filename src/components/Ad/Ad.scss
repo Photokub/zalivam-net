@@ -1,0 +1,78 @@
+#womenPhoto {
+    z-index: 1;
+    width: auto;
+    height: 100%;
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+    background: url("../../images/about_BG_image.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
+    background-size: cover;
+}
+
+.ad__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+    padding: 0 140px;
+}
+
+.ad__image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin: 0 40px 0 0;
+}
+
+.ad__imageEffect {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 25%;
+    border-radius: 350px;
+    background: rgba(255, 255, 255, 0.50);
+    mix-blend-mode: overlay;
+    filter: blur(56.5px);
+    z-index: 0;
+}
+
+@media screen and (max-width: 1124px){
+    .ad__wrap{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 984px) {
+
+    #womenPhoto {
+        width: 100%;
+    }
+
+    .ad__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 71px 54px 0 54px;
+        gap: unset;
+    }
+
+    .ad__image {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    .ad__wrap {
+        padding: 64px 15px 0 15px;
+    }
+
+    .ad__imageEffect {
+        top: 15%;
+    }
+}

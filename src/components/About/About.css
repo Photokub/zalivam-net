@@ -1,0 +1,45 @@
+.about {
+  width: 100%;
+  background: url("../../images/about_BG_image.png") no-repeat, linear-gradient(270deg, #000046 -8.54%, #3390EC 100%);
+  background-size: cover;
+  color: #FFF;
+}
+
+.about__wrap {
+  max-width: 1440px;
+  padding: 100px 140px 158px 140px;
+  margin: 0 auto;
+}
+
+.about__title {
+  margin: 0 0 48px 0;
+  font-family: Proxima Nova;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1124px) {
+  .about__wrap {
+    padding: 100px 50px 100px 50px;
+  }
+}
+@media screen and (max-width: 984px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 94px 0 63px 0;
+    margin: 0 74px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .about__wrap {
+    margin: 0 15px;
+  }
+}/*# sourceMappingURL=About.css.map */

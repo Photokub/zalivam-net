@@ -1,0 +1,22 @@
+.ReviewContainer {
+    width: 1160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.ReviewCardsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 984px) {
+    .ReviewContainer {
+        margin: 0;
+    }
+}

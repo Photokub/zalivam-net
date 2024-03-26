@@ -1,0 +1,59 @@
+@import '../../variables/variaables.scss';
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 0 100px;
+    gap: 10px;
+}
+
+.contacts_hidden{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.contacts__adress {
+    width: 152px;
+
+    color: $text-highlight-color;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Proxima Nova";
+    font-size: $nav-title;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-variant: all-small-caps;
+    text-align: start;
+}
+
+.contacts__phoneNumber {
+    min-width: 132px;
+    color: $text-highlight-color;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Proxima Nova";
+    font-size: $h4-font-size;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-variant: all-small-caps;
+}
+
+@media screen and (max-width: 1300px) {
+    .contacts {
+        margin: 0 0 0 40px;
+    }
+
+    .contacts__phoneNumber{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 984px){
+    .contacts {
+        margin: 0;
+    }
+}

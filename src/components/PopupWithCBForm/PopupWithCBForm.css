@@ -1,0 +1,39 @@
+.popup-with-CB-form {
+  width: 100vw;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+
+.popup-with-CB-form_visible {
+  display: flex;
+  opacity: 1;
+  transition: 0.5 ease-out;
+}
+
+.popup-with-CB-form__closeButton {
+  width: 44px;
+  height: 44px;
+  align-self: end;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  transition: 0.25;
+}
+.popup-with-CB-form__closeButton:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=PopupWithCBForm.css.map */

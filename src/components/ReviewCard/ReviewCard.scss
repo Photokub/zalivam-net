@@ -1,0 +1,55 @@
+@import '../../variables/variaables.scss';
+
+.reviewCard {
+    width: 348px;
+    min-height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 16px 10px 20px 10px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.35);
+}
+
+.reviewCard__reviewContainer{
+    border-bottom: 1px solid $dark-gray-color;
+    padding: 0 0 10px 0;
+}
+
+.reviewCard__image {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 10px 0;
+}
+
+.reviewCard__blockquote {
+    margin: 0;
+
+    color: #171A28;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: $paragraph-font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.reviewCard__photo {
+    width: 126px;
+    height: 126px;
+    margin: 0 0 24px 24px;
+    float: right;
+
+}
+
+.reviewCard__sign {
+    margin: 20px 0 0 0;
+
+    color: #171A28;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Proxima Nova;
+    font-size: $paragraph-font-size;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
