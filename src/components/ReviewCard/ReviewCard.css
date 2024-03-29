@@ -10,8 +10,11 @@
 }
 
 .reviewCard__reviewContainer {
-  border-bottom: 1px solid #D2D1D1;
+  height: 320px;
+  display: grid;
   padding: 0 0 10px 0;
+  grid-template-columns: 1fr 126px;
+  grid-template-rows: 126px 1fr;
 }
 
 .reviewCard__image {
@@ -21,7 +24,14 @@
 }
 
 .reviewCard__blockquote {
+  padding: 0 10px 0 0;
+  direction: rtl;
+  text-align: left;
+  height: 320px;
+  grid-column: 1/2;
+  grid-row: 1/3;
   margin: 0;
+  overflow-y: scroll;
   color: #171A28;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Proxima Nova;
@@ -34,11 +44,14 @@
 .reviewCard__photo {
   width: 126px;
   height: 126px;
-  margin: 0 0 24px 24px;
-  float: right;
+  margin: 0 0 24px 0;
+  border-radius: 50%;
+  grid-column: 2/3;
 }
 
 .reviewCard__sign {
+  grid-column: 2/3;
+  grid-row: 2/3;
   margin: 20px 0 0 0;
   color: #171A28;
   font-variant-numeric: lining-nums proportional-nums;
