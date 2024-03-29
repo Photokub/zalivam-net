@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
 import MethodsData from '../../data/MethodsData.json';
+import ReviewsData from "../../data/ReviewsData"
 import { api } from "../../utils/Api.js";
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -18,6 +19,7 @@ import solutionsData from "../../data/SolutionsData"
 import { useActionData } from 'react-router-dom';
 import Agreement from '../Agreement/Agreement';
 import PopupWithCBForm from '../PopupWithCBForm/PopupWithCBForm';
+import reviewsData from '../../data/ReviewsData';
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
   const [stepCardsArray, setStepCardsArray] = useState<Element[]>([]);
+  const [reviewCardsArray, setReviewCardsArray] = useState<Element[]>([]);
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
   const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([]);
@@ -53,6 +56,7 @@ function App() {
   const bodyElement = document.querySelector("body")
   const agreementPopup = document.querySelector(".agreement")
   const popupWithCBForm = document.querySelector(".popup-with-CB-form")
+
 
   const Data = new Date()
 
@@ -156,7 +160,6 @@ function App() {
 
   //Методы навигации по шагам блока Methods START//
   const MethodsDataArray = MethodsData.steps
-  console.log(MethodsDataArray)
 
   useEffect(() => {
     selectedMethod <= 0 ? setDisableBackButon(true) : setDisableBackButon(false);
@@ -264,9 +267,6 @@ function App() {
     selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
     selectedSolutionImage === 0 ? setDisableBackSolutionImageButton(true) : setDisableBackSolutionImageButton(false);
     selectedSolutionImage === selectedSolutionImagesArray.length - 1 ? setDisableNextSolutionImageButton(true) : setDisableNextSolutionImageButton(false);
-    console.log(`selectedSolutionImage = ${selectedSolutionImage}`)
-    console.log(`selectedSolutionImagesArray = ${selectedSolutionImagesArray.length}`)
-
   })
 
   useEffect(() => {
@@ -304,8 +304,6 @@ function App() {
     if (popupSolution != null || popupSolution != undefined) {
       { isPopupOpen ? popupSolution.style.overflow = "auto" : popupSolution.style.overflow = "hidden" }
     }
-    console.log(isPopupOpen)
-
   })
 
 
@@ -354,6 +352,19 @@ function App() {
     setSelectedSolutionImagesArray([])
   }
   //навигация по галерее Solutions END//
+
+  //логика блока Reviews START//
+  useEffect(() => {
+    const reviewCards = document.querySelectorAll(".reviewCard")
+    // const nextButton = document.querySelector("#nextBtn")
+    // const backButton = document.querySelector("#backBtn")
+    const reviewCardsArr = Array.from(reviewCards)
+ 
+    // setNextBtn(nextButton)
+    // setBackBtn(backButton)
+  }, [])
+
+  //логика блока Revires END//
 
   //общие методы попапов START//
 
@@ -435,6 +446,8 @@ function App() {
         handleClickCarouselBack={handleClickCarouselBack}
         handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
         handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
+        reviewCardsArray={reviewCardsArray}
+        reviewsArray={ReviewsData}
       />
       <Feedback
         sendFeedbackMessage={sendFeedbackMessage}
