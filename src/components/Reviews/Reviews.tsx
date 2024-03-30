@@ -1,7 +1,6 @@
 import React from "react";
 import "./Reviews.css"
 import ReviewCardsContainer from "../ReviewCardsContainer/ReviewCardsContainer";
-import ReviewsViewPort from "../ReviewsViewPort/ReviewsViewPort";
 
 interface ReviewsPropTypes {
     reviewCardsArray: any,
