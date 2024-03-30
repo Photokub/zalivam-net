@@ -2,6 +2,7 @@ import React from "react";
 import "./ReviewCardsContainer.css"
 import ReviewCard from "../ReviewCard/ReviewCard";
 import CarouselNav from "../CarouselNav/CarouselNav";
+import ReviewNav from "../ReviewsNav/ReviewsNav";
 
 interface ReviewCardsContainer {
     reviewCardsArray: any,
@@ -9,7 +10,9 @@ interface ReviewCardsContainer {
     handleAnimationNextSolutionBtn: any,
     handleAnimationBackSolutionBtn: any,
     handleClickCarouselForward: (e: MouseEvent) => void,
-    handleClickCarouselBack: (e: MouseEvent) => void
+    handleClickCarouselBack: (e: MouseEvent) => void,
+    clickToNextReview: any,
+    clickToPreviousReview: any
 }
 
 const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
@@ -18,7 +21,9 @@ const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
     handleAnimationNextSolutionBtn,
     handleAnimationBackSolutionBtn,
     reviewCardsArray,
-    reviewsArray
+    reviewsArray,
+    clickToNextReview,
+    clickToPreviousReview,
 }) => {
 
     console.log(reviewCardsArray)
@@ -40,7 +45,9 @@ const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
                     )
                 }
             </div>
-            <CarouselNav
+            <ReviewNav
+                clickToNextReview={clickToNextReview}
+                clickToPreviousReview={clickToPreviousReview}
                 handleClickCarouselForward={handleClickCarouselForward}
                 handleClickCarouselBack={handleClickCarouselBack}
                 handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}

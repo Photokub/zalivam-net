@@ -1,0 +1,24 @@
+.reviewNav {
+  width: 132px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 19px 0 0 0;
+}
+.reviewNav .reviewNav__arrow {
+  width: 44px;
+  height: 44px;
+  color: #3390EC;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.reviewNav .reviewNav__arrow:hover {
+  color: var(--Buttons, #77b3ee);
+}
+.reviewNav .reviewNav__arrow:active {
+  transform: translateX(1px) translateY(1px);
+}
+.reviewNav .reviewNav__button {
+  border: none;
+  background: none;
+}/*# sourceMappingURL=ReviewsNav.css.map */

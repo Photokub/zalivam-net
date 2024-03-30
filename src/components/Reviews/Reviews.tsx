@@ -8,10 +8,14 @@ interface ReviewsPropTypes {
     handleAnimationNextSolutionBtn: any,
     handleAnimationBackSolutionBtn: any,
     handleClickCarouselForward: (e: MouseEvent) => void,
-    handleClickCarouselBack: (e: MouseEvent) => void
+    handleClickCarouselBack: (e: MouseEvent) => void,
+    clickToNextReview: any,
+    clickToPreviousReview: any
 }
 
 const Reviews: React.FC<ReviewsPropTypes> = ({
+    clickToNextReview,
+    clickToPreviousReview,
     handleClickCarouselForward,
     handleClickCarouselBack,
     handleAnimationNextSolutionBtn,
@@ -28,6 +32,8 @@ const Reviews: React.FC<ReviewsPropTypes> = ({
                 </div>
             </div>
             <ReviewCardsContainer
+                clickToNextReview={clickToNextReview}
+                clickToPreviousReview={clickToPreviousReview}
                 reviewCardsArray={reviewCardsArray}
                 reviewsArray={reviewsArray}
                 handleClickCarouselForward={handleClickCarouselForward}

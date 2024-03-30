@@ -29,13 +29,18 @@ function App() {
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
+  const [disableBackReviewButton, setDisableBackReviewButton] = useState(true);
+  const [disableNextReviewButton, setDisableNextReviewButton] = useState(false);
   const [stepCardsArray, setStepCardsArray] = useState<Element[]>([]);
   const [reviewCardsArray, setReviewCardsArray] = useState<Element[]>([]);
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
+  const [nextReviewBtn, setNextReviewBtn] = useState<any>({});
+  const [backReviewBtn, setBackReviewBtn] = useState<any>({});
   const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([]);
   const [docCardsArray, setDocCardsArray] = useState<Element[]>([]);
   const [selectedSolution, setSelectedSolution] = useState<number>(0);
+  const [selectedReview, setSelectedReview] = useState<number>(1);
   const [nextSolutionBtn, setNextSolutionBtn] = useState<any>({});
   const [backSolutionBtn, setBackSolutionBtn] = useState<any>({});
   const [disableBackSolutionButton, setDisableBackSolutionButon] = useState(true);
@@ -51,6 +56,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isSucsess, setIsSucsess] = useState(true)
+  const MethodsDataArray = MethodsData.steps
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
@@ -159,7 +165,6 @@ function App() {
 
 
   //Методы навигации по шагам блока Methods START//
-  const MethodsDataArray = MethodsData.steps
 
   useEffect(() => {
     selectedMethod <= 0 ? setDisableBackButon(true) : setDisableBackButon(false);
@@ -356,13 +361,30 @@ function App() {
   //логика блока Reviews START//
   useEffect(() => {
     const reviewCards = document.querySelectorAll(".reviewCard")
-    // const nextButton = document.querySelector("#nextBtn")
-    // const backButton = document.querySelector("#backBtn")
+    const nextReviewButton = document.querySelector("#nextReviewBtn")
+    const backReviewButton = document.querySelector("#backReviewBtn")
     const reviewCardsArr = Array.from(reviewCards)
- 
-    // setNextBtn(nextButton)
-    // setBackBtn(backButton)
+
+    setNextReviewBtn(nextReviewButton)
+    setBackReviewBtn(backReviewButton)
   }, [])
+
+  // console.log(ReviewsData.length)
+
+  useEffect(() => {
+    selectedReview <= 0 ? setDisableBackReviewButton(true) : setDisableBackReviewButton(false);
+    selectedReview >= ReviewsData.length - 1 ? setDisableNextReviewButton(true) : setDisableNextReviewButton(false);
+    nextReviewBtn.disabled = disableNextReviewButton
+    backReviewBtn.disabled = disableBackReviewButton
+  })
+
+  const clickToNextReview = (e: MouseEvent) => {
+    setSelectedReview(selectedReview + 1)
+  }
+
+  const clickToPreviousReview = (e: MouseEvent) => {
+    setSelectedReview(selectedReview - 1)
+  }
 
   //логика блока Revires END//
 
@@ -442,6 +464,8 @@ function App() {
         agreementPopup={agreementPopup}
       />
       <Reviews
+        clickToNextReview={clickToNextReview}
+        clickToPreviousReview={clickToPreviousReview}
         handleClickCarouselForward={handleClickCarouselForward}
         handleClickCarouselBack={handleClickCarouselBack}
         handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
