@@ -10,9 +10,8 @@
 
     .reviews__wrap {
         max-width: $warp-1440;
-        margin: 0 auto;
-        padding: 100px 140px 81px 140px;
-        justify-self: start;
+        padding: 100px 140px 40px 140px;
+        align-self: flex-start;
     }
 
     .reviews__title {
@@ -59,7 +58,7 @@
 
 @media screen and (max-width: 1124px){
     .reviews__wrap {
-        padding: 100px 50px 81px 50px !important;
+        padding: 100px 50px 840px 50px !important;
     }
 }
 
@@ -73,7 +72,7 @@
     }
 
     .reviews__wrap {
-        padding: 100px 74px 81px 74px !important;
+        padding: 100px 74px 40px 74px !important;
     }
 
     .reviews__title {
@@ -87,7 +86,7 @@
 
 @media screen and (max-width: 568px) {
     .reviews__wrap {
-        padding: 100px 16px 81px 16px !important;
+        padding: 100px 16px 40px 16px !important;
     }
 
     .reviews__textContainer {
@@ -96,6 +95,6 @@
     }
 
     .reviews__title {
-        margin: 0 0 50px 0 !important;
+        margin: 0 0 40px 0 !important;
     }
 }

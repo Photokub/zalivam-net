@@ -20,7 +20,7 @@ const ReviewCard: React.FC<ReviewCard> = ({
         <div className="reviewCard">
             <ImQuotesLeft className="reviewCard__image" />
             <div className="reviewCard__reviewContainer">
-                <img src={avatar} className="reviewCard__photo" alt="фото автора" />
+                <img src={process.env.PUBLIC_URL + avatar} className="reviewCard__photo" alt="фото автора" />
                 <blockquote className="reviewCard__blockquote">{text}</blockquote>
                 <p className="reviewCard__sign">{author}</p>
             </div>
