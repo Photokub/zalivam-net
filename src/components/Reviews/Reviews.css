@@ -2,6 +2,9 @@
   background-color: #FFF;
   padding: 0 0 130px 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .reviews .reviews__wrap {
   max-width: 1440px;

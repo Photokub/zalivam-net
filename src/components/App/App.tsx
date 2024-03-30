@@ -476,6 +476,7 @@ function App() {
         handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
         reviewCardsArray={reviewCardsArray}
         reviewsArray={ReviewsData}
+        selectedReview={selectedReview}
       />
       <Feedback
         sendFeedbackMessage={sendFeedbackMessage}

@@ -12,7 +12,8 @@ interface ReviewCardsContainer {
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void,
     clickToNextReview: any,
-    clickToPreviousReview: any
+    clickToPreviousReview: any,
+    selectedReview: number,
 }
 
 const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
@@ -24,26 +25,35 @@ const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
     reviewsArray,
     clickToNextReview,
     clickToPreviousReview,
+    selectedReview
 }) => {
 
-    // console.log(reviewCardsArray)
-    // console.log(reviewsArray)
+    const centrShiftValue = ((1160 - (368*3)) / 2) / 2
+    let shiftValue = (selectedReview * (368+centrShiftValue*2)) - (368+centrShiftValue*2)
 
     return (
-        <div className="ReviewContainer">
-            <div className="ReviewCardsContainer">
-                {
-                    reviewsArray.map((card: any, id: number) =>
-                        <ReviewCard
-                            key={id}
-                            id={card.id}
-                            text={card.reviewText}
-                            author={card.reviewAuthor}
-                            avatar={card.reviewAvatar}
+        <>
+            <div className="ReviewContainer">
+                <div className="ReviewCardsContainer"
+                    style={
+                        {
+                            transform: `translateX(${shiftValue < 0 ? `${shiftValue * -1}px` : `-${shiftValue}px`})`
+                        }
+                    }
+                >
+                    {
+                        reviewsArray.map((card: any, id: number) =>
+                            <ReviewCard
+                                key={id}
+                                id={card.id}
+                                text={card.reviewText}
+                                author={card.reviewAuthor}
+                                avatar={card.reviewAvatar}
 
-                        />
-                    )
-                }
+                            />
+                        )
+                    }
+                </div>
             </div>
             <ReviewNav
                 clickToNextReview={clickToNextReview}
@@ -53,7 +63,7 @@ const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
                 handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
                 handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
             />
-        </div>
+        </>
     )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Reviews.css"
 import ReviewCardsContainer from "../ReviewCardsContainer/ReviewCardsContainer";
+import ReviewsViewPort from "../ReviewsViewPort/ReviewsViewPort";
 
 interface ReviewsPropTypes {
     reviewCardsArray: any,
@@ -10,7 +11,8 @@ interface ReviewsPropTypes {
     handleClickCarouselForward: (e: MouseEvent) => void,
     handleClickCarouselBack: (e: MouseEvent) => void,
     clickToNextReview: any,
-    clickToPreviousReview: any
+    clickToPreviousReview: any,
+    selectedReview: number,
 }
 
 const Reviews: React.FC<ReviewsPropTypes> = ({
@@ -21,7 +23,8 @@ const Reviews: React.FC<ReviewsPropTypes> = ({
     handleAnimationNextSolutionBtn,
     handleAnimationBackSolutionBtn,
     reviewCardsArray,
-    reviewsArray
+    reviewsArray,
+    selectedReview
 }) => {
     return (
         <section className="reviews" id="reviews">
@@ -40,7 +43,19 @@ const Reviews: React.FC<ReviewsPropTypes> = ({
                 handleClickCarouselBack={handleClickCarouselBack}
                 handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
                 handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
+                selectedReview={selectedReview}
             />
+            {/* <ReviewsViewPort
+                            clickToNextReview={clickToNextReview}
+                            clickToPreviousReview={clickToPreviousReview}
+                            reviewCardsArray={reviewCardsArray}
+                            reviewsArray={reviewsArray}
+                            handleClickCarouselForward={handleClickCarouselForward}
+                            handleClickCarouselBack={handleClickCarouselBack}
+                            handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
+                            handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
+                            selectedReview={selectedReview}
+            /> */}
         </section>
     )
 }
