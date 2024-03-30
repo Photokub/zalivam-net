@@ -364,9 +364,8 @@ function App() {
     const nextReviewButton = document.querySelector("#nextReviewBtn")
     const backReviewButton = document.querySelector("#backReviewBtn")
     const reviewCardsArr = Array.from(reviewCards)
-
     setNextReviewBtn(nextReviewButton)
-    setBackReviewBtn(backReviewButton)
+    setBackReviewBtn(backReviewButton)  
   }, [])
 
   // console.log(ReviewsData.length)
@@ -376,14 +375,19 @@ function App() {
     selectedReview >= ReviewsData.length - 1 ? setDisableNextReviewButton(true) : setDisableNextReviewButton(false);
     nextReviewBtn.disabled = disableNextReviewButton
     backReviewBtn.disabled = disableBackReviewButton
+    setDisabledStyle(nextReviewBtn)
+    setDisabledStyle(backReviewBtn)
   })
 
   const clickToNextReview = (e: MouseEvent) => {
     setSelectedReview(selectedReview + 1)
+    console.log(selectedReview)
   }
 
   const clickToPreviousReview = (e: MouseEvent) => {
     setSelectedReview(selectedReview - 1)
+    console.log(selectedReview)
+
   }
 
   //логика блока Revires END//

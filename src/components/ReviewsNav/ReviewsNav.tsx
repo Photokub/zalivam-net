@@ -32,8 +32,8 @@ const ReviewNav: React.FC<ReviewNavPropTypes> = ({
 
     return (
         <div className="reviewNav">
-            <button id="backReviewBtn" className="reviewNav__button reviewNav__button_next" type="button" onClick={(e) => clickToNextReview(e)}><FaLongArrowAltLeft className="reviewNav__arrow" /></button>
-            <button id="nextReviewBtn" className="reviewNav__button reviewNav__button_prev" type="button" onClick={(e) => clickToPreviousReview(e)}><FaLongArrowAltRight className="reviewNav__arrow" /></button>
+            <button id="backReviewBtn" className="reviewNav__button reviewNav__button_next" type="button" onClick={(e) => clickToPreviousReview(e)}><FaLongArrowAltLeft className="reviewNav__arrow" /></button>
+            <button id="nextReviewBtn" className="reviewNav__button reviewNav__button_prev" type="button" onClick={(e) => clickToNextReview(e)}><FaLongArrowAltRight className="reviewNav__arrow" /></button>
         </div>
     )
 }

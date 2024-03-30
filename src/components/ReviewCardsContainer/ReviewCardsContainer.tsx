@@ -26,8 +26,8 @@ const ReviewCardsContainer: React.FC<ReviewCardsContainer> = ({
     clickToPreviousReview,
 }) => {
 
-    console.log(reviewCardsArray)
-    console.log(reviewsArray)
+    // console.log(reviewCardsArray)
+    // console.log(reviewsArray)
 
     return (
         <div className="ReviewContainer">
