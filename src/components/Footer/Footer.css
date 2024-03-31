@@ -92,7 +92,7 @@
 }
 
 .footer__link {
-  text-decoration: none;
+  text-decoration: underline;
   color: #FFF;
 }
 

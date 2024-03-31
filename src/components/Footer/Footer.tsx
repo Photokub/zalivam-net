@@ -15,7 +15,6 @@ const Footer: React.FC<FooterPropTypes> = ({
     return (
         <footer className="footer">
             <div className="footer__wrap">
-                {/* <p className="footerTitle">ЗАЛИВАМ НЕТ</p> */}
                 <div className="footer__contactContainer">
                     <div className="footer__requisites">
                         <p className="footer__paragraph">ИП Отинов А.А.<br/>ИНН 772168817907<br/>ОГРНИП 323774600460286</p>
@@ -28,10 +27,10 @@ const Footer: React.FC<FooterPropTypes> = ({
                     <div className="footer__socialMedia">
                         <p className="footer__paragraph">Мы в соцсетях</p>
                         <div className="footer__socialMediaIcons">
-                            <Link className="footer__socialMediaLink" to="#">
+                            <Link className="footer__socialMediaLink" to="https://vk.com/centrprosto" target="blank">
                                 <FaVk className="footer__socialMediaIcon" />
                             </Link>
-                            <Link className="footer__socialMediaLink" to="#">
+                            <Link className="footer__socialMediaLink" to="https://t.me/zalivamNET" target="blank">
                                 <FaTelegramPlane className="footer__socialMediaIcon" />
                             </Link>
                         </div>
