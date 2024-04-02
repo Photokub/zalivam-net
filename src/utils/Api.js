@@ -43,7 +43,9 @@ class Api {
 
 export const api = new Api({
     credentails: 'include',
+    // baseUrl: 'https://centrprosto.ru/api',
     baseUrl: 'http://51.250.18.36:3001',
+    //baseUrl: 'http://localhost:3001',
     headers: {
         "content-type": "application/json",
         'Accept': 'application/json',
