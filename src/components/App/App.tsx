@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Popup from '../Popup/Popup';
 import MethodsData from '../../data/MethodsData.json';
+import ReviewsData from "../../data/ReviewsData"
 import { api } from "../../utils/Api.js";
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -18,6 +19,7 @@ import solutionsData from "../../data/SolutionsData"
 import { useActionData } from 'react-router-dom';
 import Agreement from '../Agreement/Agreement';
 import PopupWithCBForm from '../PopupWithCBForm/PopupWithCBForm';
+import reviewsData from '../../data/ReviewsData';
 
 function App() {
 
@@ -27,12 +29,18 @@ function App() {
   const [selectedMethod, setSelectedMethod] = useState(0);
   const [disableBackButton, setDisableBackButon] = useState(true);
   const [disableNextButton, setDisableNextButon] = useState(false);
+  const [disableBackReviewButton, setDisableBackReviewButton] = useState(true);
+  const [disableNextReviewButton, setDisableNextReviewButton] = useState(false);
   const [stepCardsArray, setStepCardsArray] = useState<Element[]>([]);
+  const [reviewCardsArray, setReviewCardsArray] = useState<Element[]>([]);
   const [nextBtn, setNextBtn] = useState<any>({});
   const [backBtn, setBackBtn] = useState<any>({});
+  const [nextReviewBtn, setNextReviewBtn] = useState<any>({});
+  const [backReviewBtn, setBackReviewBtn] = useState<any>({});
   const [cardCheckMarksArray, setCardCheckMarksArray] = useState<any>([]);
   const [docCardsArray, setDocCardsArray] = useState<Element[]>([]);
   const [selectedSolution, setSelectedSolution] = useState<number>(0);
+  const [selectedReview, setSelectedReview] = useState<number>(1);
   const [nextSolutionBtn, setNextSolutionBtn] = useState<any>({});
   const [backSolutionBtn, setBackSolutionBtn] = useState<any>({});
   const [disableBackSolutionButton, setDisableBackSolutionButon] = useState(true);
@@ -48,11 +56,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isSucsess, setIsSucsess] = useState(true)
+  const MethodsDataArray = MethodsData.steps
   const popupSolution = document.querySelector<HTMLElement>(".popup");
   const selectedSolutionData = solutionsData[selectedSolution]
   const bodyElement = document.querySelector("body")
   const agreementPopup = document.querySelector(".agreement")
   const popupWithCBForm = document.querySelector(".popup-with-CB-form")
+
 
   const Data = new Date()
 
@@ -155,8 +165,6 @@ function App() {
 
 
   //Методы навигации по шагам блока Methods START//
-  const MethodsDataArray = MethodsData.steps
-  console.log(MethodsDataArray)
 
   useEffect(() => {
     selectedMethod <= 0 ? setDisableBackButon(true) : setDisableBackButon(false);
@@ -264,9 +272,6 @@ function App() {
     selectedSolution >= docCardsArray.length - 1 ? setDisableNextSolutionButon(true) : setDisableNextSolutionButon(false);
     selectedSolutionImage === 0 ? setDisableBackSolutionImageButton(true) : setDisableBackSolutionImageButton(false);
     selectedSolutionImage === selectedSolutionImagesArray.length - 1 ? setDisableNextSolutionImageButton(true) : setDisableNextSolutionImageButton(false);
-    console.log(`selectedSolutionImage = ${selectedSolutionImage}`)
-    console.log(`selectedSolutionImagesArray = ${selectedSolutionImagesArray.length}`)
-
   })
 
   useEffect(() => {
@@ -304,8 +309,6 @@ function App() {
     if (popupSolution != null || popupSolution != undefined) {
       { isPopupOpen ? popupSolution.style.overflow = "auto" : popupSolution.style.overflow = "hidden" }
     }
-    console.log(isPopupOpen)
-
   })
 
 
@@ -354,6 +357,40 @@ function App() {
     setSelectedSolutionImagesArray([])
   }
   //навигация по галерее Solutions END//
+
+  //логика блока Reviews START//
+  useEffect(() => {
+    const reviewCards = document.querySelectorAll(".reviewCard")
+    const nextReviewButton = document.querySelector("#nextReviewBtn")
+    const backReviewButton = document.querySelector("#backReviewBtn")
+    const reviewCardsArr = Array.from(reviewCards)
+    setNextReviewBtn(nextReviewButton)
+    setBackReviewBtn(backReviewButton)  
+  }, [])
+
+  // console.log(ReviewsData.length)
+
+  useEffect(() => {
+    selectedReview <= 0 ? setDisableBackReviewButton(true) : setDisableBackReviewButton(false);
+    selectedReview >= ReviewsData.length - 1 ? setDisableNextReviewButton(true) : setDisableNextReviewButton(false);
+    nextReviewBtn.disabled = disableNextReviewButton
+    backReviewBtn.disabled = disableBackReviewButton
+    setDisabledStyle(nextReviewBtn)
+    setDisabledStyle(backReviewBtn)
+  })
+
+  const clickToNextReview = (e: MouseEvent) => {
+    setSelectedReview(selectedReview + 1)
+    console.log(selectedReview)
+  }
+
+  const clickToPreviousReview = (e: MouseEvent) => {
+    setSelectedReview(selectedReview - 1)
+    console.log(selectedReview)
+
+  }
+
+  //логика блока Revires END//
 
   //общие методы попапов START//
 
@@ -431,10 +468,15 @@ function App() {
         agreementPopup={agreementPopup}
       />
       <Reviews
+        clickToNextReview={clickToNextReview}
+        clickToPreviousReview={clickToPreviousReview}
         handleClickCarouselForward={handleClickCarouselForward}
         handleClickCarouselBack={handleClickCarouselBack}
         handleAnimationNextSolutionBtn={handleAnimationNextSolutionBtn}
         handleAnimationBackSolutionBtn={handleAnimationBackSolutionBtn}
+        reviewCardsArray={reviewCardsArray}
+        reviewsArray={ReviewsData}
+        selectedReview={selectedReview}
       />
       <Feedback
         sendFeedbackMessage={sendFeedbackMessage}

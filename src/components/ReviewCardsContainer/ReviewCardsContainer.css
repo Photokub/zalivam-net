@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
   justify-content: space-between;
 }
 
@@ -13,6 +12,7 @@
   justify-content: space-between;
   margin: 0 0 10px 0;
   box-sizing: border-box;
+  transition: 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 984px) {

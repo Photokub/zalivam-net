@@ -1,0 +1,31 @@
+@import "../../variables/variaables.scss";
+
+.reviewNav {
+    width: 132px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 19px 0 0 0;
+
+
+    .reviewNav__arrow {
+        width: 44px;
+        height: 44px;
+        color: $element-color;
+        cursor: pointer;
+        transition: 0.25s;
+
+        &:hover {
+            color: var(--Buttons, #77b3ee);
+        }
+
+        &:active {
+            transform: translateX(1px) translateY(1px);
+        }
+    }
+
+    .reviewNav__button {
+        border: none;
+        background: none;
+    }
+}
