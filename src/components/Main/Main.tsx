@@ -33,7 +33,7 @@ const Main: React.FC<MainPropTypes> = ({
                     {/* <h2 className="main__title">Проведение оценки ущерба<br />
                         Полное сопровождение в суде<br />
                         Поддержка клиента на всех этапах разрешения дела</h2> */}
-                    <h3 className="main__subtitle">Наши приемущества:</h3>
+                    <h3 className="main__subtitle">Наши преимущества:</h3>
                     <ul className="main__list">
                         <li className="main__listitem">Предоставление качественных услуг является нашей главной задачей</li>
                         <li className="main__listitem">Для нас важен комфорт клиента</li>
