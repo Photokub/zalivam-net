@@ -43,7 +43,7 @@ class Api {
 
 export const api = new Api({
     credentails: 'include',
-    baseUrl: 'http://51.250.100.150:3001',
+    baseUrl: 'http://84.201.136.83:3001',
     headers: {
         "content-type": "application/json",
         'Accept': 'application/json',
